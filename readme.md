@@ -26,22 +26,32 @@ Available in the resources for the course
 - Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - GIT Repository : https://github.com/in28minutes/getting-started-in-5-steps
 
-## Interview Questions
+## 200+ Interview Questions
 
 ### Java Platform
 
-- **1 . ****Why is Java so popular?**
+- **1 . Why is Java so popular?**
     - Java is popular for several reasons:
 
-    1. **Platform Independence**: Java programs can run on any device that has the Java Virtual Machine (JVM), making it
-       highly portable.
-    2. **Object-Oriented**: Java's object-oriented nature allows for modular programs and reusable code.
-    3. **Robust and Secure**: Java has strong memory management, exception handling, and security features.
-    4. **Rich API**: Java provides a vast standard library that simplifies many programming tasks.
-    5. **Community Support**: Java has a large and active community, providing extensive resources and support.
-    6. **Performance**: Java's performance has improved significantly with Just-In-Time (JIT) compilers and other
-       optimizations.
-    7. **Enterprise Use**: Java is widely used in enterprise environments, particularly for server-side applications.
+        -
+            1. **Platform Independence**: Java programs can run on any device that has the Java Virtual Machine (JVM),
+               making it
+               highly portable.
+        -
+            2. **Object-Oriented**: Java's object-oriented nature allows for modular programs and reusable code.
+        -
+            3. **Robust and Secure**: Java has strong memory management, exception handling, and security features.
+        -
+            4. **Rich API**: Java provides a vast standard library that simplifies many programming tasks.
+        -
+            5. **Community Support**: Java has a large and active community, providing extensive resources and support.
+        -
+            6. **Performance**: Java's performance has improved significantly with Just-In-Time (JIT) compilers and
+               other
+               optimizations.
+        -
+            7. **Enterprise Use**: Java is widely used in enterprise environments, particularly for server-side
+               applications.
 - **2 . What is platform independence?**
   Platform independence refers to the ability of a programming language or software to run on various types of computer
   systems without modification. In the context of Java, platform independence is achieved through the use of the Java
@@ -98,53 +108,62 @@ Available in the resources for the course
   on the values.
 - **8 . Why do we need Wrapper classes in Java?**
   Wrapper classes in Java are needed for the following reasons:
-    1. **Object-Oriented Programming**: Wrapper classes allow primitive data types to be treated as objects, enabling
-       them to be used in object-oriented programming contexts.
-    2. **Collections**: Collections in Java, such as `ArrayList`, can only store objects. Wrapper classes allow
-       primitive types to be stored in collections.
-    3. **Utility Methods**: Wrapper classes provide utility methods for converting between types and performing
-       operations on the values.
-    4. **Default Values**: Wrapper classes can be used to represent default values (e.g., `null` for an `Integer`),
-       which is not possible with primitive types.
-    5. **Type Safety**: Wrapper classes enable type safety in generic programming, ensuring that only the correct type
-       of objects are used.
+    -
+        1. **Object-Oriented Programming**: Wrapper classes allow primitive data types to be treated as objects,
+           enabling
+           them to be used in object-oriented programming contexts.
+    -
+        2. **Collections**: Collections in Java, such as `ArrayList`, can only store objects. Wrapper classes allow
+           primitive types to be stored in collections.
+    -
+        3. **Utility Methods**: Wrapper classes provide utility methods for converting between types and performing
+           operations on the values.
+    -
+        4. **Default Values**: Wrapper classes can be used to represent default values (e.g., `null` for an `Integer`),
+           which is not possible with primitive types.
+    -
+        5. **Type Safety**: Wrapper classes enable type safety in generic programming, ensuring that only the correct
+           type
+           of objects are used.
 - **9 . What are the different ways of creating Wrapper class instances?**
   There are two main ways to create instances of Wrapper classes in Java:
-    1. **Using Constructors**:
-       Each wrapper class has a constructor that takes a primitive type or a String as an argument.
+    - a). **Using Constructors**:
+      Each wrapper class has a constructor that takes a primitive type or a String as an argument.
        ```java
        Integer intObj1 = new Integer(10);
        Integer intObj2 = new Integer("10");
        ```
-    2. **Using Static Factory Methods**:
-       The wrapper classes provide static factory methods like `valueOf` to create instances.
+    - b). **Using Static Factory Methods**:
+      The wrapper classes provide static factory methods like `valueOf` to create instances.
        ```java
        Integer intObj1 = 10;
        Integer intObj2 = Integer.valueOf("10");
        ```
-- **10 . What are differences in the two ways of creating Wrapper classes?**
+- **10 . What are differences in the two ways of creating Wrapper classes?** \
   The two ways of creating Wrapper class instances in Java are using constructors and using static factory methods. Here
   are the differences:
 
-    1. **Using Constructors**:
-        - Each wrapper class has a constructor that takes a primitive type or a `String` as an argument.
-        - Example:
-          ```java
-          Integer intObj1 = new Integer(10);
-          Integer intObj2 = new Integer("10");
-          ```
-    2. **Using Static Factory Methods**:
-        - Wrapper classes provide static factory methods like `valueOf` to create instances.
-        - Example:
-          ```java
-          Integer intObj1 = Integer.valueOf(10);
-          Integer intObj2 = Integer.valueOf("10");
-          ```
+    -
+        1. **Using Constructors**:
+           Each wrapper class has a constructor that takes a primitive type or a `String` as an argument. \
+           Example:
+            ```java
+            Integer intObj1 = new Integer(10);
+            Integer intObj2 = new Integer("10");
+            ```
+    -
+        2. **Using Static Factory Methods**:
+           Wrapper classes provide static factory methods like `valueOf` to create instances.\
+           Example:
+            ```java
+            Integer intObj1 = Integer.valueOf(10);
+            Integer intObj2 = Integer.valueOf("10");
+            ```
   **Differences**:
     - **Performance**: Static factory methods are generally preferred over constructors because they can cache
       frequently requested values, improving performance.
-        - **Readability**: Using `valueOf` is often more readable and expressive.
-        - **Deprecation**: Some constructors in wrapper classes are deprecated in favor of static factory methods.
+    - **Readability**: Using `valueOf` is often more readable and expressive.
+    - **Deprecation**: Some constructors in wrapper classes are deprecated in favor of static factory methods.
 - **11 . What is auto boxing?**
   Autoboxing in Java is the automatic conversion that the Java compiler makes between the primitive types and their
   corresponding object wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and
@@ -160,24 +179,30 @@ Available in the resources for the course
   In this example, the primitive `int` is automatically converted to an `Integer` object.
 - **12 . What are the advantages of auto boxing?**
   Autoboxing in Java provides several advantages:
-    1. **Simplicity**: Autoboxing simplifies the process of working with primitive types in contexts that require
-       objects,
-       such as collections.
-    2. **Readability**: Autoboxing makes the code more readable and expressive by automatically converting between
-       primitive types and their corresponding object wrapper classes.
-    3. **Convenience**: Autoboxing eliminates the need for manual conversion between primitive types and objects,
-       reducing
-       boilerplate code.
-    4. **Compatibility**: Autoboxing allows code written with primitive types to be used in contexts that require
-       objects,
-       without the need for explicit conversion.
+    -
+        1. **Simplicity**: Autoboxing simplifies the process of working with primitive types in contexts that require
+           objects,
+           such as collections.
+    -
+        2. **Readability**: Autoboxing makes the code more readable and expressive by automatically converting between
+           primitive types and their corresponding object wrapper classes.
+    -
+        3. **Convenience**: Autoboxing eliminates the need for manual conversion between primitive types and objects,
+           reducing
+           boilerplate code.
+    -
+        4. **Compatibility**: Autoboxing allows code written with primitive types to be used in contexts that require
+           objects, without the need for explicit conversion.
 - **13 . What is casting?**
   Casting in Java is the process of converting a value of one data type to another. There are two types of casting:
-    1. **Implicit Casting**: When a smaller data type is converted to a larger data type, Java automatically performs
-       the
-       conversion. For example, converting an `int` to a `double`.
-    2. **Explicit Casting**: When a larger data type is converted to a smaller data type, or when converting between
-       incompatible types, explicit casting is required. For example, converting a `double` to an `int`.
+    -
+        1. **Implicit Casting**: When a smaller data type is converted to a larger data type, Java automatically
+           performs
+           the
+           conversion. For example, converting an `int` to a `double`.
+    -
+        2. **Explicit Casting**: When a larger data type is converted to a smaller data type, or when converting between
+           incompatible types, explicit casting is required. For example, converting a `double` to an `int`.
 
   Example:
   ```java
@@ -209,26 +234,25 @@ Available in the resources for the course
 
 ### Strings
 
-- **16 . Are all String**’s immutable?
+- **16 . Are all String**’s immutable?\
   No, not all `String` objects are immutable. In Java, `String` objects are immutable, meaning once a `String`
   object is created, its value cannot be changed. However, there are other classes like `StringBuilder`
   and `StringBuffer` that provide mutable alternatives to `String`. These classes allow you to modify the contents
   of the string without creating new objects.
-- **17 . Where are String values stored in memory?**
+- **17 . Where are String values stored in memory?**\
   In Java, `String` values are stored in a special memory area called the **String Pool**. The String Pool is part of
   the Java heap memory and is used to store unique `String` literals. When a `String` literal is created, the JVM checks
   the String Pool to see if an identical `String` already exists. If it does, the reference to the existing `String` is
   returned. If not, the new `String` is added to the pool. This process helps in saving memory and improving performance
   by reusing immutable `String` objects.
-- **18 . Why should you be careful about String concatenation**(+) operator in loops?
+- **18 . Why should you be careful about String concatenation(+) operator in loops?**\
   String concatenation using the `+` operator in loops can be inefficient due to the immutability of `String` objects.
   Each time a `String` is concatenated using the `+` operator, a new `String` object is created, resulting in
   unnecessary memory allocation and garbage collection. This can lead to performance issues, especially in loops where
   multiple concatenations are performed. To improve performance, it is recommended to use `StringBuilder`
   or `StringBuffer`
   for string concatenation in loops, as these classes provide mutable alternatives to `String` and are more efficient
-  for
-  building strings.
+  for building strings.
 - **19 . How do you solve above problem?**
   To solve the problem of inefficient string concatenation using the `+` operator in loops, you should
   use `StringBuilder` or `StringBuffer`. These classes provide mutable alternatives to `String` and are more efficient
@@ -928,18 +952,18 @@ public class Dog implements Animal {
 
     No, this code will not compile due to a missing semicolon at the end of the `System.out.println` statement. In Java,
 
-- **52 . What is the use of this**() keyword in Java?
+- **52 . What is the use of this**() keyword in Java?\
   The `this` keyword in Java is a reference to the current object within a method or constructor. It can be used to
   access instance variables, call other constructors, or pass the current object as a parameter to other methods. The
   use of `this` is optional, but it can help clarify code and avoid naming conflicts between instance variables and
   method parameters.
 
-- **53 . Can a constructor be called directly from a method?**
+- **53 . Can a constructor be called directly from a method?**\
   No, a constructor cannot be called directly from a method. Constructors are special methods that are called only when
   an object is created. However, you can call another constructor from a constructor using `this()` or `super()`. If you
   need to initialize an object within a method, you should create a new instance of the class using the `new` keyword.
 
-- **54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?**
+- **54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?**\
   Yes, a superclass constructor is always called, even if there is no explicit call from a subclass constructor. If a
   subclass constructor does not explicitly call a superclass constructor using `super()`, the Java compiler
   automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a
@@ -958,7 +982,7 @@ public class Dog implements Animal {
 
   Polymorphism allows for flexibility and the ability to define methods that can be used interchangeably, making the
   code more modular and easier to maintain.
-- **56 . What is the use of instanceof operator in Java?**
+- **56 . What is the use of instanceof operator in Java?**\
   The `instanceof` operator in Java is used to test whether an object is an instance of a specific class or implements a
   specific interface. It returns `true` if the object is an instance of the specified class or interface, and `false`
   otherwise. This operator is useful for type checking before performing type-specific operations.
@@ -989,8 +1013,9 @@ public class Dog implements Animal {
     ```
 
   In this example, the `instanceof` operator checks if the `animal` object is an instance of the `Dog` class before
-  casting it to `Dog` and calling the `bark` method.
-- **57 . What is coupling?**
+  casting it to `Dog` and calling the `bark` method. This helps prevent `ClassCastException` errors by ensuring that the
+  object is of the correct type before performing type-specific operations.
+- **57 . What is coupling?**\
   Coupling in software engineering refers to the degree of direct knowledge that one module has about another. It
   measures how closely connected two routines or modules are. High coupling means that modules are highly dependent on
   each other, which can make the system more difficult to understand, maintain, and modify. Low coupling, on the other
@@ -1005,7 +1030,7 @@ public class Dog implements Animal {
 
   To reduce coupling, it is important to follow good design principles like encapsulation, abstraction, and separation
   of concerns.
-- **58 . What is cohesion?**
+- **58 . What is cohesion?**\
   Cohesion in software engineering refers to the degree to which the elements inside a module belong together. It
   measures how closely related the responsibilities of a single module are. High cohesion means that the elements within
   a module are strongly related and work together to achieve a common goal. Low cohesion, on the other hand, means that
@@ -1014,14 +1039,16 @@ public class Dog implements Animal {
   Cohesion in Java refers to the degree to which the methods in a class are related and work together to achieve a
   common purpose. High cohesion is desirable as it promotes code that is easier to understand, maintain, and test. Low
   cohesion can lead to code that is difficult to follow, modify, and debug.
-- **59 . What is encapsulation?**
+- **59 . What is encapsulation?**\
   Encapsulation in Java is a fundamental object-oriented programming concept that involves bundling the data (fields)
   and the methods (functions) that operate on the data into a single unit, called a class. It restricts direct access to
   some of the object's components, which can help prevent the accidental modification of data. Encapsulation is achieved
   by:
 
-    1. Declaring the fields of a class as private.
-    2. Providing public getter and setter methods to access and update the value of the private fields.
+    -
+        1. Declaring the fields of a class as private.
+    -
+        2. Providing public getter and setter methods to access and update the value of the private fields.
 
   Here is an example:
 
@@ -1055,52 +1082,264 @@ public class Dog implements Animal {
   In this example, the `name` and `age` fields are private, and they can only be accessed and modified through the
   public getter and setter methods. This ensures that the internal state of the object is protected and can only be
   changed in a controlled manner.
-- **60 . What is an inner class?**
+- **60 . What is an inner class?**\
   An inner class in Java is a class that is defined within another class. Inner classes can access the members (
   including private members) of the outer class. There are four types of inner classes in Java:
 
-    1. **Member Inner Class**: A class defined within another class.
-    2. **Static Nested Class**: A static class defined within another class.
-    3. **Local Inner Class**: A class defined within a method.
-    4. **Anonymous Inner Class**: A class without a name, defined and instantiated in a single statement.
+    -
+        1. **Member Inner Class**: A class defined within another class.
+    -
+        2. **Static Nested Class**: A static class defined within another class.
+    -
+        3. **Local Inner Class**: A class defined within a method.
+    -
+        4. **Anonymous Inner Class**: A class without a name, defined and instantiated in a single statement.
 
-  Here is an example of a member inner class:
+  Inner classes are useful for grouping related classes together, improving encapsulation, and reducing code complexity.
+-
+
+Here is an example of a member inner class:
+
+  ```java
+  public class OuterClass {
+    private int outerField = 10;
+
+    class InnerClass {
+        void display() {
+            System.out.println("Outer field value: " + outerField);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        OuterClass.InnerClass inner = outer.new InnerClass();
+        inner.display();
+    }
+
+}
+  ```
+
+In this example, `InnerClass` is an inner class within `OuterClass` and can access the `outerField` of `OuterClass`.
+
+- **61 . What is a static inner class?**\  
+  A static inner class in Java is a nested class that is defined as a static member of the outer class. It does not have
+  access to the instance variables and methods of the outer class, but it can access static members of the outer class.
+  Static inner classes are useful for grouping related classes together and improving code organization.
+
+  Here is an example of a static inner class:
+
+    ```java
+    public class OuterClass {
+        private static int outerStaticField = 10;
+    
+        static class StaticInnerClass {
+            void display() {
+                System.out.println("Outer static field value: " + outerStaticField);
+            }
+        }
+    
+        public static void main(String[] args) {
+            OuterClass.StaticInner inner = new OuterClass.StaticInner();
+            inner.display();
+        }
+    }
+    ```
+  In this example, `StaticInnerClass` is a static inner class within `OuterClass` and can access the `outerStaticField`
+  of `OuterClass`.
+
+- **62 . Can you create an inner class inside a method?** \
+  Yes, you can create an inner class inside a method in Java. This type of inner class is called a local inner class.
+  Local inner classes are defined within a method and can only be accessed within that method. They have access to the
+  variables and parameters of the enclosing method, but they must be declared before they are used.
+
+  Here is an example of a local inner class:
 
     ```java
     public class OuterClass {
         private int outerField = 10;
     
-        class InnerClass {
-            void display() {
-                System.out.println("Outer field value: " + outerField);
+        public void display() {
+            class LocalInnerClass {
+                void display() {
+                    System.out.println("Outer field value: " + outerField);
+                }
             }
+    
+            LocalInnerClass inner = new LocalInnerClass();
+            inner.display();
         }
     
         public static void main(String[] args) {
             OuterClass outer = new OuterClass();
-            OuterClass.InnerClass inner = outer.new InnerClass();
-            inner.display();
+            outer.display();
         }
     }
     ```
 
-  In this example, `InnerClass` is an inner class within `OuterClass` and can access the `outerField` of `OuterClass`.
-- **61 . What is a static inner class?**
-- **62 . Can you create an inner class inside a method?**
-- **63 . What is an anonymous class?**
+  In this example, `LocalInnerClass` is a local inner class defined within the `display` method of `OuterClass`. It can
+  access the `outerField` of `OuterClass` and is instantiated and used within the `display` method.
+- **63 . What is an anonymous class?** \
+  An anonymous class in Java is a class without a name that is defined and instantiated in a single statement. It is
+  typically used for one-time use cases where a class needs to be defined and instantiated without creating a separate
+  class file. Anonymous classes are often used for event handling, callbacks, and other situations where a class is
+  needed for a specific purpose.
+
+  Here is an example of an anonymous class:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("Hello, World!");
+                }
+            };
+    
+            new Thread(runnable).start();
+        }
+    }
+    ```
+  here is the same example using a lambda expression:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            Runnable runnable = () -> System.out.println("Hello, World!");
+            new Thread(runnable).start();
+        }
+    }
+    ```
+
+  In this example, an anonymous class is defined and instantiated as an implementation of the `Runnable` interface. It
+  is
+  used to create a new `Thread` that prints "Hello, World!" when started.
 
 ### Modifiers
 
-- **64 . What is default class modifier?**
-- **65 . What is private access modifier?**
-- **66 . What is default or package access modifier?**
-- **67 . What is protected access modifier?**
-- **68 . What is public access modifier?**
-- **69 . What access types of variables can be accessed from a class in same package?**
-- **70 . What access types of variables can be accessed from a class in different package?**
-- **71 . What access types of variables can be accessed from a sub class in same package?**
-- **72 . What access types of variables can be accessed from a sub class in different package?**
-- **73 . What is the use of a final modifier on a class?**
+- **64 . What is default class modifier?** \
+  The default class modifier in Java is package-private, which means that the class is only accessible within the same
+  package. If no access modifier is specified for a class, it is considered to have default access. This means that the
+  class can be accessed by other classes within the same package but not by classes in different packages.
+
+  Here is an example of a class with default access:
+
+    ```java
+    class MyClass {
+        // class implementation
+    }
+    ```
+
+  In this example, `MyClass` has default access, so it can be accessed by other classes within the same package but not
+  by classes in different packages. If you want a class to be accessible from other packages, you should use the
+  `public` access modifier. If you want to restrict access to the class to only subclasses, you can use the `protected`
+  access modifier. If you want to restrict access to only the class itself, you can use the `private` access modifier.
+- **65 . What is private access modifier?** \
+  The `private` access modifier in Java is the most restrictive access level. It is used to restrict access to members
+  (fields, methods, constructors) of a class to only within the same class. This means that private members cannot be
+  accessed by other classes, even subclasses. Private members are only accessible within the class in which they are
+  declared.
+
+  Here is an example of a private field:
+
+    ```java
+    public class MyClass {
+        private int privateField;
+    
+        public void setPrivateField(int value) {
+            privateField = value;
+        }
+    
+        public int getPrivateField() {
+            return privateField;
+        }
+    }
+    ```
+
+  In this example, `privateField` is a private field that can only be accessed and modified within the `MyClass` class.
+  Any attempt to access or modify `privateField` from outside the class will result in a compilation error.
+- **66 . What is default or package access modifier?** \
+  The default or package access modifier in Java is the absence of an access modifier. It is also known as
+  package-private
+  access. This means that the class, method, or field with default access can only be accessed by classes within the
+  same
+  package. It is more restrictive than the `protected` access modifier but less restrictive than the `private` and
+  `public` access modifiers.
+
+  Here is an example of a class with default access:
+
+    ```java
+    class MyClass {
+        // class implementation
+    }
+    ```
+
+  In this example, `MyClass` has default access, so it can be accessed by other classes within the same package but not
+  by classes in different packages. If you want a class to be accessible from other packages, you should use the
+  `public` access modifier. If you want to restrict access to the class to only subclasses, you can use the `protected`
+  access modifier. If you want to restrict access to only the class itself, you can use the `private` access modifier.
+- **67 . What is protected access modifier?** \
+  The `protected` access modifier in Java is used to restrict access to members (fields, methods, constructors) of a
+  class to only within the same package or subclasses of the class. This means that protected members can be accessed by
+  classes within the same package and by subclasses, even if they are in different packages. Protected members are not
+  accessible by classes that are not in the same package or are not subclasses of the class.
+
+  Here is an example of a protected field:
+
+    ```java
+    public class SuperClass {
+        protected int protectedField;
+    }
+    
+    public class SubClass extends SuperClass {
+        public void setProtectedField(int value) {
+            protectedField = value;
+        }
+    
+        public int getProtectedField() {
+            return protectedField;
+        }
+    }
+    ```
+
+  In this example, `protectedField` is a protected field in the `SuperClass` class. It can be accessed and modified by
+  the `SubClass` class, which is a subclass of `SuperClass`. Any attempt to access or modify `protectedField` from a
+  class that is not in the same package or is not a subclass of `SuperClass` will result in a compilation error.
+- **68 . What is public access modifier?** \
+  The `public` access modifier in Java is the least restrictive access level. It allows a class, method, or field to be
+  accessed by any other class in the same project or in other projects. Public members are accessible from any other
+  class, regardless of the package or inheritance relationship. This makes them useful for creating APIs and libraries
+  that can be used by other developers.
+- **69 . What access types of variables can be accessed from a class in same package?** \
+  In Java, a class in the same package can access the following types of variables:
+    - **Public Variables**: Public variables can be accessed by any class in the same package or in other packages.
+    - **Protected Variables**: Protected variables can be accessed by any class in the same package or by subclasses in
+      other packages.
+    - **Default (Package-Private) Variables**: Default variables can be accessed by any class in the same package.
+    - **Private Variables**: Private variables cannot be accessed by any other class, even in the same package.
+- **70 . What access types of variables can be accessed from a class in different package?** \
+  In Java, a class in a different package can access the following types of variables:
+    - **Public Variables**: Public variables can be accessed by any class in any package.
+    - **Protected Variables**: Protected variables can be accessed by subclasses in any package, but not by non-subclasses
+      in different packages.
+    - **Default (Package-Private) Variables**: Default variables cannot be accessed by classes in different packages.
+    - **Private Variables**: Private variables cannot be accessed by any other class, even in a different package.
+- **71 . What access types of variables can be accessed from a sub class in same package?** \
+  In Java, a subclass in the same package can access the following types of variables:
+    - **Public Variables**: Public variables can be accessed by any class in the same package or in other packages.
+    - **Protected Variables**: Protected variables can be accessed by any class in the same package or by subclasses in
+      other packages.
+    - **Default (Package-Private) Variables**: Default variables can be accessed by any class in the same package.
+    - **Private Variables**: Private variables cannot be accessed by any other class, even in the same package.
+- **72 . What access types of variables can be accessed from a sub class in different package?** \
+  In Java, a subclass in a different package can access the following types of variables:
+    - **Public Variables**: Public variables can be accessed by any class in any package.
+    - **Protected Variables**: Protected variables can be accessed by subclasses in any package, but not by non-subclasses
+      in different packages.
+    - **Default (Package-Private) Variables**: \Default variables cannot be accessed by classes in different packages.
+    - **Private Variables**: Private variables cannot be accessed by any other class, even in a different package.
+- **73 . What is the use of a final modifier on a class?** \
   The `final` modifier on a class in Java is used to prevent the class from being subclassed. This means that no other
   class can extend a `final` class. It is often used to create immutable classes or to ensure that the implementation of
   the class cannot be altered through inheritance.
@@ -1159,7 +1398,7 @@ public class Dog implements Animal {
   In this example, `MAX_VALUE` is a final variable that cannot be reassigned after it is initialized. Any attempt to
   reassign `MAX_VALUE` will result in a compilation error. This ensures that the value of `MAX_VALUE` remains constant
   in the program.
-- **76 . What is a final argument?**
+- **76 . What is a final argument?**\
   A final argument in Java is a method parameter that is declared with the `final` keyword. This means that once the
   parameter is assigned a value, it cannot be changed within the method. This is useful for ensuring that the parameter
   remains constant throughout the method execution.
@@ -1176,12 +1415,12 @@ public class Dog implements Animal {
 
   In this example, `finalParam` is a final argument, and any attempt to reassign it within the method will result in a
   compilation error.
-- **77 . What happens when a variable is marked as volatile?**
+- **77 . What happens when a variable is marked as volatile?**\
   When a variable is marked as `volatile` in Java, it ensures that the value of the variable is always read from and
   written to the main memory, rather than being cached in a thread's local memory. This guarantees visibility of changes
   to the variable across all threads. The `volatile` keyword is used to prevent memory consistency errors in concurrent
   programming.
-- **78 . What is a static variable?**
+- **78 . What is a static variable?**\
   A static variable in Java is a variable that is shared among all instances of a class. It is declared using the
   `static` keyword and belongs to the class rather than any specific instance. This means that there is only one copy of
   the static variable, regardless of how many instances of the class are created. Static variables are often used for
