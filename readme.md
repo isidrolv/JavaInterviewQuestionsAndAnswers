@@ -2661,8 +2661,100 @@ public class Dog implements Animal {
 
   These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations
   based on the requirements of the application.
-- 195 . How do you check whether an ExecutionService task executed successfully?
-- 196 . What is callable? How do you execute a callable from executionservice?
+- 195 . How do you check whether an ExecutionService task executed successfully? \
+  The `Future` interface in the Java Concurrency API provides a way to check whether an `ExecutorService` task executed
+  successfully and retrieve the result of the task. The `Future` interface represents the result of an asynchronous
+  computation and provides methods for checking the status of the task, waiting for the task to complete, and retrieving
+  the result of the task.
+
+  Here is an example of using `Future` to check whether an `ExecutorService` task executed successfully:
+
+    ```java
+    import java.util.concurrent.ExecutorService;
+    import java.util.concurrent.Executors;
+    import java.util.concurrent.Future;
+
+    public class Main {
+        public static void main(String[] args) {
+            // Create an ExecutorService with a fixed thread pool size
+            ExecutorService executor = Executors.newFixedThreadPool(2);
+
+            // Submit a task for execution
+            Future<String> future = executor.submit(() -> {
+                Thread.sleep(2000);
+                return "Task completed successfully";
+            });
+
+            // Check if the task is done
+            if (future.isDone()) {
+                try {
+                    // Get the result of the task
+                    String result = future.get();
+                    System.out.println("Task result: " + result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            // Shutdown the ExecutorService
+            executor.shutdown();
+        }
+    }
+    ```
+
+  In this example, a task is submitted for execution using the `submit` method, which returns a `Future` representing the
+  result of the task. The `isDone` method is used to check if the task has completed, and the `get` method is used to
+  retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the `ExecutorService` is shut down to release the resources. 
+- 196 . What is callable? How do you execute a callable from executionservice? \
+  `Callable` is a functional interface in the Java Concurrency API that represents a task that can be executed
+  asynchronously and return a result. `Callable` is similar to `Runnable`, but it can return a result or throw an
+  exception. The `Callable` interface defines a single method, `call`, that takes no arguments and returns a result of
+  a specified type.
+
+  Here is an example of executing a `Callable` from an `ExecutorService`:
+
+    ```java
+    import java.util.concurrent.Callable;
+    import java.util.concurrent.ExecutorService;
+    import java.util.concurrent.Executors;
+    import java.util.concurrent.Future;
+
+    public class Main {
+        public static void main(String[] args) {
+            // Create an ExecutorService with a fixed thread pool size
+            ExecutorService executor = Executors.newFixedThreadPool(2);
+
+            // Create a Callable task
+            Callable<String> callable = () -> {
+                Thread.sleep(2000);
+                return "Task completed successfully";
+            };
+
+            // Submit the Callable task for execution
+            Future<String> future = executor.submit(callable);
+
+            // Check if the task is done
+            if (future.isDone()) {
+                try {
+                    // Get the result of the task
+                    String result = future.get();
+                    System.out.println("Task result: " + result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            // Shutdown the ExecutorService
+            executor.shutdown();
+        }
+    }
+    ```
+
+  In this example, a `Callable` task is created using a lambda expression that sleeps for 2 seconds and returns a result.
+  The `Callable` task is then submitted for execution using the `submit` method, which returns a `Future` representing
+  the result of the task. The `isDone` method is used to check if the task has completed, and the `get` method is used to
+  retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the
+  `ExecutorService` is shut down to release the resources.
 - 197 . What is synchronization of threads? \
   Synchronization in Java is a mechanism that allows multiple threads to coordinate access to shared resources.
 - 198 . Can you give an example of a synchronized block? \
@@ -2811,7 +2903,24 @@ public class Dog implements Animal {
   In this example, a thread is created that sleeps for 2 seconds before finishing. The `join` method is called on the
   thread to wait for it to finish before printing a message in the main thread. This ensures that the main thread waits
   for the thread to complete before continuing.
-- 201 . Describe a few other important methods in threads?
+- 201 . Describe a few other important methods in threads? \
+  Some other important methods in Java threads include:
+    - **`start`**: The `start` method is used to start a thread and execute its `run` method asynchronously.
+    - **`sleep`**: The `sleep` method is used to pause the execution of a thread for a specified amount of time.
+    - **`yield`**: The `yield` method is used to give up the current thread's turn and allow other threads to run.
+    - **`interrupt`**: The `interrupt` method is used to interrupt a thread that is blocked or sleeping.
+    - **`isAlive`**: The `isAlive` method is used to check if a thread is alive and running.
+    - **`setName` and `getName`**: The `setName` and `getName` methods are used to set and get the name of a thread.
+    - **`setPriority` and `getPriority`**: The `setPriority` and `getPriority` methods are used to set and get the
+      priority of a thread.
+    - **`join`**: The `join` method is used to wait for a thread to complete its execution before continuing with the
+      current thread.
+    - **`wait` and `notify`**: The `wait` and `notify` methods are used for inter-thread communication and synchronization
+      in multi-threaded programs.
+    - **`isInterrupted` and `interrupted`**: The `isInterrupted` and `interrupted` methods are used to check if a thread
+      has been interrupted.
+    - **`run`**: The `run` method is the entry point for a thread's execution and contains the code that the thread will
+      run.
 - 202 . What is a deadlock? How can you avoid a deadlock? \
   A deadlock is a situation in multi-threaded programming where two or more threads are blocked forever, waiting for
   each
