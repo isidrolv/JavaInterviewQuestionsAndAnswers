@@ -30,7 +30,7 @@ Available in the resources for the course
 
 ### Java Platform
 
-- 1 . Why is Java so popular?
+- **1 . ****Why is Java so popular?**
     - Java is popular for several reasons:
 
     1. **Platform Independence**: Java programs can run on any device that has the Java Virtual Machine (JVM), making it
@@ -42,18 +42,18 @@ Available in the resources for the course
     6. **Performance**: Java's performance has improved significantly with Just-In-Time (JIT) compilers and other
        optimizations.
     7. **Enterprise Use**: Java is widely used in enterprise environments, particularly for server-side applications.
-- 2 . What is platform independence?
+- **2 . What is platform independence?**
   Platform independence refers to the ability of a programming language or software to run on various types of computer
   systems without modification. In the context of Java, platform independence is achieved through the use of the Java
   Virtual Machine (JVM). Java programs are compiled into bytecode, which can be executed on any device that has a JVM,
   regardless of the underlying hardware and operating system. This allows Java applications to be written once and run
   anywhere.
-- 3 . What is bytecode?
+- **3 . What is bytecode?**
   Bytecode is an intermediate representation of a Java program. When a Java program is compiled, it is converted into
   bytecode, which is a set of instructions that can be executed by the Java Virtual Machine (JVM). Bytecode is
   platform-independent, meaning it can run on any device that has a JVM, regardless of the underlying hardware and
   operating system. This allows Java programs to be written once and run anywhere.
-- 4 . Compare JDK vs JVM vs JRE
+- **4 . Compare JDK vs JVM vs JRE**
     - **JDK (Java Development Kit)**: A software development kit used to develop Java applications. It includes the JRE,
       an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and
       other tools needed for Java development.
@@ -62,14 +62,14 @@ Available in the resources for the course
       platform independence.
     - **JRE (Java Runtime Environment)**: A package of software that provides the class libraries, JVM, and other
       components to run applications written in Java. It does not include development tools like compilers or debuggers.
-- 5 . What are the important differences between C++ and Java?
+- **5 . What are the important differences between C++ and Java?**
     - **Memory Management**: C++ uses manual memory management with pointers, while Java uses automatic garbage
       collection.
     - **Platform Independence**: Java is platform-independent due to the JVM, whereas C++ is platform-dependent and
       needs to be compiled for each platform.
     - **Multiple Inheritance**: C++ supports multiple inheritance, while Java does not. Java uses interfaces to achieve
       similar functionality.
-    - **Pointers**: C++ supports pointers, allowing direct memory access. Java does not support pointers explicitly,
+    - **Pointers**: C++ supports pointe rs, allowing direct memory access. Java does not support pointers explicitly,
       enhancing security and simplicity.
     - **Standard Library**: Java has a rich standard library with built-in support for networking, threading, and GUI
       development. C++ has a standard library but with less built-in support for these features.
@@ -80,7 +80,7 @@ Available in the resources for the course
 
 ### Wrapper Classes
 
-- 7 . What are Wrapper classes?
+- **7 . What are Wrapper classes?**
   Wrapper classes in Java are classes that encapsulate a primitive data type into an object. They provide a way to use
   primitive data types (like `int`, `char`, etc.) as objects. Each primitive type has a corresponding wrapper class:
 
@@ -96,7 +96,7 @@ Available in the resources for the course
   Wrapper classes are useful because they allow primitives to be used in contexts that require objects, such as in
   collections like `ArrayList`, and they provide utility methods for converting between types and performing operations
   on the values.
-- 8 . Why do we need Wrapper classes in Java?
+- **8 . Why do we need Wrapper classes in Java?**
   Wrapper classes in Java are needed for the following reasons:
     1. **Object-Oriented Programming**: Wrapper classes allow primitive data types to be treated as objects, enabling
        them to be used in object-oriented programming contexts.
@@ -108,7 +108,7 @@ Available in the resources for the course
        which is not possible with primitive types.
     5. **Type Safety**: Wrapper classes enable type safety in generic programming, ensuring that only the correct type
        of objects are used.
-- 9 . What are the different ways of creating Wrapper class instances?
+- **9 . What are the different ways of creating Wrapper class instances?**
   There are two main ways to create instances of Wrapper classes in Java:
     1. **Using Constructors**:
        Each wrapper class has a constructor that takes a primitive type or a String as an argument.
@@ -122,7 +122,7 @@ Available in the resources for the course
        Integer intObj1 = 10;
        Integer intObj2 = Integer.valueOf("10");
        ```
-- 10 . What are differences in the two ways of creating Wrapper classes?
+- **10 . What are differences in the two ways of creating Wrapper classes?**
   The two ways of creating Wrapper class instances in Java are using constructors and using static factory methods. Here
   are the differences:
 
@@ -145,7 +145,7 @@ Available in the resources for the course
       frequently requested values, improving performance.
         - **Readability**: Using `valueOf` is often more readable and expressive.
         - **Deprecation**: Some constructors in wrapper classes are deprecated in favor of static factory methods.
-- 11 . What is auto boxing?
+- **11 . What is auto boxing?**
   Autoboxing in Java is the automatic conversion that the Java compiler makes between the primitive types and their
   corresponding object wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and
   so on. This feature was introduced in Java 5 to simplify the process of working with primitive types in contexts that
@@ -158,7 +158,7 @@ Available in the resources for the course
     ```
 
   In this example, the primitive `int` is automatically converted to an `Integer` object.
-- 12 . What are the advantages of auto boxing?
+- **12 . What are the advantages of auto boxing?**
   Autoboxing in Java provides several advantages:
     1. **Simplicity**: Autoboxing simplifies the process of working with primitive types in contexts that require
        objects,
@@ -171,7 +171,7 @@ Available in the resources for the course
     4. **Compatibility**: Autoboxing allows code written with primitive types to be used in contexts that require
        objects,
        without the need for explicit conversion.
-- 13 . What is casting?
+- **13 . What is casting?**
   Casting in Java is the process of converting a value of one data type to another. There are two types of casting:
     1. **Implicit Casting**: When a smaller data type is converted to a larger data type, Java automatically performs
        the
@@ -186,7 +186,7 @@ Available in the resources for the course
   double doubleValue = 10.5;
   int intValue = (int) doubleValue; // Explicit casting
   ```
-- 14 . What is implicit casting?
+- **14 . What is implicit casting?**
   Implicit casting in Java is the automatic conversion of a smaller data type to a larger data type. Java performs
   implicit casting when the target data type can accommodate the source data type without loss of precision. For
   example, converting an `int` to a `double` or a `float` to a `double`.
@@ -196,7 +196,7 @@ Available in the resources for the course
   int intValue = 10;
   double doubleValue = intValue; // Implicit casting
   ```
-- 15 . What is explicit casting?
+- **15 . What is explicit casting?**
   Explicit casting in Java is the manual conversion of a larger data type to a smaller data type, or when converting
   between incompatible types. Java requires explicit casting when the target data type may lose precision or range
   when accommodating the source data type. For example, converting a `double` to an `int`.
@@ -209,18 +209,18 @@ Available in the resources for the course
 
 ### Strings
 
-- 16 . Are all String’s immutable?
+- **16 . Are all String**’s immutable?
   No, not all `String` objects are immutable. In Java, `String` objects are immutable, meaning once a `String`
   object is created, its value cannot be changed. However, there are other classes like `StringBuilder`
   and `StringBuffer` that provide mutable alternatives to `String`. These classes allow you to modify the contents
   of the string without creating new objects.
-- 17 . Where are String values stored in memory?
+- **17 . Where are String values stored in memory?**
   In Java, `String` values are stored in a special memory area called the **String Pool**. The String Pool is part of
   the Java heap memory and is used to store unique `String` literals. When a `String` literal is created, the JVM checks
   the String Pool to see if an identical `String` already exists. If it does, the reference to the existing `String` is
   returned. If not, the new `String` is added to the pool. This process helps in saving memory and improving performance
   by reusing immutable `String` objects.
-- 18 . Why should you be careful about String concatenation(+) operator in loops?
+- **18 . Why should you be careful about String concatenation**(+) operator in loops?
   String concatenation using the `+` operator in loops can be inefficient due to the immutability of `String` objects.
   Each time a `String` is concatenated using the `+` operator, a new `String` object is created, resulting in
   unnecessary memory allocation and garbage collection. This can lead to performance issues, especially in loops where
@@ -229,7 +229,7 @@ Available in the resources for the course
   for string concatenation in loops, as these classes provide mutable alternatives to `String` and are more efficient
   for
   building strings.
-- 19 . How do you solve above problem?
+- **19 . How do you solve above problem?**
   To solve the problem of inefficient string concatenation using the `+` operator in loops, you should
   use `StringBuilder` or `StringBuffer`. These classes provide mutable alternatives to `String` and are more efficient
   for building strings.
@@ -244,7 +244,7 @@ Available in the resources for the course
   String result = sb.toString();
   ```
 
-- 20 . What are the differences between `String` and `StringBuffer`?
+- **20 . What are the differences between `String` and `StringBuffer`?**
     - **Mutability**: `String` objects are immutable, meaning their values cannot be changed once
       created. `StringBuffer` objects are mutable, allowing their values to be modified.
     - **Thread Safety**: `StringBuffer` is synchronized, making it thread-safe. `String` is not synchronized.
@@ -252,7 +252,7 @@ Available in the resources for the course
       is faster for concatenation and modification operations.
     - **Usage**: Use `String` when the value does not change. Use `StringBuffer` when the value changes frequently and
       thread safety is required.
-- 22 . Can you give examples of different utility methods in String class?
+- **22 . Can you give examples of different utility methods in String class?**
   The `String` class in Java provides various utility methods. Here are some examples:
 
   ```java
@@ -287,20 +287,20 @@ Available in the resources for the course
 
 ### Object oriented programming basics
 
-- 23 . What is a class?
+- **23 . What is a class?**
   A class in Java is a blueprint for creating objects. It defines a set of properties (fields) and methods that the
   created objects will have. A class encapsulates data for the object and methods to manipulate that data. It serves as
   a template from which individual objects are instantiated.
-- 25 . What is state of an object?
+- **25 . What is state of an object?**
   The state of an object in Java refers to the data or values stored in its fields (instance variables) at any given
   time. The state represents the current condition of the object, which can change over time as the values of its fields
   are modified through methods or operations.
-- 26 . What is behavior of an object?
+- **26 . What is behavior of an object?**
   The behavior of an object in Java refers to the actions or operations that the object can perform. These behaviors are
   defined by the methods in the object's class. The methods manipulate the object's state and can interact with other
   objects. The behavior of an object is what it can do, such as calculating a value, modifying its state, or interacting
   with other objects.
-- 28 . Explain about toString method ?
+- **28 . Explain about toString method ?**
   The `toString` method in Java is a method that returns a string representation of an object. It is defined in
   the `Object` class, which is the superclass of all Java classes. By default, the `toString` method returns a string
   that consists of the class name followed by the `@` character and the object's hashcode in hexadecimal form.
@@ -335,7 +335,7 @@ Available in the resources for the course
   In this example, the `toString` method is overridden to return a string that includes the `name` and `age` of
   the `Person` object.
 
-- 29 . What is the use of equals method in Java?
+- **29 . What is the use of equals method in Java?**
   The `equals` method in Java is used to compare the equality of two objects. It is defined in the `Object` class and
   can be overridden in subclasses to provide custom equality logic. By default, the `equals` method compares object
   references, checking if two references point to the same object in memory.
@@ -386,7 +386,7 @@ Available in the resources for the course
   determine if they are equal. The `hashCode` method is also overridden to ensure that equal objects have the same hash
   code, which is important when using objects in collections like `HashSet` or `HashMap`.
 
-- 30 . What are the important things to consider when implementing `equals` method?
+- **30 . What are the important things to consider when implementing `equals` method?**
     - **Reflexive**: `x.equals(x)` should return `true`.
     - **Symmetric**: If `x.equals(y)` returns `true`, then `y.equals(x)` should also return `true`.
     - **Transitive**: If `x.equals(y)` and `y.equals(z)` both return `true`, then `x.equals(z)` should also
@@ -395,7 +395,7 @@ Available in the resources for the course
     - **Non-nullity**: `x.equals(null)` should return `false`.
     - **Type Check**: Ensure the object being compared is of the correct type.
     - **Field Comparison**: Compare significant fields that determine equality.
-- 31 . What is the Hashcode method used for in Java?
+- **31 . What is the Hashcode method used for in Java?**
   The `hashCode` method in Java is used to generate a unique integer value for an object. It is defined in the `Object`
   class and can be overridden in subclasses to provide a custom hash code calculation. The `hashCode` method is used
   primarily for objects that are stored in collections like `HashSet` or `HashMap`, where the hash code is used to
@@ -428,7 +428,7 @@ Available in the resources for the course
   In this example, the `hashCode` method is overridden to generate a hash code based on the `name` and `age` fields of
   `Person` objects. This ensures that equal objects have the same hash code, which is important for using objects in
   collections like `HashSet` or `HashMap`.
-- 32 . Explain inheritance with examples.
+- **32 . Explain inheritance with examples**.
   Inheritance in Java is a mechanism where one class (subclass) inherits the fields and methods of another class (
   superclass). It allows for code reuse and establishes a relationship between classes.
 
@@ -464,17 +464,104 @@ Available in the resources for the course
     - `Dog` is the subclass that inherits the `eat()` method from `Animal` and also has its own method `bark()`.
     - In the `Main` class, an instance of `Dog` can call both `eat()` and `bark()` methods.
 
-- 33 . What is method overloading?
+- **33 . What is method overloading?**
   Method overloading in Java is a feature that allows a class to have more than one method with the same name, provided
   their parameter lists are different. This means that the methods must differ in the type, number, or order of their
   parameters. Method overloading is a compile-time polymorphism technique, enabling different methods to perform similar
   operations with varying inputs. It enhances code readability and reusability by allowing the same method name to be
   used for different tasks, based on the arguments passed. Overloaded methods can have different return types, but this
   alone is not enough for overloading; the parameter list must be different.
-- 34 . What is method overriding?
-- 35 . Can super class reference variable can hold an object of sub class?
-- 36 . Is multiple inheritance allowed in Java?
-- 37 . What is an interface?
+- **34 . What is method overriding?**
+  Method overriding in Java is a feature that allows a subclass to provide a specific implementation of a method that is
+  already provided by its superclass. When a method in a subclass has the same name, return type, and parameters as a
+  method in its superclass, it is said to override the superclass method. Method overriding is a runtime polymorphism
+  technique, enabling a subclass to provide its own implementation of a method inherited from a superclass. This allows
+  for more specific behavior to be defined in the subclass, while still maintaining a common interface with the
+  superclass. Method overriding is used to achieve dynamic polymorphism in Java.
+- **35 . Can super class reference variable can hold an object of sub class?**
+  Yes, a superclass reference variable can hold an object of a subclass in Java. This is known as polymorphism and is a
+  key feature of object-oriented programming. When a superclass reference variable holds an object of a subclass, it can
+  only access the methods and fields that are defined in the superclass. If the subclass has additional methods or
+  fields
+  that are not present in the superclass, they cannot be accessed using the superclass reference variable. However, if
+  the superclass reference variable is cast to the subclass type, it can access the subclass-specific methods and
+  fields.
+  Here is an example:
+
+    ```java
+    class Animal {
+        void eat() {
+            System.out.println("Animal is eating");
+        }
+    }
+
+    class Dog extends Animal {
+        void bark() {
+            System.out.println("Dog is barking");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Animal animal = new Dog(); // Superclass reference holding subclass object
+            animal.eat(); // Accessing superclass method
+            // animal.bark(); // Compilation error: Cannot access subclass-specific method
+            Dog dog = (Dog) animal; // Casting to subclass type
+            dog.bark(); // Accessing subclass-specific method
+        }
+    }
+    ```
+
+  In this example:
+    - The `Animal` class has an `eat` method.
+    - The `Dog` class extends `Animal` and has a `bark` method.
+    - In the `Main` class, an `Animal` reference variable holds a `Dog` object.
+    - The `eat` method can be accessed using the superclass reference variable.
+    - The `bark` method cannot be accessed using the superclass reference variable, but it can be accessed after casting
+      to the subclass type.
+- **36 . Is multiple inheritance allowed in Java?**
+  Java does not support multiple inheritance of classes, meaning a class cannot extend more than one class at a time.
+  This is to avoid the "diamond problem," where conflicts can arise if two superclasses have methods with the same
+  signature. However, Java does support multiple inheritance of interfaces, allowing a class to implement multiple
+  interfaces. This provides a form of multiple inheritance by allowing a class to inherit the abstract methods of
+  multiple interfaces. By using interfaces, Java achieves the benefits of multiple inheritance without the issues
+  associated with multiple inheritance of classes.
+
+  Here is an example of multiple inheritance of interfaces:
+
+    ```java
+    interface InterfaceA {
+        void methodA();
+    }
+
+    interface InterfaceB {
+        void methodB();
+    }
+
+    class MyClass implements InterfaceA, InterfaceB {
+        public void methodA() {
+            System.out.println("Method A");
+        }
+
+        public void methodB() {
+            System.out.println("Method B");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            MyClass obj = new MyClass();
+            obj.methodA();
+            obj.methodB();
+        }
+    }
+    ```
+
+  In this example:
+    - `InterfaceA` and `InterfaceB` are two interfaces with abstract methods.
+    - The `MyClass` class implements both interfaces, providing concrete implementations for the abstract methods.
+    - The `Main` class creates an instance of `MyClass` and calls the methods defined in the interfaces.
+- **37 . What is an interface?**
   An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures,
   default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. They are
   used to specify a set of methods that a class must implement. An interface is a way to achieve abstraction and
@@ -508,7 +595,7 @@ public class Dog implements Animal {
 }
 ```
 
-- 38 . How do you define an interface?
+- **38 . How do you define an interface?**
 
   An interface in Java is defined using the `interface` keyword. It can contain abstract methods, default methods,
   static methods, and constants. Here is an example:
@@ -519,7 +606,7 @@ public class Dog implements Animal {
       void sleep();
   }
   ```
-- 39 . How do you implement an interface?
+- **39 . How do you implement an interface?**
   To implement an interface in Java, a class must use the `implements` keyword and provide concrete implementations for
   all the methods declared in the interface. Here is an example:
 
@@ -547,7 +634,7 @@ public class Dog implements Animal {
     - The `Dog` class implements the `Animal` interface and provides concrete implementations for the `eat` and `sleep`
       methods.
 
-- 40 . Can you explain a few tricky things about interfaces?
+- **40 . Can you explain a few tricky things about interfaces?**
   Here are a few tricky things about interfaces in Java:
 
     1. **Default Methods**: Interfaces can have default methods with a body. This allows adding new methods to
@@ -623,7 +710,7 @@ public class Dog implements Animal {
             }
         }
         ```
-- 41 . Can you extend an interface?
+- **41 . Can you extend an interface?**
   Yes, in Java, an interface can extend another interface. This allows the extending interface to inherit the abstract
   methods of the parent interface. Here is an example:
 
@@ -640,7 +727,7 @@ public class Dog implements Animal {
   In this example, the `Dog` interface extends the `Animal` interface, inheriting its methods (`eat` and `sleep`) and
   adding a new method (`bark`).
 
-- 42 . Can a class extend multiple interfaces?
+- **42 . Can a class extend multiple interfaces?**
   Yes, in Java, a class can implement multiple interfaces. This allows the class to inherit the abstract methods of all
   the interfaces it implements. Here is an example:
 
@@ -673,7 +760,7 @@ public class Dog implements Animal {
     ```
   In this example, the `Dog` class implements both the `Animal` and `Pet` interfaces, providing concrete implementations
   for all the methods declared in the interfaces.
-- 43 . What is an abstract class?
+- **43 . What is an abstract class?**
   An abstract class in Java is a class that cannot be instantiated on its own and is meant to be subclassed by other
   classes. It can contain abstract methods, which are declared but not implemented, as well as concrete methods with
   implementations. Abstract classes are used to define a common interface for subclasses and to provide default behavior
@@ -691,7 +778,7 @@ public class Dog implements Animal {
     ```
 
   In this example, the `Animal` class is declared
-- 44 . When do you use an abstract class?
+- **44 . When do you use an abstract class?**
   You should use an abstract class in Java when you want to define a common interface for a group of subclasses and
   provide default behavior that can be overridden by the subclasses. Abstract classes are useful when you have a set of
   classes that share common methods or fields, but each class may implement those methods differently. By defining an
@@ -704,7 +791,7 @@ public class Dog implements Animal {
     - When you want to define a common interface for a group of classes that share similar behavior.
 
   Abstract classes are a powerful tool in Java for creating hierarchies of classes with shared behavior and structure.
-- 45 . How do you define an abstract method?
+- **45 . How do you define an abstract method?**
   An abstract method in Java is a method that is declared but not implemented in an abstract class. Abstract methods do
   not have a body and are meant to be implemented by subclasses. To define an abstract method, you use the `abstract`
   keyword in the method signature. Here is an example:
@@ -717,7 +804,7 @@ public class Dog implements Animal {
 
   In this example, the `eat` method is declared as abstract in the `Animal` class, meaning that any subclass of `Animal`
   must provide an implementation for the `eat` method.
-- 46 . Compare abstract class vs interface?
+- **46 . Compare abstract class vs interface?**
     - **Abstract Class**:
         - Can have both abstract and concrete methods.
         - Can have instance variables.
@@ -733,7 +820,7 @@ public class Dog implements Animal {
         - Cannot have constructors.
         - Supports multiple inheritance.
         - All methods are implicitly public and abstract (except default and static methods).
-- 47 . What is a constructor?
+- **47 . What is a constructor?**
   A constructor in Java is a special type of method that is used to initialize objects. It is called when an object of a
   class is created using the `new` keyword. Constructors have the same name as the class and do not have a return type.
   They can have parameters to initialize the object's state.
@@ -762,7 +849,7 @@ public class Dog implements Animal {
 
   In this example, the `Person` class has a parameterized constructor that initializes the `name` and `age` fields of
   the `Person` object.
-- 48 . What is a default constructor?
+- **48 . What is a default constructor?**
   A default constructor in Java is a constructor that is automatically provided by the compiler if a class does not have
   any constructor defined. It is a no-argument constructor that initializes the object with default values. The default
   constructor is used when an object is created without passing any arguments to the constructor.
@@ -784,7 +871,7 @@ public class Dog implements Animal {
 
   In this example, the `Person` class does not have any constructor defined, so the compiler provides a default
   constructor that initializes the `name` and `age` fields with default values.
-- 49 . Will this code compile?
+- **49 . Will this code compile?**
   Here is an example of a Java code segment that will not compile due to a missing semicolon:
 
     ```java
@@ -803,7 +890,7 @@ public class Dog implements Animal {
         }
     }
     ```
-- 50 . How do you call a super class constructor from a constructor?
+- **50 . How do you call a super class constructor from a constructor?**
   In Java, you can call a superclass constructor from a subclass constructor using the `super` keyword. This is useful
   when you want to initialize the superclass part of the object before initializing the subclass part. The `super`
   keyword must be the first statement in the subclass constructor
@@ -828,13 +915,31 @@ public class Dog implements Animal {
 
   In this example, the `SubClass` constructor calls the `SuperClass` constructor with the argument
   `"Hello from SuperClass"`.
-- 51 . Will this code compile?
-- 52 . What is the use of this()?
-- 53 . Can a constructor be called directly from a method?
+- **51 . Will this code compile?**
+
+```java
+  public class Example {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!") // Missing semicolon here
+    }
+
+}
+  ```
+
+    No, this code will not compile due to a missing semicolon at the end of the `System.out.println` statement. In Java,
+
+- **52 . What is the use of this**() keyword in Java?
+  The `this` keyword in Java is a reference to the current object within a method or constructor. It can be used to
+  access instance variables, call other constructors, or pass the current object as a parameter to other methods. The
+  use of `this` is optional, but it can help clarify code and avoid naming conflicts between instance variables and
+  method parameters.
+
+- **53 . Can a constructor be called directly from a method?**
   No, a constructor cannot be called directly from a method. Constructors are special methods that are called only when
   an object is created. However, you can call another constructor from a constructor using `this()` or `super()`. If you
   need to initialize an object within a method, you should create a new instance of the class using the `new` keyword.
-- 54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?
+
+- **54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?**
   Yes, a superclass constructor is always called, even if there is no explicit call from a subclass constructor. If a
   subclass constructor does not explicitly call a superclass constructor using `super()`, the Java compiler
   automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a
@@ -842,7 +947,7 @@ public class Dog implements Animal {
 
 ### Advanced object oriented concepts
 
-- 55 . What is polymorphism?
+- **55 . What is polymorphism?** \
   Polymorphism in Java is the ability of an object to take on many forms. It allows one interface to be used for a
   general class of actions. The specific action is determined by the exact nature of the situation. Polymorphism is
   mainly achieved through method overriding and method overloading.
@@ -853,7 +958,7 @@ public class Dog implements Animal {
 
   Polymorphism allows for flexibility and the ability to define methods that can be used interchangeably, making the
   code more modular and easier to maintain.
-- 56 . What is the use of instanceof operator in Java?
+- **56 . What is the use of instanceof operator in Java?**
   The `instanceof` operator in Java is used to test whether an object is an instance of a specific class or implements a
   specific interface. It returns `true` if the object is an instance of the specified class or interface, and `false`
   otherwise. This operator is useful for type checking before performing type-specific operations.
@@ -885,7 +990,7 @@ public class Dog implements Animal {
 
   In this example, the `instanceof` operator checks if the `animal` object is an instance of the `Dog` class before
   casting it to `Dog` and calling the `bark` method.
-- 57 . What is coupling?
+- **57 . What is coupling?**
   Coupling in software engineering refers to the degree of direct knowledge that one module has about another. It
   measures how closely connected two routines or modules are. High coupling means that modules are highly dependent on
   each other, which can make the system more difficult to understand, maintain, and modify. Low coupling, on the other
@@ -900,7 +1005,7 @@ public class Dog implements Animal {
 
   To reduce coupling, it is important to follow good design principles like encapsulation, abstraction, and separation
   of concerns.
-- 58 . What is cohesion?
+- **58 . What is cohesion?**
   Cohesion in software engineering refers to the degree to which the elements inside a module belong together. It
   measures how closely related the responsibilities of a single module are. High cohesion means that the elements within
   a module are strongly related and work together to achieve a common goal. Low cohesion, on the other hand, means that
@@ -909,7 +1014,7 @@ public class Dog implements Animal {
   Cohesion in Java refers to the degree to which the methods in a class are related and work together to achieve a
   common purpose. High cohesion is desirable as it promotes code that is easier to understand, maintain, and test. Low
   cohesion can lead to code that is difficult to follow, modify, and debug.
-- 59 . What is encapsulation?
+- **59 . What is encapsulation?**
   Encapsulation in Java is a fundamental object-oriented programming concept that involves bundling the data (fields)
   and the methods (functions) that operate on the data into a single unit, called a class. It restricts direct access to
   some of the object's components, which can help prevent the accidental modification of data. Encapsulation is achieved
@@ -950,7 +1055,7 @@ public class Dog implements Animal {
   In this example, the `name` and `age` fields are private, and they can only be accessed and modified through the
   public getter and setter methods. This ensures that the internal state of the object is protected and can only be
   changed in a controlled manner.
-- 60 . What is an inner class?
+- **60 . What is an inner class?**
   An inner class in Java is a class that is defined within another class. Inner classes can access the members (
   including private members) of the outer class. There are four types of inner classes in Java:
 
@@ -980,22 +1085,22 @@ public class Dog implements Animal {
     ```
 
   In this example, `InnerClass` is an inner class within `OuterClass` and can access the `outerField` of `OuterClass`.
-- 61 . What is a static inner class?
-- 62 . Can you create an inner class inside a method?
-- 63 . What is an anonymous class?
+- **61 . What is a static inner class?**
+- **62 . Can you create an inner class inside a method?**
+- **63 . What is an anonymous class?**
 
 ### Modifiers
 
-- 64 . What is default class modifier?
-- 65 . What is private access modifier?
-- 66 . What is default or package access modifier?
-- 67 . What is protected access modifier?
-- 68 . What is public access modifier?
-- 69 . What access types of variables can be accessed from a class in same package?
-- 70 . What access types of variables can be accessed from a class in different package?
-- 71 . What access types of variables can be accessed from a sub class in same package?
-- 72 . What access types of variables can be accessed from a sub class in different package?
-- 73 . What is the use of a final modifier on a class?
+- **64 . What is default class modifier?**
+- **65 . What is private access modifier?**
+- **66 . What is default or package access modifier?**
+- **67 . What is protected access modifier?**
+- **68 . What is public access modifier?**
+- **69 . What access types of variables can be accessed from a class in same package?**
+- **70 . What access types of variables can be accessed from a class in different package?**
+- **71 . What access types of variables can be accessed from a sub class in same package?**
+- **72 . What access types of variables can be accessed from a sub class in different package?**
+- **73 . What is the use of a final modifier on a class?**
   The `final` modifier on a class in Java is used to prevent the class from being subclassed. This means that no other
   class can extend a `final` class. It is often used to create immutable classes or to ensure that the implementation of
   the class cannot be altered through inheritance.
@@ -1008,7 +1113,7 @@ public class Dog implements Animal {
     ```
 
   In this example, `MyClass` cannot be extended by any other class.
-- 74 . What is the use of a final modifier on a method?
+- **74 . What is the use of a final modifier on a method?**
   The `final` modifier on a method in Java is used to prevent the method from being overridden by subclasses. This
   ensures that the implementation of the method remains unchanged in any subclass.
 
@@ -1030,8 +1135,31 @@ public class Dog implements Animal {
     ```
 
   In this example, the `display` method in `SuperClass` is marked as `final`, so it cannot be overridden in `SubClass`.
-- 75 . What is a final variable?
-- 76 . What is a final argument?
+  Any attempt to override the `display` method in `SubClass` will result in a compilation error. This is useful for
+  ensuring that certain methods retain their behavior across subclasses.
+- **75 . What is a final variable?** \
+  A final variable in Java is a variable that cannot be reassigned once it has been initialized. The `final` keyword is
+  used to declare a variable as final. This means that the value of the variable remains constant throughout the
+  program. Final variables are often used for constants or for ensuring that a variable's value does not change.
+
+  Here is an example:
+
+    ```java
+    public class Example {
+        public static final int MAX_VALUE = 100;
+    
+        public static void main(String[] args) {
+            // MAX_VALUE cannot be reassigned
+            // MAX_VALUE = 200; // This would cause a compilation error
+            System.out.println(MAX_VALUE);
+        }
+    }
+    ```
+
+  In this example, `MAX_VALUE` is a final variable that cannot be reassigned after it is initialized. Any attempt to
+  reassign `MAX_VALUE` will result in a compilation error. This ensures that the value of `MAX_VALUE` remains constant
+  in the program.
+- **76 . What is a final argument?**
   A final argument in Java is a method parameter that is declared with the `final` keyword. This means that once the
   parameter is assigned a value, it cannot be changed within the method. This is useful for ensuring that the parameter
   remains constant throughout the method execution.
@@ -1048,12 +1176,12 @@ public class Dog implements Animal {
 
   In this example, `finalParam` is a final argument, and any attempt to reassign it within the method will result in a
   compilation error.
-- 77 . What happens when a variable is marked as volatile?
+- **77 . What happens when a variable is marked as volatile?**
   When a variable is marked as `volatile` in Java, it ensures that the value of the variable is always read from and
   written to the main memory, rather than being cached in a thread's local memory. This guarantees visibility of changes
   to the variable across all threads. The `volatile` keyword is used to prevent memory consistency errors in concurrent
   programming.
-- 78 . What is a static variable?
+- **78 . What is a static variable?**
   A static variable in Java is a variable that is shared among all instances of a class. It is declared using the
   `static` keyword and belongs to the class rather than any specific instance. This means that there is only one copy of
   the static variable, regardless of how many instances of the class are created. Static variables are often used for
@@ -1077,31 +1205,31 @@ public class Dog implements Animal {
 
 ### conditions & loops
 
-- 79 . Why should you always use blocks around if statement?
-- 80 . Guess the output
-- 81 . Guess the output
-- 82 . Guess the output of this switch block .
-- 83 . Guess the output of this switch block?
-- 84 . Should default be the last case in a switch statement?
-- 85 . Can a switch statement be used around a String
-- 86 . Guess the output of this for loop (P.S. there is an error as the output of given question should be
+- **79 . Why should you always use blocks around if statement?**
+- **80 . Guess the output**
+- **81 . Guess the output**
+- **82 . Guess the output of this switch block **.
+- **83 . Guess the output of this switch block?**
+- **84 . Should default be the last case in a switch statement?**
+- **85 . Can a switch statement be used around a String**
+- **86 . Guess the output of this for loop **(P.S. there is an error as the output of given question should be
   0-1-2-3-4-5-6-7-8-9. So please ignore that.)
-- 87 . What is an enhanced for loop?
-- 88 . What is the output of the for loop below?
-- 89 . What is the output of the program below?
-- 90 . What is the output of the program below?
+- **87 . What is an enhanced for loop?**
+- **88 . What is the output of the for loop below?**
+- **89 . What is the output of the program below?**
+- **90 . What is the output of the program below?**
 
 ### Exception handling
 
-- 91 . Why is exception handling important?
-- 92 . What design pattern is used to implement exception handling features in most languages?
-- 93 . What is the need for finally block?
-- 94 . In what scenarios is code in finally not executed?
-- 95 . Will finally be executed in the program below?
-- 96 . Is try without a catch is allowed?
-- 97 . Is try without catch and finally allowed?
-- 98 . Can you explain the hierarchy of exception handling classes?
-- 99 . What is the difference between error and exception?
+- **91 . Why is exception handling important?**
+- **92 . What design pattern is used to implement exception handling features in most languages?**
+- **93 . What is the need for finally block?**
+- **94 . In what scenarios is code in finally not executed?**
+- **95 . Will finally be executed in the program below?**
+- **96 . Is try without a catch is allowed?**
+- **97 . Is try without catch and finally allowed?**
+- **98 . Can you explain the hierarchy of exception handling classes?**
+- **99 . What is the difference between error and exception?**
   Errors and exceptions are both types of problems that can occur during the execution of a program, but they are
   handled differently in Java:
 
@@ -1118,7 +1246,7 @@ public class Dog implements Animal {
         - **Unchecked Exceptions**: These are exceptions that are not checked at compile-time but occur during runtime.
           They are subclasses of `RuntimeException` and do not need to be declared or caught. Examples include
           `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `IllegalArgumentException`.
-- 101 . How do you throw an exception from a method?
+- **101 . How do you throw an exception from a method?**
   To throw an exception from a method in Java, you use the `throw` keyword followed by an instance of the exception
   class.
   This allows you to create and throw custom exceptions or to re-throw exceptions that were caught earlier. Here is an
@@ -1131,13 +1259,13 @@ public class Dog implements Animal {
     ```
 
   In this example, the `exampleMethod` throws a `RuntimeException` with the message `"An error occurred"`.
-- 102 . What happens when you throw a checked exception from a method?\
+- **102 . What happens when you throw a checked exception from a method?** \
   When you throw a checked exception from a method in Java, you must either catch the exception using a `try-catch`
   block or declare the exception using the `throws` keyword in the method signature. If you throw a checked exception
   without handling it, the code will not compile, and you will get a compilation error. Checked exceptions are checked
   at
   compile-time to ensure that they are handled properly.
-- 103 . What are the options you have to eliminate compilation errors when handling checked exceptions?\
+- **103 . What are the options you have to eliminate compilation errors when handling checked exceptions?** \
   When handling checked exceptions in Java, you have several options to eliminate compilation errors:
 
     1. **Catch the Exception**: Use a `try-catch` block to catch the exception and handle it within the method.
@@ -1149,15 +1277,15 @@ public class Dog implements Animal {
        handling or declaring the exception.
     5. **Use a Lambda Expression**: Use a lambda expression to handle the exception in a functional interface that does
        not declare checked exceptions.
-- 104 . How do you create a custom exception?
-- 105 . How do you handle multiple exception types with same exception handling block?
-- 106 . Can you explain about try with resources?
-- 107 . How does try with resources work?
-- 108 . Can you explain a few exception handling best practices?
+- **104 . How do you create a custom exception?**
+- **105 . How do you handle multiple exception types with same exception handling block?**
+- **106 . Can you explain about try with resources?**
+- **107 . How does try with resources work?**
+- **108 . Can you explain a few exception handling best practices?**
 
 ### Miscellaneous topics
 
-- 109 . What are the default values in an array? \
+- **109 . What are the default values in an array? ** \
   In Java, when an array is created, the elements are initialized to default values based on the type of the array. The
   default values for primitive types are as follows:
 
@@ -1171,9 +1299,9 @@ public class Dog implements Animal {
     - **boolean**: false
 
   For reference types (objects), the default value is `null`. For example, the default value of an `int` array is `0`.
-- 110 . How do you loop around an array using enhanced for loop?
-- 111 . How do you print the content of an array?
-- 112 . How do you compare two arrays? \
+- **110 . How do you loop around an array using enhanced for loop?**
+- **111 . How do you print the content of an array?**
+- **112 . How do you compare two arrays? ** \
   In Java, you can compare two arrays using the `Arrays.equals` method from the `java.util` package. This method
   compares the contents of two arrays to determine if they are equal. It takes two arrays as arguments and returns
   `true` if the arrays are equal and `false` otherwise. The comparison is done element by element, so the arrays must
@@ -1197,7 +1325,7 @@ public class Dog implements Animal {
 
   In this example, the `Arrays.equals` method is used to compare the `array1` and `array2` arrays, and the result is
   printed to the console.
-- 113 . What is an enum? \
+- **113 . What is an enum? ** \
   An enum in Java is a special data type that represents a group of constants (unchangeable variables). It is used to
   define a set of named constants that can be used in place of integer values. Enumerations are defined using the
   `enum` keyword and can contain constructors, methods, and fields.
@@ -1212,7 +1340,7 @@ public class Dog implements Animal {
 
   In this example, the `Day` enum defines a set of constants representing the days of the week. Each constant is
   implicitly declared as a public static final field of the `Day` enum.
-- 114 . Can you use a switch statement around an enum? \
+- **114 . Can you use a switch statement around an enum? ** \
   Yes, you can use a switch statement around an enum in Java. Enumerations are often used with switch statements to
   provide a more readable and type-safe alternative to using integer values. Each constant in the enum can be used as a
   case label in the switch statement.
@@ -1259,7 +1387,7 @@ public class Dog implements Animal {
 
   In this example, the `Day` enum is used with a switch statement to print the day of the week based on the value of the
   `day` variable.
-- 115 . What are variable arguments or varargs? \
+- **115 . What are variable arguments or varargs? ** \
   Variable arguments, also known as varargs, allow you to pass a variable number of arguments to a method. This
   feature was introduced in Java 5 and is denoted by an ellipsis (`...`) after the type of the last parameter in the
   method signature. Varargs are represented as an array within the method and can be used to pass any number of
@@ -1283,16 +1411,16 @@ public class Dog implements Animal {
 
   In this example, the `printNumbers` method accepts a variable number of `int` arguments using varargs. The method
   can be called with any number of `int` values, and they will be treated as an array within the method.
-- 116 . What are asserts used for?
-- 117 . When should asserts be used?
-- 118 . What is garbage collection?
-- 119 . Can you explain garbage collection with an example?
-- 120 . When is garbage collection run?
-- 121 . What are best practices on garbage collection?
-- 122 . What are initialization blocks?
-- 123 . What is a static initializer?
-- 124 . What is an instance initializer block?
-- 125 . What is tokenizing? \
+- **116 . What are asserts used for?**
+- **117 . When should asserts be used?**
+- **118 . What is garbage collection?**
+- **119 . Can you explain garbage collection with an example?**
+- **120 . When is garbage collection run?**
+- **121 . What are best practices on garbage collection?**
+- **122 . What are initialization blocks?**
+- **123 . What is a static initializer?**
+- **124 . What is an instance initializer block?**
+- **125 . What is tokenizing? ** \
   Tokenizing in Java refers to the process of breaking a string into smaller parts, called tokens. This is often done
   to extract individual words, numbers, or other elements from a larger string. Tokenizing is commonly used in parsing
   and text processing tasks to analyze and manipulate text data.
@@ -1314,18 +1442,18 @@ public class Dog implements Animal {
 
   In this example, the `split` method is used to tokenize the `sentence` string by splitting it into individual words
   based on the space character. The resulting tokens are then printed to the console.
-- 126 . Can you give an example of tokenizing?
-- 127 . What is serialization?
-- 128 . How do you serialize an object using serializable interface?
-- 129 . How do you de-serialize in Java?
-- 130 . What do you do if only parts of the object have to be serialized?
-- 131 . How do you serialize a hierarchy of objects?
-- 132 . Are the constructors in an object invoked when it is de-serialized?
-- 133 . Are the values of static variables stored when an object is serialized?
+- **126 . Can you give an example of tokenizing?**
+- **127 . What is serialization?**
+- **128 . How do you serialize an object using serializable interface?**
+- **129 . How do you de**-serialize in Java?
+- **130 . What do you do if only parts of the object have to be serialized?**
+- **131 . How do you serialize a hierarchy of objects?**
+- **132 . Are the constructors in an object invoked when it is de**-serialized?
+- **133 . Are the values of static variables stored when an object is serialized?**
 
 ### Collections
 
-- 134 . Why do we need collections in Java? \
+- **134 . Why do we need collections in Java? ** \
   Collections in Java are used to store, retrieve, manipulate, and process groups of objects. They provide a way to
   organize and manage data in a structured and efficient manner. Collections offer a wide range of data structures and
   algorithms that can be used to perform common operations like searching, sorting, and iterating over elements. By
@@ -1347,7 +1475,7 @@ public class Dog implements Animal {
       various operations.
     - **Flexibility**: Collections offer a wide range of data structures and interfaces that can be used to meet
       different requirements and use cases.
-- 135 . What are the important interfaces in the collection hierarchy? \
+- **135 . What are the important interfaces in the collection hierarchy? ** \
   The Java Collections Framework provides a set of interfaces that define the core functionality of collections in
   Java. Some of the important interfaces in the collection hierarchy include:
 
@@ -1370,7 +1498,7 @@ public class Dog implements Animal {
       pairs in a map.
 
   These interfaces define common methods and behaviors that are shared by different types of collections in Java.
-- 136 . What are the important methods that are declared in the collection interface? \
+- **136 . What are the important methods that are declared in the collection interface? ** \
   The `Collection` interface in Java defines a set of common methods that are shared by all classes that implement the
   interface. Some of the important methods declared in the `Collection` interface include:
 
@@ -1392,7 +1520,7 @@ public class Dog implements Animal {
 
   These methods provide basic functionality for working with collections in Java and are implemented by classes that
   implement the `Collection` interface.
-- 137 . Can you explain briefly about the List interface? \
+- **137 . Can you explain briefly about the List interface? ** \
   The `List` interface in Java extends the `Collection` interface and represents an ordered collection of elements
   that allows duplicates. Lists maintain the insertion order of elements and provide methods for accessing, adding,
   removing, and updating elements at specific positions. Some of the key features of the `List` interface include:
@@ -1407,7 +1535,7 @@ public class Dog implements Animal {
 
   The `List` interface is implemented by classes like `ArrayList`, `LinkedList`, and `Vector` in the Java Collections
   Framework. It provides a flexible and efficient way to work with ordered collections of elements.
-- 138 . Explain about ArrayList with an example? \
+- **138 . Explain about ArrayList with an example? ** \
   The `ArrayList` class in Java is a resizable array implementation of the `List` interface. It provides dynamic
   resizing, fast random access, and efficient insertion and deletion of elements. `ArrayList` is part of the Java
   Collections Framework and is commonly used to store and manipulate collections of objects.
@@ -1443,12 +1571,12 @@ public class Dog implements Animal {
 
   In this example, an `ArrayList` of integers is created, and elements are added, accessed, and removed from the list.
   The `ArrayList` class provides a flexible and efficient way to work with collections of objects in Java.
-- 139 . Can an ArrayList have duplicate elements? \
+- **139 . Can an ArrayList have duplicate elements? ** \
   Yes, an `ArrayList` in Java can have duplicate elements. Unlike a `Set`, which does not allow duplicates, an
   `ArrayList` allows elements to be added multiple times. This means that an `ArrayList` can contain duplicate elements
   at different positions in the list. The order of elements in an `ArrayList` is maintained, so duplicate elements will
   appear in the list in the order in which they were added.
-- 140 . How do you iterate around an ArrayList using iterator? \
+- **140 . How do you iterate around an ArrayList using iterator? ** \
   To iterate over an `ArrayList` using an iterator in Java, you can use the `iterator` method provided by the
   `ArrayList` class. The `iterator` method returns an `Iterator` object that can be used to traverse the elements in the
   list. Here is an example:
@@ -1479,7 +1607,7 @@ public class Dog implements Animal {
 
   In this example, an `ArrayList` of strings is created, and an iterator is obtained using the `iterator` method. The
   iterator is then used to iterate over the elements in the list and print them to the console.
-- 141 . How do you sort an ArrayList? \
+- **141 . How do you sort an ArrayList? ** \
   To sort an `ArrayList` in Java, you can use the `Collections.sort` method provided by the `java.util.Collections`
   class. The `Collections.sort` method sorts the elements in the list in ascending order based on their natural order or
   a custom comparator. Here is an example:
@@ -1509,7 +1637,7 @@ public class Dog implements Animal {
 
   In this example, an `ArrayList` of integers is created, and the `Collections.sort` method is used to sort the elements
   in the list. The sorted elements are then printed to the console in ascending order.
-- 142 . How do you sort elements in an ArrayList using comparable interface? \
+- **142 . How do you sort elements in an ArrayList using comparable interface? ** \
   To sort elements in an `ArrayList` using the `Comparable` interface in Java, you need to implement the `Comparable`
   interface in the class of the elements you want to sort. The `Comparable` interface defines a `compareTo` method that
   compares the current object with another object and returns a negative, zero, or positive value based on their
@@ -1554,7 +1682,7 @@ public class Dog implements Animal {
   In this example, the `Person` class implements the `Comparable` interface and defines a `compareTo` method that
   compares `Person` objects based on their age. The `Collections.sort` method is then used to sort the `ArrayList` of
   `Person` objects based on their age.
-- 143 . How do you sort elements in an ArrayList using comparator interface? \
+- **143 . How do you sort elements in an ArrayList using comparator interface? ** \
   To sort elements in an `ArrayList` using the `Comparator` interface in Java, you need to create a custom comparator
   class that implements the `Comparator` interface. The `Comparator` interface defines a `compare` method that compares
   two objects and returns a negative, zero, or positive value based on their ordering. Here is an example:
@@ -1601,7 +1729,7 @@ public class Dog implements Animal {
   In this example, a custom comparator class is created using the `Comparator.comparing` method to sort `Person` objects
   based on their name. The `Collections.sort` method is then used to sort the `ArrayList` of `Person` objects using the
   custom comparator.
-- 144 . What is vector class? How is it different from an ArrayList? \
+- **144 . What is vector class? How is it different from an ArrayList? ** \
   The `Vector` class in Java is a legacy collection class that is similar to an `ArrayList` but is synchronized. This
   means that access to a `Vector` is thread-safe, making it suitable for use in multi-threaded environments. The
   `Vector` class provides methods for adding, removing, and accessing elements in the list, as well as for iterating
@@ -1618,7 +1746,7 @@ public class Dog implements Animal {
 
   Despite these differences, both `Vector` and `ArrayList` provide similar functionality for working with collections of
   objects in Java.
-- 145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList? \
+- **145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList? ** \
   The `LinkedList` class in Java is a doubly-linked list implementation of the `List` interface. It provides efficient
   insertion and deletion of elements at the beginning, middle, and end of the list. `LinkedList` implements the `List`,
   `Deque`, and `Queue` interfaces, making it suitable for a wide range of operations.
@@ -1635,7 +1763,7 @@ public class Dog implements Animal {
 
   Despite these differences, both `LinkedList` and `ArrayList` provide similar functionality for working with
   collections of objects in Java, and the choice between them depends on the specific requirements of the application.
-- 146 . Can you briefly explain about the Set interface? \
+- **146 . Can you briefly explain about the Set interface? ** \
   The `Set` interface in Java extends the `Collection` interface and represents a collection of unique elements with no
   duplicates. Sets do not allow duplicate elements, and they maintain no specific order of elements. The `Set`
   interface provides methods for adding, removing, and checking the presence of elements in the set.
@@ -1652,7 +1780,7 @@ public class Dog implements Animal {
 
   The `Set` interface is commonly used to store collections of unique elements and perform operations like union,
   intersection, and difference on sets. It provides a flexible and efficient way to work with sets of objects in Java.
-- 147 . What are the important interfaces related to the Set interface? \
+- **147 . What are the important interfaces related to the Set interface? ** \
   The `Set` interface in Java is related to several other interfaces in the Java Collections Framework that provide
   additional functionality for working with sets of elements. Some of the important interfaces related to the `Set`
   interface include:
@@ -1666,7 +1794,7 @@ public class Dog implements Animal {
 
   These interfaces build on the functionality provided by the `Set` interface and offer additional features for working
   with sets of elements in Java.
-- 148 . What is the difference between Set and sortedSet interfaces? \
+- **148 . What is the difference between Set and sortedSet interfaces? ** \
   The `Set` and `SortedSet` interfaces in Java are related interfaces in the Java Collections Framework that represent
   collections of unique elements with no duplicates. The main difference between `Set` and `SortedSet` is the ordering
   of elements:
@@ -1681,7 +1809,7 @@ public class Dog implements Animal {
 
   In summary, `Set` is a general interface for collections of unique elements, while `SortedSet` is a specialized
   interface for sets that maintain the order of elements based on a specific ordering.
-- 149 . Can you give examples of classes that implement the Set interface? \
+- **149 . Can you give examples of classes that implement the Set interface? ** \
   The `Set` interface in Java is implemented by several classes in the Java Collections Framework that provide
   different implementations of sets. Some of the common classes that implement the `Set` interface include:
 
@@ -1695,7 +1823,7 @@ public class Dog implements Animal {
 
   These classes provide different implementations of sets with varying performance characteristics and ordering
   guarantees.
-- 150 . What is a HashSet? How is it different from a TreeSet? \
+- **150 . What is a HashSet? How is it different from a TreeSet? ** \
   `HashSet` and `TreeSet` are two common implementations of the `Set` interface in Java that provide different
   characteristics for working with sets of elements. The main differences between `HashSet` and `TreeSet` include:
 
@@ -1712,7 +1840,7 @@ public class Dog implements Animal {
 
   In summary, `HashSet` is a hash-based set implementation with no ordering guarantees, while `TreeSet` is a tree-based
   set implementation that maintains the order of elements based on their natural ordering or a custom comparator.
-- 151 . What is a linkedHashSet? How is different from a HashSet? \
+- **151 . What is a linkedHashSet? How is different from a HashSet? ** \
   `LinkedHashSet` is a class in Java that extends `HashSet` and maintains the order of elements based on their insertion
   order. Unlike `HashSet`, which does not maintain the order of elements, `LinkedHashSet` provides predictable iteration
   order and constant-time performance for basic operations. `LinkedHashSet` is implemented using a hash table with a
@@ -1729,7 +1857,7 @@ public class Dog implements Animal {
 
   In summary, `LinkedHashSet` is a hash-based set implementation that maintains the order of elements based on their
   insertion order, providing predictable iteration order and constant-time performance for basic operations.
-- 152 . What is a TreeSet? How is different from a HashSet? \
+- **152 . What is a TreeSet? How is different from a HashSet? ** \
   `TreeSet` is a class in Java that implements the `SortedSet` interface using a red-black tree data structure.
   `TreeSet`
   maintains the order of elements based on their natural ordering or a custom comparator, allowing elements to be sorted
@@ -1747,7 +1875,7 @@ public class Dog implements Animal {
   In summary, `TreeSet` is a tree-based set implementation that maintains the order of elements based on their natural
   ordering or a custom comparator, providing efficient sorting and range query operations. `HashSet` is a hash-based set
   implementation with no ordering guarantees.
-- 153 . Can you give examples of implementations of navigableSet? \
+- **153 . Can you give examples of implementations of navigableSet? ** \
   The `NavigableSet` interface in Java is implemented by the `TreeSet` and `ConcurrentSkipListSet` classes in the Java
   Collections Framework. These classes provide implementations of navigable sets that support navigation methods for
   accessing elements in a set. Some examples of implementations of `NavigableSet` include:
@@ -1761,7 +1889,7 @@ public class Dog implements Animal {
 
   These classes provide efficient and flexible implementations of navigable sets that allow elements to be accessed,
   added, and removed based on their order in the set.
-- 154 . Explain briefly about Queue interface? \
+- **154 . Explain briefly about Queue interface? ** \
   The `Queue` interface in Java represents a collection of elements in a specific order for processing. Queues follow
   the First-In-First-Out (FIFO) order, meaning that elements are added to the end of the queue and removed from the
   front of the queue. The `Queue` interface provides methods for adding, removing, and accessing elements in the queue,
@@ -1779,7 +1907,7 @@ public class Dog implements Animal {
   The `Queue` interface is commonly used to represent collections of elements that need to be processed in a specific
   order, such as tasks in a job queue or messages in a message queue. It provides a flexible and efficient way to work
   with queues of objects in Java.
-- 155 . What are the important interfaces related to the Queue interface? \
+- **155 . What are the important interfaces related to the Queue interface? ** \
   The `Queue` interface in Java is related to several other interfaces in the Java Collections Framework that provide
   additional functionality for working with queues of elements. Some of the important interfaces related to the `Queue`
   interface include:
@@ -1794,7 +1922,7 @@ public class Dog implements Animal {
   These interfaces build on the functionality provided by the `Queue` interface and offer additional features for
   working
   with queues of elements in Java.
-- 156 . Explain about the Deque interface? \
+- **156 . Explain about the Deque interface? ** \
   The `Deque` interface in Java represents a double-ended queue that allows elements to be added or removed from both
   ends. Deques provide methods for adding, removing, and accessing elements at the front and back of the queue, making
   them suitable for a wide range of operations. The `Deque` interface extends the `Queue` interface and provides
@@ -1812,7 +1940,7 @@ public class Dog implements Animal {
   The `Deque` interface is commonly used to represent double-ended queues that require efficient insertion and removal
   of elements at both ends. It provides a flexible and efficient way to work with double-ended queues of objects in
   Java.
-- 157 . Explain the BlockingQueue interface? \
+- **157 . Explain the BlockingQueue interface? ** \
   The `BlockingQueue` interface in Java represents a queue that supports blocking operations for adding and removing
   elements. Blocking queues provide methods for waiting for elements to become available or space to become available in
   the queue, allowing threads to block until the desired condition is met. The `BlockingQueue` interface extends the
@@ -1832,7 +1960,7 @@ public class Dog implements Animal {
   The `BlockingQueue` interface is commonly used in multi-threaded applications to coordinate the processing of elements
   between producer and consumer threads. It provides a flexible and efficient way to work with blocking queues of
   objects in Java.
-- 158 . What is a priorityQueue? How is it different from a normal queue? \
+- **158 . What is a priorityQueue? How is it different from a normal queue? ** \
   `PriorityQueue` is a class in Java that implements the `Queue` interface using a priority heap data structure. Unlike
   a normal queue, which follows the First-In-First-Out (FIFO) order, a `PriorityQueue` maintains elements in a priority
   order based on their natural ordering or a custom comparator. Elements with higher priority are dequeued before
@@ -1852,7 +1980,7 @@ public class Dog implements Animal {
   while
   a normal queue follows the FIFO order. `PriorityQueue` is commonly used in applications that require elements to be
   processed based on their priority level.
-- 159 . Can you give example implementations of the BlockingQueue interface? \
+- **159 . Can you give example implementations of the BlockingQueue interface? ** \
   The `BlockingQueue` interface in Java is implemented by several classes in the Java Collections Framework that provide
   different implementations of blocking queues. Some examples of implementations of `BlockingQueue` include:
 
@@ -1871,7 +1999,7 @@ public class Dog implements Animal {
   These classes provide different implementations of blocking queues with varying characteristics and performance
   guarantees. They are commonly used in multi-threaded applications to coordinate the processing of elements between
   producer and consumer threads.
-- 160 . Can you briefly explain about the Map interface? \
+- **160 . Can you briefly explain about the Map interface? ** \
   The `Map` interface in Java represents a collection of key-value pairs where each key is unique and maps to a single
   value. Maps provide methods for adding, removing, and accessing key-value pairs, as well as for checking the presence
   of keys or values. The `Map` interface does not extend the `Collection` interface and provides a separate set of
@@ -1889,7 +2017,7 @@ public class Dog implements Animal {
   The `Map` interface is commonly used to store and manipulate key-value pairs in Java, providing a flexible and
   efficient
   way to work with mappings of objects.
-- 161 . What is difference between Map and SortedMap? \
+- **161 . What is difference between Map and SortedMap? ** \
   The `Map` and `SortedMap` interfaces in Java are related interfaces in the Java Collections Framework that represent
   collections of key-value pairs. The main difference between `Map` and `SortedMap` is the ordering of keys:
 
@@ -1903,7 +2031,7 @@ public class Dog implements Animal {
 
   In summary, `Map` is a general interface for collections of key-value pairs, while `SortedMap` is a specialized
   interface for maps that maintain the order of keys based on a specific ordering.
-- 162 . What is a HashMap? How is it different from a TreeMap? \
+- **162 . What is a HashMap? How is it different from a TreeMap? ** \
   `HashMap` and `TreeMap` are two common implementations of the `Map` interface in Java that provide different
   characteristics for working with key-value pairs. The main differences between `HashMap` and `TreeMap` include:
 
@@ -1924,7 +2052,7 @@ public class Dog implements Animal {
   map implementation that maintains the order of keys based on their natural ordering or a custom comparator. `HashMap`
   is commonly used in applications that require fast access to key-value pairs, while `TreeMap` is used when keys need
   to be sorted in a specific order.
-- 163 . What are the different methods in a Hash Map? \
+- **163 . What are the different methods in a Hash Map? ** \
   The `HashMap` class in Java provides a variety of methods for working with key-value pairs stored in a hash table
   data structure. Some of the common methods provided by the `HashMap` class include:
 
@@ -1941,7 +2069,7 @@ public class Dog implements Animal {
     - **`entrySet()`**: Returns a set of key-value pairs in the map.
 
   These methods provide a flexible and efficient way to work with key-value pairs stored in a `HashMap` in Java.
-    - 164 . What is a TreeMap? How is different from a HashMap? \
+    - **164 . What is a TreeMap? How is different from a HashMap? ** \
       `TreeMap` is a class in Java that implements the `SortedMap` interface using a red-black tree data structure.
       `TreeMap`
       maintains the order of keys based on their natural ordering or a custom comparator, allowing keys to be sorted in
@@ -1970,7 +2098,7 @@ public class Dog implements Animal {
       ordering or a custom comparator, while `HashMap` is a hash-based map implementation with no ordering guarantees.
       `TreeMap` is commonly used in applications that require keys to be sorted in a specific order. `HashMap` is used
       when a fast access to key-value pairs is required.
-- 165 . Can you give an example of implementation of NavigableMap interface? \
+- **165 . Can you give an example of implementation of NavigableMap interface? ** \
   The `NavigableMap` interface in Java is implemented by the `TreeMap` class in the Java Collections Framework.
   `TreeMap`
   provides a navigable map of key-value pairs sorted in a specific order, allowing elements to be accessed, added, and
@@ -2010,7 +2138,7 @@ public class Dog implements Animal {
   In this example, a `NavigableMap` is created using a `TreeMap` and key-value pairs are added to the map. The key-value
   pairs are then printed in ascending order and descending order using the `keySet` and `descendingKeySet` methods of
   the `NavigableMap` interface.
-- 166 . What are the static methods present in the collections class? \
+- **166 . What are the static methods present in the collections class? ** \
   The `Collections` class in Java provides a variety of static methods for working with collections in the Java
   Collections Framework. Some of the common static methods provided by the `Collections` class include:
 
@@ -2031,7 +2159,7 @@ public class Dog implements Animal {
 
 ### Advanced collections
 
-- 167 . What is the difference between synchronized and concurrent collections in Java? \
+- **167 . What is the difference between synchronized and concurrent collections in Java? ** \
   Synchronized collections and concurrent collections in Java are two approaches to handling thread safety in
   multi-threaded applications. The main difference between synchronized and concurrent collections is how they achieve
   thread safety:
@@ -2061,7 +2189,7 @@ public class Dog implements Animal {
   In general, concurrent collections are preferred for high-concurrency scenarios where performance and scalability are
   important. Synchronized collections are suitable for simpler applications where thread safety is required but
   high-concurrency is not a concern.
-- 168 . Explain about the new concurrent collections in Java? \
+- **168 . Explain about the new concurrent collections in Java? ** \
   Java provides a set of concurrent collections in the `java.util.concurrent` package that are designed for high
   concurrency and thread safety in multi-threaded applications. Some of the new concurrent collections introduced in
   Java include:
@@ -2087,7 +2215,7 @@ public class Dog implements Animal {
   providing
   built-in thread safety and high concurrency support. They are suitable for scenarios where multiple threads need to
   access and modify collections concurrently.
-- 169 . Explain about copyOnWrite concurrent collections approach? \
+- **169 . Explain about copyOnWrite concurrent collections approach? ** \
   The copy-on-write (COW) approach is a concurrency control technique used in Java to provide thread-safe access to
   collections. In the copy-on-write approach, a new copy of the collection is created whenever a modification is made,
   ensuring that the original collection remains unchanged and can be safely accessed by other threads. This approach
@@ -2106,7 +2234,7 @@ public class Dog implements Animal {
   The copy-on-write approach is commonly used in scenarios where high concurrency and thread safety are required, such
   as in read-heavy workloads or applications with multiple readers and few writers. It provides a simple and efficient
   way to achieve thread safety without the need for explicit synchronization.
-- 170 . What is compareAndSwap approach? \
+- **170 . What is compareAndSwap approach? ** \
   The compare-and-swap (CAS) operation is an atomic operation used in concurrent programming to implement lock-free
   algorithms and data structures. The CAS operation allows a thread to update a value in memory if it matches an
   expected
@@ -2121,7 +2249,7 @@ public class Dog implements Animal {
   that allow multiple threads to access and modify shared data without the risk of data corruption or lost updates. CAS
   is a key building block for implementing efficient and scalable concurrent algorithms in Java and other programming
   languages.
-- 171 . What is a lock? How is it different from using synchronized approach? \
+- **171 . What is a lock? How is it different from using synchronized approach? ** \
   A lock is a synchronization mechanism used in Java to control access to shared resources in multi-threaded
   applications. Locks provide a way to coordinate the execution of threads and ensure that only one thread can access a
   shared resource at a time. Locks are more flexible and powerful than the `synchronized` keyword in Java and provide
@@ -2134,8 +2262,7 @@ public class Dog implements Animal {
     - **Reentrant Locking**: Locks support reentrant locking, meaning that a thread can acquire the same lock multiple
       times without deadlocking. The `synchronized` keyword does not support reentrant locking.
     - **Condition Variables**: Locks provide condition variables that allow threads to wait for specific conditions to
-      be
-      met before proceeding. Condition variables are not available with the `synchronized` keyword.
+      be met before proceeding. Condition variables are not available with the `synchronized` keyword.
     - **Fairness**: Locks can be configured to provide fairness in thread scheduling, ensuring that threads are granted
       access to the lock in the order they requested it. The `synchronized` keyword does not provide fairness
       guarantees.
@@ -2143,7 +2270,7 @@ public class Dog implements Animal {
   In general, locks are more flexible and powerful than the `synchronized` keyword and provide additional features for
   managing concurrency in multi-threaded applications. Locks are commonly used in scenarios where fine-grained control
   over synchronization is required or when additional features like reentrant locking or condition variables are needed.
-- 172 . What is initial capacity of a Java collection? \
+- **172 . What is initial capacity of a Java collection? ** \
   The initial capacity of a Java collection refers to the number of elements that the collection can initially store
   before resizing is required. When a collection is created, an initial capacity is specified to allocate memory for
   storing elements. If the number of elements exceeds the initial capacity, the collection is resized to accommodate
@@ -2161,7 +2288,7 @@ public class Dog implements Animal {
   can store up to 10 elements before resizing is required. Setting an appropriate initial capacity can help improve
   performance by reducing the number of resize operations and memory allocations needed as elements are added to the
   collection.
-- 173 . What is load factor? \
+- **173 . What is load factor?** \
   The load factor of a Java collection is a value that determines when the collection should be resized to accommodate
   additional elements. The load factor is used in hash-based collections like `HashMap` and `HashSet` to control the
   number of elements that can be stored in the collection before resizing is required. When the number of elements in
@@ -2176,7 +2303,7 @@ public class Dog implements Animal {
   The load factor is an important parameter in hash-based collections to balance memory usage and performance. Setting
   an appropriate load factor can help optimize the performance of the collection by reducing the frequency of resize
   operations and ensuring that the collection remains efficient as elements are added and removed.
-- 174 . When does a Java collection throw UnsupportedOperationException? \
+- **174 . When does a Java collection throw `UnsupportedOperationException`?** \
   A Java collection throws an `UnsupportedOperationException` when an operation is not supported by the collection. This
   exception is typically thrown when an attempt is made to modify an immutable or read-only collection, or when an
   operation is not implemented by the specific collection implementation.
@@ -2193,7 +2320,7 @@ public class Dog implements Animal {
   The `UnsupportedOperationException` is a runtime exception that indicates that an operation is not supported by the
   collection. It is typically thrown to prevent modifications to collections that are intended to be read-only or
   immutable.
-- 175 . What is difference between fail-safe and fail-fast iterators? \
+- **175 . What is difference between fail-safe and fail-fast iterators?** \
   Fail-safe and fail-fast iterators are two different approaches to handling concurrent modifications to collections in
   Java. The main difference between fail-safe and fail-fast iterators is how they respond to modifications made to a
   collection while iterating over it:
@@ -2214,7 +2341,7 @@ public class Dog implements Animal {
   collections like `ArrayList` and `HashMap` to detect and prevent concurrent modifications that could lead to data
   corruption. The choice between fail-safe and fail-fast iterators depends on the requirements of the application and
   the level of concurrency expected.
-- 176 . What are atomic operations in Java? \
+- **176 . What are atomic operations in Java?** \
   Atomic operations in Java are operations that are performed atomically, meaning that they are indivisible and
   uninterruptible. Atomic operations are used in concurrent programming to ensure that shared data is accessed and
   modified safely by multiple threads without the risk of data corruption or lost updates. Java provides a set of
@@ -2231,7 +2358,7 @@ public class Dog implements Animal {
   Atomic operations are commonly used in multi-threaded applications to ensure that shared data is accessed and modified
   safely by multiple threads. They provide a simple and efficient way to implement lock-free algorithms and data
   structures that require atomicity and thread safety.
-- 177 . What is BlockingQueue in Java? \
+- **177 . What is BlockingQueue in Java?** \
   A `BlockingQueue` in Java is a type of queue that supports blocking operations for adding and removing elements. A
   blocking queue provides methods for waiting for elements to become available or space to become available in the
   queue, allowing threads to block until the desired condition is met. Blocking queues are commonly used in
@@ -2252,7 +2379,7 @@ public class Dog implements Animal {
 
 ### Generics
 
-- 178 . What are Generics? Why do we need Generics? \
+- **178 . What are Generics? Why do we need Generics?** \
   Generics in Java are a feature that allows classes and methods to be parameterized by one or more types. Generics
   provide a way to create reusable and type-safe code by allowing classes and methods to work with generic types that
   are specified at compile time. Generics enable the creation of classes, interfaces, and methods that can work with
@@ -2269,7 +2396,7 @@ public class Dog implements Animal {
   Generics are an important feature of the Java language that provide a way to create flexible, reusable, and
   type-safe code. They are commonly used in collections, data structures, and algorithms to work with generic types
   and improve code quality.
-- 179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible? \
+- **179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible? ** \
   Generics in Java are a feature that allows classes and methods to be parameterized by one or more types. Generics
   provide a way to create reusable and type-safe code by allowing classes and methods to work with generic types that
   are specified at compile time. Generics enable the creation of classes, interfaces, and methods that can work with
@@ -2312,7 +2439,7 @@ public class Dog implements Animal {
   parameterized by two types `T` and `U`, allowing it to work with different types of values. This flexibility makes
   the `Pair` class more generic and reusable, allowing it to store pairs of values of different types without
   sacrificing type safety.
-- 180 . How do you declare a generic class? \
+- **180 . How do you declare a generic class? ** \
   A generic class in Java is declared by specifying one or more type parameters in angle brackets (`<>`) after the class
   name. The type parameters are used to represent generic types that can be specified at compile time when creating
   instances of the class. Here is an example of declaring a generic class in Java:
@@ -2343,7 +2470,7 @@ public class Dog implements Animal {
   type specified by the type parameter `T`. Instances of the `Box` class are created by specifying the type parameter
   when creating the instance, such as `Box<String>` or `Box<Integer`. This allows the `Box` class to work with different
   types of values while maintaining type safety.
-- 181 . What are the restrictions in using generic type that is declared in a class declaration? \
+- **181 . What are the restrictions in using generic type that is declared in a class declaration? ** \
   When using a generic type that is declared in a class declaration, there are some restrictions and limitations that
   must be considered:
 
@@ -2360,7 +2487,7 @@ public class Dog implements Animal {
       types used with the generic type are consistent and compatible with the declared type parameters.
 
   These restrictions and limitations help ensure type safety and consistency when working with generic types in Java.
-- 182 . How can we restrict Generics to a subclass of particular class? \
+- **182 . How can we restrict Generics to a subclass of particular class? ** \
   In Java, it is possible to restrict generics to a subclass of a particular class by using bounded type parameters. By
   specifying an upper bound for the generic type parameter, you can restrict the types that can be used with the generic
   class to subclasses of a specific class. Here is an example of restricting generics to a subclass of a particular
@@ -2390,14 +2517,14 @@ public class Dog implements Animal {
   the generic type `T` must be a subclass of `Number`, such as `Integer`, `Double`, or `Float`. Instances of the `Box`
   class can be created with types that are subclasses of `Number`, but not with types that are not subclasses of
   `Number`.
-- 183 . How can we restrict Generics to a super class of particular class? \
+- **183 . How can we restrict Generics to a super class of particular class? ** \
   In Java, it is possible to restrict generics to a super class of a particular class by using bounded type parameters.
   By specifying a lower bound for the generic type parameter, you can restrict the types that can be used with the
   generic class to superclasses of a specific class. Here is an example of restricting generics to a superclass of a
   particular class:
 
     ```java
-    public class Box<T super Number> {
+    public class Box<T super Integer> {
         private T value;
 
         public Box(T value) {
@@ -2409,7 +2536,7 @@ public class Dog implements Animal {
         }
 
         public static void main(String[] args) {
-            Box<Number> box1 = new Box<>(42);
+            Box<Integer> box1 = new Box<>(42);
             Box<Object> box2 = new Box<>("Hello");
             // Box<String> box3 = new Box<>("Hello"); // Compilation error
         }
@@ -2420,7 +2547,7 @@ public class Dog implements Animal {
   that the generic type `T` must be a superclass of `Number`, such as `Object` or `Serializable`. Instances of the
   `Box` class can be created with types that are superclasses of `Number`, but not with types that are not superclasses
   of `Number`.
-- 184 . Can you give an example of a generic method? \
+- **184 . Can you give an example of a generic method? ** \
   A generic method in Java is a method that is parameterized by one or more types. Generic methods provide a way to
   create methods that can work with different types of arguments without sacrificing type safety. Here is an example of
   a generic method that swaps the elements of an array:
@@ -2450,7 +2577,7 @@ public class Dog implements Animal {
 
 ### Multi threading
 
-- 185 . What is the need for threads in Java? \
+- **185 . What is the need for threads in Java? ** \
   Threads in Java are used to achieve concurrent execution of tasks within a single process. Threads allow multiple
   operations to be performed simultaneously, enabling applications to take advantage of multi-core processors and
   improve performance. Threads are lightweight processes that share the same memory space and resources of a process,
@@ -2461,7 +2588,7 @@ public class Dog implements Animal {
       responsiveness
       of applications.
     - **Parallelism**: Threads allow tasks to be executed
-- 186 . How do you create a thread? \
+- **186 . How do you create a thread? ** \
   There are two main ways to create a thread in Java:
     - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the
       `run` method. This approach allows you to define the behavior of the thread by implementing the `run` method.
@@ -2508,7 +2635,7 @@ public class Dog implements Animal {
   In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
   method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
   called to start the thread.
-- 187 . How do you create a thread by extending thread class? \
+- **187 . How do you create a thread by extending thread class? ** \
   You can create a thread in Java by extending the `Thread` class and overriding the `run` method. This approach allows
   you to define the behavior of the thread by implementing the `run` method. Here is an example:
 
@@ -2528,7 +2655,7 @@ public class Dog implements Animal {
 
   In this example, a `MyThread` class is created by extending the `Thread` class and overriding the `run` method. An
   instance of the `MyThread` class is then created, and the `start` method is called to start the thread.
-- 188 . How do you create a thread by implementing runnable interface? \
+- **188 . How do you create a thread by implementing runnable interface? ** \
   You can create a thread in Java by implementing the `Runnable` interface and passing an instance of the class to the
   `Thread` constructor. This approach separates the thread logic from the class definition and allows for better code
   reusability. Here is an example:
@@ -2551,7 +2678,7 @@ public class Dog implements Animal {
   In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
   method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
   called to start the thread.
-- 189 . How do you run a thread in Java? \
+- **189 . How do you run a thread in Java? ** \
   There are two main ways to run a thread in Java:
     - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the `run`
       method. This approach allows you to define the behavior of the thread by implementing the `run` method. You can
@@ -2601,15 +2728,15 @@ public class Dog implements Animal {
   In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
   method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
   called to run the thread.
-- 190 . What are the different states of a thread? \
+- **190 . What are the different states of a thread? ** \
   Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are:
     - **New**: A thread is in the new state when it is created but has not yet started.
     - **Runnable**: A thread is in the runnable state when it is ready to run but is waiting for a processor to execute
-    - 191 . What is priority of a thread? How do you change the priority of a thread? \
+    - **191 . What is priority of a thread? How do you change the priority of a thread? ** \
       The priority of a thread in Java is an integer value that determines the scheduling priority of the thread.
       Threads
       with higher priority values are given preference by the thread scheduler and are more likely.
-- 192 . What is ExecutorService? \
+- **192 . What is ExecutorService? ** \
   `ExecutorService` is an interface in the Java Concurrency API that provides a higher-level abstraction for managing
   and executing tasks asynchronously using a pool of threads. `ExecutorService` extends the `Executor` interface and
   provides additional methods for managing the lifecycle of the executor, submitting tasks for execution, and
@@ -2622,7 +2749,7 @@ public class Dog implements Animal {
     - **Thread Pool Management**: `ExecutorService` manages a pool of worker threads that can be reused for executing
       tasks.
     - **Asynchronous
-- 193 . Can you give an example for ExecutorService? \
+- **193 . Can you give an example for ExecutorService? ** \
   Here is an example of using `ExecutorService` to execute tasks asynchronously in Java:
 
     ```java
@@ -2649,7 +2776,7 @@ public class Dog implements Animal {
   method. Two tasks are then submitted for execution using the `submit` method, and the tasks are executed
   asynchronously
   by the worker threads in the thread pool. Finally, the `ExecutorService` is shut down to release the resources.
-- 194 . Explain different ways of creating executor services. \
+- **194 . Explain different ways of creating executor services**. \
   There are several ways to create `ExecutorService` instances in Java using the `Executors` utility class. Some of the
   common ways to create `ExecutorService` instances include:
     - **`newFixedThreadPool(int nThreads)`**: Creates a fixed-size thread pool with the specified number of threads.
@@ -2661,7 +2788,7 @@ public class Dog implements Animal {
 
   These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations
   based on the requirements of the application.
-- 195 . How do you check whether an ExecutionService task executed successfully? \
+- **195 . How do you check whether an ExecutionService task executed successfully? ** \
   The `Future` interface in the Java Concurrency API provides a way to check whether an `ExecutorService` task executed
   successfully and retrieve the result of the task. The `Future` interface represents the result of an asynchronous
   computation and provides methods for checking the status of the task, waiting for the task to complete, and retrieving
@@ -2702,10 +2829,12 @@ public class Dog implements Animal {
     }
     ```
 
-  In this example, a task is submitted for execution using the `submit` method, which returns a `Future` representing the
+  In this example, a task is submitted for execution using the `submit` method, which returns a `Future` representing
+  the
   result of the task. The `isDone` method is used to check if the task has completed, and the `get` method is used to
-  retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the `ExecutorService` is shut down to release the resources. 
-- 196 . What is callable? How do you execute a callable from executionservice? \
+  retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the
+  `ExecutorService` is shut down to release the resources.
+- **196 . What is callable? How do you execute a callable from executionservice? ** \
   `Callable` is a functional interface in the Java Concurrency API that represents a task that can be executed
   asynchronously and return a result. `Callable` is similar to `Runnable`, but it can return a result or throw an
   exception. The `Callable` interface defines a single method, `call`, that takes no arguments and returns a result of
@@ -2750,14 +2879,16 @@ public class Dog implements Animal {
     }
     ```
 
-  In this example, a `Callable` task is created using a lambda expression that sleeps for 2 seconds and returns a result.
+  In this example, a `Callable` task is created using a lambda expression that sleeps for 2 seconds and returns a
+  result.
   The `Callable` task is then submitted for execution using the `submit` method, which returns a `Future` representing
-  the result of the task. The `isDone` method is used to check if the task has completed, and the `get` method is used to
+  the result of the task. The `isDone` method is used to check if the task has completed, and the `get` method is used
+  to
   retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the
   `ExecutorService` is shut down to release the resources.
-- 197 . What is synchronization of threads? \
+- **197 . What is synchronization of threads? ** \
   Synchronization in Java is a mechanism that allows multiple threads to coordinate access to shared resources.
-- 198 . Can you give an example of a synchronized block? \
+- **198 . Can you give an example of a synchronized block? ** \
   Here is an example of using a synchronized block in Java to synchronize access to a shared resource:
 
     ```java
@@ -2813,7 +2944,7 @@ public class Dog implements Animal {
   `increment` and `getCount` methods are synchronized using a synchronized block with the `this` object as the monitor.
   Multiple threads are created to increment the counter concurrently, and the final count is printed after the threads
   have finished.
-- 199 . Can a static method be synchronized? \
+- **199 . Can a static method be synchronized? ** \
   Yes, a static method can be synchronized in Java. When a static method is synchronized, the lock acquired is on the
   class object associated with the method's class. This means that only one thread can execute the synchronized static
   method at a time, regardless of the number of instances of the class.
@@ -2866,7 +2997,7 @@ public class Dog implements Animal {
   In this example, the `increment` method is a synchronized static method that increments a shared static counter. The
   `increment` method is synchronized to ensure that only one thread can increment the counter at a time, even when
   multiple threads are accessing the method concurrently.
-- 200 . What is the use of join method in threads? \
+- **200 . What is the use of join method in threads? ** \
   The `join` method in Java is used to wait for a thread to complete its execution before continuing with the current
   thread. When the `join` method is called on a thread, the current thread will block and wait for the specified thread
   to finish before proceeding.
@@ -2903,7 +3034,7 @@ public class Dog implements Animal {
   In this example, a thread is created that sleeps for 2 seconds before finishing. The `join` method is called on the
   thread to wait for it to finish before printing a message in the main thread. This ensures that the main thread waits
   for the thread to complete before continuing.
-- 201 . Describe a few other important methods in threads? \
+- **201 . Describe a few other important methods in threads? ** \
   Some other important methods in Java threads include:
     - **`start`**: The `start` method is used to start a thread and execute its `run` method asynchronously.
     - **`sleep`**: The `sleep` method is used to pause the execution of a thread for a specified amount of time.
@@ -2915,13 +3046,14 @@ public class Dog implements Animal {
       priority of a thread.
     - **`join`**: The `join` method is used to wait for a thread to complete its execution before continuing with the
       current thread.
-    - **`wait` and `notify`**: The `wait` and `notify` methods are used for inter-thread communication and synchronization
+    - **`wait` and `notify`**: The `wait` and `notify` methods are used for inter-thread communication and
+      synchronization
       in multi-threaded programs.
     - **`isInterrupted` and `interrupted`**: The `isInterrupted` and `interrupted` methods are used to check if a thread
       has been interrupted.
     - **`run`**: The `run` method is the entry point for a thread's execution and contains the code that the thread will
       run.
-- 202 . What is a deadlock? How can you avoid a deadlock? \
+- **202 . What is a deadlock? How can you avoid a deadlock? ** \
   A deadlock is a situation in multi-threaded programming where two or more threads are blocked forever, waiting for
   each
   other to release resources that they need to continue execution. Deadlocks can occur when multiple threads acquire
@@ -2940,7 +3072,7 @@ public class Dog implements Animal {
 
   By following these best practices and designing multi-threaded programs carefully, you can reduce the likelihood of
   deadlocks and improve the reliability of your applications.
-- 203 . What are the important methods in Java for inter-thread communication? \
+- **203 . What are the important methods in Java for inter**-thread communication? \
   Java provides several methods for inter-thread communication, including:
     - **`wait` and `notify`**: The `wait` and `notify` methods are used to coordinate the execution of threads by
       allowing
@@ -2948,21 +3080,21 @@ public class Dog implements Animal {
     - **`wait(long timeout)` and `notifyAll`**: The `wait(long timeout)` method allows a thread to wait for a specified
       amount of time before continuing, while the `notifyAll` method notifies all waiting threads to wake up and
       continue execution
-- 204 . What is the use of wait method? \
+- **204 . What is the use of wait method? ** \
   The `wait` method in Java is used to make a thread wait until a condition is met. When a thread calls the `wait`
   method,
   it releases the lock it holds and enters a waiting state until another thread calls the `notify` or `notifyAll` method
   on the same object. The `wait` method is typically used for inter-thread communication and synchronization in
   multi-threaded programs.
-- 205 . What is the use of notify method? \
+- **205 . What is the use of notify method? ** \
   The `notify` method in Java is used to wake up a single thread that is waiting on the same object. When a thread calls
   the `notify` method, it notifies a single waiting thread to wake up and continue execution. The `notify` method is
   typically used in conjunction with the `wait` method for inter-thread communication and synchronization in
   multi-threaded programs.
-- 206 . What is the use of notifyall method? \
+- **206 . What is the use of notifyall method? ** \
   The `notifyAll` method in Java is used to wake up all threads that are waiting on the same object. When a thread calls
   the `notifyAll` method, it notifies all waiting threads to wake up and
-- 207 . Can you write a synchronized program with wait and notify methods? \
+- **207 . Can you write a synchronized program with wait and notify methods? ** \
   Here is an example of a synchronized program using the `wait` and `notify` methods for inter-thread communication in
   Java:
 
@@ -3003,7 +3135,7 @@ public class Dog implements Animal {
 
 ### Functional Programming - Lambda expressions and Streams
 
-- 208 . What is functional programming? How is it different from object-oriented programming? \
+- **208 . What is functional programming? How is it different from object**-oriented programming? \
   Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions
   and avoids changing state and mutable data. Functional programming focuses on the use of pure functions, higher-order
   functions, and immutable data structures to achieve declarative and concise code. Functional programming is based on
@@ -3026,7 +3158,7 @@ public class Dog implements Animal {
   Functional programming languages like Haskell, Scala, and Clojure provide built-in support for functional programming
   features, while languages like Java have introduced functional programming concepts like lambda expressions and
   streams to support functional programming paradigms.
-- 209 . Can you give an example of functional programming? \
+- **209 . Can you give an example of functional programming? ** \
   Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions
   and avoids changing state and mutable data. Functional programming focuses on the use of pure functions, higher-order
   functions, and immutable data structures to achieve declarative and concise code. Functional programming is based on
@@ -3053,8 +3185,8 @@ public class Dog implements Animal {
   In this example, a list of integers is created, and a lambda expression is used with the `map` method of the `Stream`
   interface to square each element in the list. The result is then printed to the console using the `forEach` method.
   This example demonstrates the use of functional programming concepts like lambda expressions and streams in Java.
-- 210 . What is a stream?
-- 211 . Explain about streams with an example? what are intermediate operations in streams? \
+- **210 . What is a stream?**
+- **211 . Explain about streams with an example? what are intermediate operations in streams? ** \
   Streams in Java provide a way to process collections of elements in a functional and declarative manner. Streams
   enable you to perform operations like filtering, mapping, sorting, and reducing on collections using a fluent and
   pipeline-based API. Streams are designed to be lazy, parallelizable, and efficient for processing large amounts of
@@ -3081,13 +3213,13 @@ public class Dog implements Animal {
   In this example, a list of integers is created, and a stream is obtained using the `stream` method. The `filter`
   method is then used to filter even numbers from the stream, and the result is printed to the console using the
   `forEach` method. This example demonstrates the use of streams and intermediate operations like `filter` in Java.
-- 212 . What are terminal operations in streams? \
+- **212 . What are terminal operations in streams? ** \
   Terminal operations in streams are operations that produce a result or a side effect and terminate the stream
   processing. Terminal operations are the final step in a stream pipeline and trigger the execution of intermediate
   operations on the stream elements. Some common terminal operations in streams include `forEach`, `collect`, `reduce`,
   and `count`. Terminal operations are essential for processing streams and obtaining the final result of the stream
   processing.
-- 213 . What are method references? How are they used in streams? \
+- **213 . What are method references? How are they used in streams? ** \
   Method references in Java provide a way to refer to methods or constructors without invoking them. Method references
   are shorthand syntax for lambda expressions that call a single method or constructor. Method references can be used in
   streams to simplify the code and make it more readable by replacing lambda expressions with method references.
@@ -3113,7 +3245,7 @@ public class Dog implements Animal {
   the
   `System.out` class and is equivalent to a lambda expression `(name) -> System.out.println(name)`. Method references
   provide a concise and readable way to refer to methods in streams and other functional programming constructs in Java.
-- 214 . What are lambda expressions? How are they used in streams? \
+- **214 . What are lambda expressions? How are they used in streams? ** \
   Lambda expressions in Java provide a way to define anonymous functions or blocks of code that can be passed as
   arguments to methods or stored in variables. Lambda expressions are a concise and expressive way to represent
   functions and enable functional programming paradigms in Java. Lambda expressions are used in streams to define
@@ -3141,7 +3273,7 @@ public class Dog implements Animal {
   the `Stream` interface to square each element in the list. The result is then printed to the console using the
   `forEach` method. Lambda expressions provide a concise and expressive way to define operations on stream elements in
   Java.
-- 215 . Can you give an example of lambda expression? \
+- **215 . Can you give an example of lambda expression? ** \
   Lambda expressions in Java provide a way to define anonymous functions or blocks of code that can be passed as
   arguments to methods or stored in variables. Lambda expressions are a concise and expressive way to represent
   functions and enable functional programming paradigms in Java.
@@ -3167,7 +3299,7 @@ public class Dog implements Animal {
   In this example, a lambda expression `(a, b) -> a + b` is used to define a function that adds two numbers. The lambda
   expression is assigned to a functional interface `MathOperation` that defines a method `operate` to perform the
   operation. The lambda expression is then used to add two numbers and print the result to the console.
-- 216 . Can you explain the relationship between lambda expression and functional interfaces? \
+- **216 . Can you explain the relationship between lambda expression and functional interfaces? ** \
   Lambda expressions in Java are closely related to functional interfaces, which are interfaces that have exactly one
   abstract method. Lambda expressions can be used to provide an implementation for the abstract method of a functional
   interface, allowing you to define anonymous functions or blocks of code that can be passed as arguments to methods or
@@ -3195,7 +3327,7 @@ public class Dog implements Animal {
   expression is assigned to a functional interface `MathOperation` that defines a method `operate` to perform the
   operation. The lambda expression provides an implementation for the abstract method of the functional interface,
   allowing you to define and use anonymous functions in Java.
-- 217 . What is a predicate? \
+- **217 . What is a predicate? ** \
   A predicate in Java is a functional interface that represents a boolean-valued function of one argument. Predicates
   are
   commonly used in functional programming to define conditions or filters that can be applied to elements in a
@@ -3226,7 +3358,7 @@ public class Dog implements Animal {
 
   In this example, a predicate `isEven` is defined to filter even numbers from a list of integers. The predicate is used
   with the `filter` method of the `Stream` interface to apply the condition and print the even numbers to the console.
-- 218 . What is the functional interface - function? \
+- **218 . What is the functional interface **- function? \
   The `Function` interface in Java is a functional interface that represents a function that accepts one argument and
   produces a result. The `Function` interface is commonly used in functional programming to define transformations or
   mappings that can be applied to elements in a collection. The `Function` interface provides a method `apply` to
@@ -3252,7 +3384,7 @@ public class Dog implements Animal {
   In this example, a function `square` is defined to square a number. The function is assigned to a `Function` interface
   that accepts an integer and produces an integer. The function is then applied to a number using the `apply` method to
   calculate the square and print the result to the console.
-- 219 . What is a consumer? \
+- **219 . What is a consumer? ** \
   A consumer in Java is a functional interface that represents an operation that accepts a single input argument and
   returns no result. Consumers are commonly used in functional programming to perform side effects or actions on
   elements
@@ -3278,7 +3410,7 @@ public class Dog implements Animal {
   In this example, a consumer `printMessage` is defined to print a message. The consumer is assigned to a `Consumer`
   interface that accepts a string and performs the operation to print the message. The consumer is then used to accept
   the message and print it to the console.
-- 220 . Can you give examples of functional interfaces with multiple arguments? \
+- **220 . Can you give examples of functional interfaces with multiple arguments? ** \
   Functional interfaces in Java can have multiple arguments by defining methods with multiple parameters. You can create
   functional interfaces with multiple arguments by specifying the number of input arguments in the method signature and
   using lambda expressions to provide implementations for the method.
@@ -3308,7 +3440,7 @@ public class Dog implements Animal {
 
 ### New Features
 
-- 221 . What are the new features in Java 5? \
+- **221 . What are the new features in Java **5? \
   Java 5 introduced several new features and enhancements to the Java programming language, including:
     - **Generics**: Java 5 introduced generics to provide compile-time type safety and reduce the need for explicit
       casting of objects. Generics allow you to define classes, interfaces, and methods with type parameters that can be
@@ -3338,7 +3470,7 @@ public class Dog implements Animal {
 
   These new features introduced in Java 5 helped to improve the expressiveness, readability, and maintainability of Java
   code and laid the foundation for future enhancements in the Java programming language.
-- 222 . What are the new features in Java 6? \
+- **222 . What are the new features in Java **6? \
   Java 6 introduced several new features and enhancements to the Java programming language, including:
     - **Scripting Support**: Java 6 introduced scripting support through the `javax.script` package, allowing you to
       execute scripts written in languages like JavaScript, Groovy, and Ruby within Java applications. Scripting support
@@ -3369,7 +3501,7 @@ public class Dog implements Animal {
   These new features introduced in Java 6 helped to improve the performance, productivity, and functionality of Java
   applications and provided developers with new tools and capabilities for building robust and scalable software
   systems.
-- 223 . What are the new features in Java 7? \
+- **223 . What are the new features in Java **7? \
   Java 7 introduced several new features and enhancements to the Java programming language, including:
     - **Diamond Operator**: Java 7 introduced the diamond operator (`<>`) to simplify the use of generics by inferring
       the
@@ -3387,7 +3519,7 @@ public class Dog implements Animal {
     - **Binary Literals and Underscores in Numeric Literals**: Java 7 introduced support for binary literals (0b or 0B
       prefix) and underscores in numeric literals to improve readability and expressiveness when working with binary and
       numeric values
-    - 224 . What are the new features in Java 8? \
+    - **224 . What are the new features in Java **8? \
       Java 8 introduced several new features and enhancements to the Java programming language, including:
         - **Lambda Expressions**: Java 8 introduced lambda expressions to provide a concise and expressive way to define
           anonymous functions or blocks of code. Lambda expressions enable functional programming paradigms in Java and
@@ -3424,7 +3556,7 @@ public class Dog implements Animal {
       These new features introduced in Java 8 helped to modernize the Java programming language and provide developers
       with new tools and capabilities for building robust and scalable software systems.
 
-- 225 . What are the new features in Java 9? \
+- **225 . What are the new features in Java **9? \
   Java 9 introduced several new features and enhancements to the Java programming language, including:
     - **Module System (Project Jigsaw)**: Java 9 introduced the module system to provide a way to modularize and
       encapsulate
@@ -3440,7 +3572,7 @@ public class Dog implements Animal {
     - **Stream API Enhancements**: Java 9 introduced several enhancements to the Streams API, including new methods like
       `takeWhile`, `dropWhile`, and `ofNullable` to improve the functionality and expressiveness of stream operations.
     - **Process API Updates**: Java 9 introduced updates to the Process API to provide better
-- 226 . What are the new features in Java 11? \
+- **226 . What are the new features in Java **11? \
   Java 11 introduced several new features and enhancements to the Java programming language, including:
     - **Local-Variable Syntax for Lambda Parameters**: Java 11 introduced the ability to use `var` as the type of
       lambda parameters in lambda expressions. This feature allows you to use `var` to declare the type of lambda
@@ -3464,7 +3596,7 @@ public class Dog implements Animal {
     - **Dynamic Class-File Constants**: Java 11 introduced dynamic class-file constants to provide a way to define
       constants in class files that are dynamically computed at runtime. Dynamic class-file constants allow you to
       define constants that depend on the class's runtime context, enabling more flexible and dynamic code generation.
-- 227 . What are the new features in Java 13? \
+- **227 . What are the new features in Java **13? \
   Java 13 introduced several new features and enhancements to the Java programming language, including:
     - **Text Blocks (Preview Feature)**: Java 13 introduced text blocks as a preview feature to provide a more readable
       and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line strings with
@@ -3489,7 +3621,7 @@ public class Dog implements Animal {
     - **Text Blocks (Second Preview)**: Java 13 introduced text blocks as a second preview feature to provide a more
       readable and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line
       strings with improved formatting and indentation, making it easier to write and read complex string literals.
-- 228 . What are the new features in Java 17? \
+- **228 . What are the new features in Java **17? \
   Java 17 introduced several new features and enhancements to the Java programming language, including:
     - **Sealed Classes (Standard Feature)**: Java 17 introduced sealed classes as a standard feature to provide a way to
       restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend
@@ -3520,7 +3652,7 @@ public class Dog implements Animal {
       enabling
       better integration with native libraries and systems.
     - **JEP
-- 228 . What are the new features in Java 21? \
+- **228 . What are the new features in Java **21? \
   Java 21 introduced several new features and enhancements to the Java programming language, including:
     - **JEP 406: Pattern Matching for switch (Standard Feature)**: Java 21 introduced pattern matching for switch as a
       standard feature to provide a more concise and expressive way to write switch statements. Pattern matching for
