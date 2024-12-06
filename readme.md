@@ -119,7 +119,7 @@ Available in the resources for the course
     2. **Using Static Factory Methods**:
        The wrapper classes provide static factory methods like `valueOf` to create instances.
        ```java
-       Integer intObj1 = Integer.valueOf(10);
+       Integer intObj1 = 10;
        Integer intObj2 = Integer.valueOf("10");
        ```
 - 10 . What are differences in the two ways of creating Wrapper classes?
@@ -210,10 +210,10 @@ Available in the resources for the course
 ### Strings
 
 - 16 . Are all String’s immutable?
-    No, not all `String` objects are immutable. In Java, `String` objects are immutable, meaning once a `String`
-    object is created, its value cannot be changed. However, there are other classes like `StringBuilder`
-    and `StringBuffer` that provide mutable alternatives to `String`. These classes allow you to modify the contents
-    of the string without creating new objects.
+  No, not all `String` objects are immutable. In Java, `String` objects are immutable, meaning once a `String`
+  object is created, its value cannot be changed. However, there are other classes like `StringBuilder`
+  and `StringBuffer` that provide mutable alternatives to `String`. These classes allow you to modify the contents
+  of the string without creating new objects.
 - 17 . Where are String values stored in memory?
   In Java, `String` values are stored in a special memory area called the **String Pool**. The String Pool is part of
   the Java heap memory and is used to store unique `String` literals. When a `String` literal is created, the JVM checks
@@ -1138,7 +1138,7 @@ public class Dog implements Animal {
   at
   compile-time to ensure that they are handled properly.
 - 103 . What are the options you have to eliminate compilation errors when handling checked exceptions?\
-    When handling checked exceptions in Java, you have several options to eliminate compilation errors:
+  When handling checked exceptions in Java, you have several options to eliminate compilation errors:
 
     1. **Catch the Exception**: Use a `try-catch` block to catch the exception and handle it within the method.
     2. **Declare the Exception**: Use the `throws` keyword in the method signature to declare the exception and pass the
@@ -1158,8 +1158,8 @@ public class Dog implements Animal {
 ### Miscellaneous topics
 
 - 109 . What are the default values in an array? \
-    In Java, when an array is created, the elements are initialized to default values based on the type of the array. The
-    default values for primitive types are as follows:
+  In Java, when an array is created, the elements are initialized to default values based on the type of the array. The
+  default values for primitive types are as follows:
 
     - **byte**: 0
     - **short**: 0
@@ -1174,12 +1174,12 @@ public class Dog implements Animal {
 - 110 . How do you loop around an array using enhanced for loop?
 - 111 . How do you print the content of an array?
 - 112 . How do you compare two arrays? \
-    In Java, you can compare two arrays using the `Arrays.equals` method from the `java.util` package. This method
-    compares the contents of two arrays to determine if they are equal. It takes two arrays as arguments and returns
-    `true` if the arrays are equal and `false` otherwise. The comparison is done element by element, so the arrays must
-    have the same length and contain the same elements in the same order.
+  In Java, you can compare two arrays using the `Arrays.equals` method from the `java.util` package. This method
+  compares the contents of two arrays to determine if they are equal. It takes two arrays as arguments and returns
+  `true` if the arrays are equal and `false` otherwise. The comparison is done element by element, so the arrays must
+  have the same length and contain the same elements in the same order.
 
-    Here is an example:
+  Here is an example:
 
     ```java
     import java.util.Arrays;
@@ -1195,14 +1195,14 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, the `Arrays.equals` method is used to compare the `array1` and `array2` arrays, and the result is
-    printed to the console.
+  In this example, the `Arrays.equals` method is used to compare the `array1` and `array2` arrays, and the result is
+  printed to the console.
 - 113 . What is an enum? \
-    An enum in Java is a special data type that represents a group of constants (unchangeable variables). It is used to
-    define a set of named constants that can be used in place of integer values. Enumerations are defined using the
-    `enum` keyword and can contain constructors, methods, and fields.
+  An enum in Java is a special data type that represents a group of constants (unchangeable variables). It is used to
+  define a set of named constants that can be used in place of integer values. Enumerations are defined using the
+  `enum` keyword and can contain constructors, methods, and fields.
 
-    Here is an example of an enum:
+  Here is an example of an enum:
 
     ```java
     public enum Day {
@@ -1210,14 +1210,14 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, the `Day` enum defines a set of constants representing the days of the week. Each constant is
-    implicitly declared as a public static final field of the `Day` enum. 
+  In this example, the `Day` enum defines a set of constants representing the days of the week. Each constant is
+  implicitly declared as a public static final field of the `Day` enum.
 - 114 . Can you use a switch statement around an enum? \
-    Yes, you can use a switch statement around an enum in Java. Enumerations are often used with switch statements to
-    provide a more readable and type-safe alternative to using integer values. Each constant in the enum can be used as a
-    case label in the switch statement.
+  Yes, you can use a switch statement around an enum in Java. Enumerations are often used with switch statements to
+  provide a more readable and type-safe alternative to using integer values. Each constant in the enum can be used as a
+  case label in the switch statement.
 
-    Here is an example:
+  Here is an example:
 
     ```java
     public enum Day {
@@ -1257,15 +1257,15 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, the `Day` enum is used with a switch statement to print the day of the week based on the value of the
-    `day` variable. 
+  In this example, the `Day` enum is used with a switch statement to print the day of the week based on the value of the
+  `day` variable.
 - 115 . What are variable arguments or varargs? \
-    Variable arguments, also known as varargs, allow you to pass a variable number of arguments to a method. This
-    feature was introduced in Java 5 and is denoted by an ellipsis (`...`) after the type of the last parameter in the
-    method signature. Varargs are represented as an array within the method and can be used to pass any number of
-    arguments of the specified type.
+  Variable arguments, also known as varargs, allow you to pass a variable number of arguments to a method. This
+  feature was introduced in Java 5 and is denoted by an ellipsis (`...`) after the type of the last parameter in the
+  method signature. Varargs are represented as an array within the method and can be used to pass any number of
+  arguments of the specified type.
 
-    Here is an example:
+  Here is an example:
 
     ```java
     public class Main {
@@ -1281,8 +1281,8 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, the `printNumbers` method accepts a variable number of `int` arguments using varargs. The method
-    can be called with any number of `int` values, and they will be treated as an array within the method.
+  In this example, the `printNumbers` method accepts a variable number of `int` arguments using varargs. The method
+  can be called with any number of `int` values, and they will be treated as an array within the method.
 - 116 . What are asserts used for?
 - 117 . When should asserts be used?
 - 118 . What is garbage collection?
@@ -1293,11 +1293,11 @@ public class Dog implements Animal {
 - 123 . What is a static initializer?
 - 124 . What is an instance initializer block?
 - 125 . What is tokenizing? \
-    Tokenizing in Java refers to the process of breaking a string into smaller parts, called tokens. This is often done
-    to extract individual words, numbers, or other elements from a larger string. Tokenizing is commonly used in parsing
-    and text processing tasks to analyze and manipulate text data.
+  Tokenizing in Java refers to the process of breaking a string into smaller parts, called tokens. This is often done
+  to extract individual words, numbers, or other elements from a larger string. Tokenizing is commonly used in parsing
+  and text processing tasks to analyze and manipulate text data.
 
-    Here is an example of tokenizing a string:
+  Here is an example of tokenizing a string:
 
     ```java
     public class Main {
@@ -1312,8 +1312,8 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, the `split` method is used to tokenize the `sentence` string by splitting it into individual words
-    based on the space character. The resulting tokens are then printed to the console.
+  In this example, the `split` method is used to tokenize the `sentence` string by splitting it into individual words
+  based on the space character. The resulting tokens are then printed to the console.
 - 126 . Can you give an example of tokenizing?
 - 127 . What is serialization?
 - 128 . How do you serialize an object using serializable interface?
@@ -1326,13 +1326,13 @@ public class Dog implements Animal {
 ### Collections
 
 - 134 . Why do we need collections in Java? \
-    Collections in Java are used to store, retrieve, manipulate, and process groups of objects. They provide a way to
-    organize and manage data in a structured and efficient manner. Collections offer a wide range of data structures and
-    algorithms that can be used to perform common operations like searching, sorting, and iterating over elements. By
-    using collections, developers can write more efficient and maintainable code, as well as take advantage of
-    pre-built data structures and algorithms provided by the Java Collections Framework.
+  Collections in Java are used to store, retrieve, manipulate, and process groups of objects. They provide a way to
+  organize and manage data in a structured and efficient manner. Collections offer a wide range of data structures and
+  algorithms that can be used to perform common operations like searching, sorting, and iterating over elements. By
+  using collections, developers can write more efficient and maintainable code, as well as take advantage of
+  pre-built data structures and algorithms provided by the Java Collections Framework.
 
-    Some key reasons why we need collections in Java include:
+  Some key reasons why we need collections in Java include:
     - **Efficient Data Storage**: Collections provide efficient data structures for storing and organizing large amounts
       of data.
     - **Data Manipulation**: Collections offer methods for adding, removing, and updating elements in a structured
@@ -1348,8 +1348,8 @@ public class Dog implements Animal {
     - **Flexibility**: Collections offer a wide range of data structures and interfaces that can be used to meet
       different requirements and use cases.
 - 135 . What are the important interfaces in the collection hierarchy? \
-    The Java Collections Framework provides a set of interfaces that define the core functionality of collections in
-    Java. Some of the important interfaces in the collection hierarchy include:
+  The Java Collections Framework provides a set of interfaces that define the core functionality of collections in
+  Java. Some of the important interfaces in the collection hierarchy include:
 
     - **Collection**: The root interface in the collection hierarchy that defines basic operations for working with
       collections of objects.
@@ -1369,10 +1369,10 @@ public class Dog implements Animal {
     - **NavigableMap**: An interface that extends `SortedMap` and provides navigation methods for accessing key-value
       pairs in a map.
 
-    These interfaces define common methods and behaviors that are shared by different types of collections in Java.
+  These interfaces define common methods and behaviors that are shared by different types of collections in Java.
 - 136 . What are the important methods that are declared in the collection interface? \
-    The `Collection` interface in Java defines a set of common methods that are shared by all classes that implement the
-    interface. Some of the important methods declared in the `Collection` interface include:
+  The `Collection` interface in Java defines a set of common methods that are shared by all classes that implement the
+  interface. Some of the important methods declared in the `Collection` interface include:
 
     - **add(E e)**: Adds the specified element to the collection.
     - **addAll(Collection<? extends E> c)**: Adds all elements from the specified collection to the collection.
@@ -1390,28 +1390,29 @@ public class Dog implements Animal {
     - **size()**: Returns the number of elements in the collection.
     - **toArray()**: Returns an array containing all elements in the collection.
 
-    These methods provide basic functionality for working with collections in Java and are implemented by classes that
-    implement the `Collection` interface.
+  These methods provide basic functionality for working with collections in Java and are implemented by classes that
+  implement the `Collection` interface.
 - 137 . Can you explain briefly about the List interface? \
-    The `List` interface in Java extends the `Collection` interface and represents an ordered collection of elements
-    that allows duplicates. Lists maintain the insertion order of elements and provide methods for accessing, adding,
-    removing, and updating elements at specific positions. Some of the key features of the `List` interface include:
+  The `List` interface in Java extends the `Collection` interface and represents an ordered collection of elements
+  that allows duplicates. Lists maintain the insertion order of elements and provide methods for accessing, adding,
+  removing, and updating elements at specific positions. Some of the key features of the `List` interface include:
 
     - **Ordered Collection**: Lists maintain the order in which elements are added and allow duplicate elements.
     - **Indexed Access**: Elements in a list can be accessed using an index, starting from zero.
-    - **Positional Operations**: Lists provide methods for adding, removing, and updating elements at specific positions.
+    - **Positional Operations**: Lists provide methods for adding, removing, and updating elements at specific
+      positions.
     - **Iterating Over Elements**: Lists can be iterated over using an iterator or enhanced for loop.
     - **Sublist Operations**: Lists support operations for creating sublists of elements based on specific ranges.
     - **Sorting**: Lists can be sorted using the `Collections.sort` method.
 
-    The `List` interface is implemented by classes like `ArrayList`, `LinkedList`, and `Vector` in the Java Collections
-    Framework. It provides a flexible and efficient way to work with ordered collections of elements.
+  The `List` interface is implemented by classes like `ArrayList`, `LinkedList`, and `Vector` in the Java Collections
+  Framework. It provides a flexible and efficient way to work with ordered collections of elements.
 - 138 . Explain about ArrayList with an example? \
-    The `ArrayList` class in Java is a resizable array implementation of the `List` interface. It provides dynamic
-    resizing, fast random access, and efficient insertion and deletion of elements. `ArrayList` is part of the Java
-    Collections Framework and is commonly used to store and manipulate collections of objects.
+  The `ArrayList` class in Java is a resizable array implementation of the `List` interface. It provides dynamic
+  resizing, fast random access, and efficient insertion and deletion of elements. `ArrayList` is part of the Java
+  Collections Framework and is commonly used to store and manipulate collections of objects.
 
-    Here is an example of using `ArrayList`:
+  Here is an example of using `ArrayList`:
 
     ```java
     import java.util.ArrayList;
@@ -1440,17 +1441,17 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, an `ArrayList` of integers is created, and elements are added, accessed, and removed from the list.
-    The `ArrayList` class provides a flexible and efficient way to work with collections of objects in Java.
+  In this example, an `ArrayList` of integers is created, and elements are added, accessed, and removed from the list.
+  The `ArrayList` class provides a flexible and efficient way to work with collections of objects in Java.
 - 139 . Can an ArrayList have duplicate elements? \
-    Yes, an `ArrayList` in Java can have duplicate elements. Unlike a `Set`, which does not allow duplicates, an
-    `ArrayList` allows elements to be added multiple times. This means that an `ArrayList` can contain duplicate elements
-    at different positions in the list. The order of elements in an `ArrayList` is maintained, so duplicate elements will
-    appear in the list in the order in which they were added.
+  Yes, an `ArrayList` in Java can have duplicate elements. Unlike a `Set`, which does not allow duplicates, an
+  `ArrayList` allows elements to be added multiple times. This means that an `ArrayList` can contain duplicate elements
+  at different positions in the list. The order of elements in an `ArrayList` is maintained, so duplicate elements will
+  appear in the list in the order in which they were added.
 - 140 . How do you iterate around an ArrayList using iterator? \
-    To iterate over an `ArrayList` using an iterator in Java, you can use the `iterator` method provided by the
-    `ArrayList` class. The `iterator` method returns an `Iterator` object that can be used to traverse the elements in the
-    list. Here is an example:
+  To iterate over an `ArrayList` using an iterator in Java, you can use the `iterator` method provided by the
+  `ArrayList` class. The `iterator` method returns an `Iterator` object that can be used to traverse the elements in the
+  list. Here is an example:
 
     ```java
     import java.util.ArrayList;
@@ -1476,12 +1477,12 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, an `ArrayList` of strings is created, and an iterator is obtained using the `iterator` method. The
-    iterator is then used to iterate over the elements in the list and print them to the console.
+  In this example, an `ArrayList` of strings is created, and an iterator is obtained using the `iterator` method. The
+  iterator is then used to iterate over the elements in the list and print them to the console.
 - 141 . How do you sort an ArrayList? \
-    To sort an `ArrayList` in Java, you can use the `Collections.sort` method provided by the `java.util.Collections`
-    class. The `Collections.sort` method sorts the elements in the list in ascending order based on their natural order or
-    a custom comparator. Here is an example:
+  To sort an `ArrayList` in Java, you can use the `Collections.sort` method provided by the `java.util.Collections`
+  class. The `Collections.sort` method sorts the elements in the list in ascending order based on their natural order or
+  a custom comparator. Here is an example:
 
     ```java
     import java.util.ArrayList;
@@ -1506,13 +1507,13 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, an `ArrayList` of integers is created, and the `Collections.sort` method is used to sort the elements
-    in the list. The sorted elements are then printed to the console in ascending order.
+  In this example, an `ArrayList` of integers is created, and the `Collections.sort` method is used to sort the elements
+  in the list. The sorted elements are then printed to the console in ascending order.
 - 142 . How do you sort elements in an ArrayList using comparable interface? \
-    To sort elements in an `ArrayList` using the `Comparable` interface in Java, you need to implement the `Comparable`
-    interface in the class of the elements you want to sort. The `Comparable` interface defines a `compareTo` method that
-    compares the current object with another object and returns a negative, zero, or positive value based on their
-    ordering. Here is an example:
+  To sort elements in an `ArrayList` using the `Comparable` interface in Java, you need to implement the `Comparable`
+  interface in the class of the elements you want to sort. The `Comparable` interface defines a `compareTo` method that
+  compares the current object with another object and returns a negative, zero, or positive value based on their
+  ordering. Here is an example:
 
     ```java
     import java.util.ArrayList;
@@ -1550,13 +1551,13 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, the `Person` class implements the `Comparable` interface and defines a `compareTo` method that
-    compares `Person` objects based on their age. The `Collections.sort` method is then used to sort the `ArrayList` of
-    `Person` objects based on their age.
+  In this example, the `Person` class implements the `Comparable` interface and defines a `compareTo` method that
+  compares `Person` objects based on their age. The `Collections.sort` method is then used to sort the `ArrayList` of
+  `Person` objects based on their age.
 - 143 . How do you sort elements in an ArrayList using comparator interface? \
-    To sort elements in an `ArrayList` using the `Comparator` interface in Java, you need to create a custom comparator
-    class that implements the `Comparator` interface. The `Comparator` interface defines a `compare` method that compares
-    two objects and returns a negative, zero, or positive value based on their ordering. Here is an example:
+  To sort elements in an `ArrayList` using the `Comparator` interface in Java, you need to create a custom comparator
+  class that implements the `Comparator` interface. The `Comparator` interface defines a `compare` method that compares
+  two objects and returns a negative, zero, or positive value based on their ordering. Here is an example:
 
     ```java
     import java.util.ArrayList;
@@ -1597,106 +1598,1874 @@ public class Dog implements Animal {
     }
     ```
 
-    In this example, a custom comparator class is created using the `Comparator.comparing` method to sort `Person` objects
-    based on their name. The `Collections.sort` method is then used to sort the `ArrayList` of `Person` objects using the
-    custom comparator.
-- 144 . What is vector class? How is it different from an ArrayList?
-- 145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList?
-- 146 . Can you briefly explain about the Set interface?
-- 147 . What are the important interfaces related to the Set interface?
-- 148 . What is the difference between Set and sortedSet interfaces?
-- 149 . Can you give examples of classes that implement the Set interface?
-- 150 . What is a HashSet?
-- 151 . What is a linkedHashSet? How is different from a HashSet?
-- 152 . What is a TreeSet? How is different from a HashSet?
-- 153 . Can you give examples of implementations of navigableSet?
-- 154 . Explain briefly about Queue interface?
-- 155 . What are the important interfaces related to the Queue interface?
-- 156 . Explain about the Deque interface?
-- 157 . Explain the BlockingQueue interface?
-- 158 . What is a priorityQueue?
-- 159 . Can you give example implementations of the BlockingQueue interface?
-- 160 . Can you briefly explain about the Map interface?
-- 161 . What is difference between Map and sortedMap?
-- 162 . What is a HashMap?
-- 163 . What are the different methods in a Hash Map?
-- 164 . What is a TreeMap? How is different from a HashMap?
-- 165 . Can you give an example of implementation of navigableMap interface?
-- 166 . What are the static methods present in the collections class?
+  In this example, a custom comparator class is created using the `Comparator.comparing` method to sort `Person` objects
+  based on their name. The `Collections.sort` method is then used to sort the `ArrayList` of `Person` objects using the
+  custom comparator.
+- 144 . What is vector class? How is it different from an ArrayList? \
+  The `Vector` class in Java is a legacy collection class that is similar to an `ArrayList` but is synchronized. This
+  means that access to a `Vector` is thread-safe, making it suitable for use in multi-threaded environments. The
+  `Vector` class provides methods for adding, removing, and accessing elements in the list, as well as for iterating
+  over the elements.
+
+  Some key differences between `Vector` and `ArrayList` include:
+    - **Synchronization**: `Vector` is synchronized, while `ArrayList` is not. This means that access to a `Vector` is
+      thread-safe, but it can be slower in single-threaded applications.
+    - **Performance**: `ArrayList` is generally faster than `Vector` because it is not synchronized. In single-threaded
+      applications, `ArrayList` is preferred for its better performance.
+    - **Legacy**: `Vector` is a legacy class that was introduced in Java 1.0, while `ArrayList` is part of the Java
+      Collections Framework introduced in Java 2. `ArrayList` is the preferred choice for most applications due to its
+      better performance and flexibility.
+
+  Despite these differences, both `Vector` and `ArrayList` provide similar functionality for working with collections of
+  objects in Java.
+- 145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList? \
+  The `LinkedList` class in Java is a doubly-linked list implementation of the `List` interface. It provides efficient
+  insertion and deletion of elements at the beginning, middle, and end of the list. `LinkedList` implements the `List`,
+  `Deque`, and `Queue` interfaces, making it suitable for a wide range of operations.
+
+  Some key differences between `LinkedList` and `ArrayList` include:
+    - **Underlying Data Structure**: `ArrayList` uses an array to store elements, while `LinkedList` uses a
+      doubly-linked
+      list. This makes `LinkedList` more efficient for adding and removing elements in the middle of the list.
+    - **Performance**: `ArrayList` is generally faster than `LinkedList` for random access and iteration, as it provides
+      constant-time access to elements. `LinkedList` is more efficient for adding and removing elements in the middle of
+      the list.
+    - **Memory Overhead**: `LinkedList` has higher memory overhead than `ArrayList` due to the additional pointers
+      required for the linked list structure. This can impact performance and memory usage in large collections.
+
+  Despite these differences, both `LinkedList` and `ArrayList` provide similar functionality for working with
+  collections of objects in Java, and the choice between them depends on the specific requirements of the application.
+- 146 . Can you briefly explain about the Set interface? \
+  The `Set` interface in Java extends the `Collection` interface and represents a collection of unique elements with no
+  duplicates. Sets do not allow duplicate elements, and they maintain no specific order of elements. The `Set`
+  interface provides methods for adding, removing, and checking the presence of elements in the set.
+
+  Some key features of the `Set` interface include:
+    - **Unique Elements**: Sets do not allow duplicate elements, ensuring that each element is unique.
+    - **No Specific Order**: Sets do not maintain the order of elements, so the order in which elements are added may
+      not
+      be preserved.
+    - **Fast Lookup**: Sets provide fast lookup operations for checking the presence of elements.
+    - **Iterating Over Elements**: Sets can be iterated over using an iterator or enhanced for loop.
+    - **Implementations**: The `Set` interface is implemented by classes like `HashSet`, `LinkedHashSet`, and `TreeSet`
+      in the Java Collections Framework.
+
+  The `Set` interface is commonly used to store collections of unique elements and perform operations like union,
+  intersection, and difference on sets. It provides a flexible and efficient way to work with sets of objects in Java.
+- 147 . What are the important interfaces related to the Set interface? \
+  The `Set` interface in Java is related to several other interfaces in the Java Collections Framework that provide
+  additional functionality for working with sets of elements. Some of the important interfaces related to the `Set`
+  interface include:
+
+    - **SortedSet**: An interface that extends `Set` and represents a set of elements sorted in a specific order. Sorted
+      sets maintain the order of elements based on their natural ordering or a custom comparator.
+    - **NavigableSet**: An interface that extends `SortedSet` and provides navigation methods for accessing elements in
+      a
+      set. Navigable sets support operations like finding the closest element, finding subsets, and performing range
+      queries.
+
+  These interfaces build on the functionality provided by the `Set` interface and offer additional features for working
+  with sets of elements in Java.
+- 148 . What is the difference between Set and sortedSet interfaces? \
+  The `Set` and `SortedSet` interfaces in Java are related interfaces in the Java Collections Framework that represent
+  collections of unique elements with no duplicates. The main difference between `Set` and `SortedSet` is the ordering
+  of elements:
+
+    - **Set**: The `Set` interface does not maintain the order of elements and does not provide any guarantees about the
+      order in which elements are stored. Sets are typically implemented using hash-based data structures like `HashSet`
+      and `LinkedHashSet`.
+    - **SortedSet**: The `SortedSet` interface extends `Set` and represents a set of elements sorted in a specific
+      order.
+      Sorted sets maintain the order of elements based on their natural ordering or a custom comparator. Common
+      implementations of `SortedSet` include `TreeSet` and `ConcurrentSkipListSet`.
+
+  In summary, `Set` is a general interface for collections of unique elements, while `SortedSet` is a specialized
+  interface for sets that maintain the order of elements based on a specific ordering.
+- 149 . Can you give examples of classes that implement the Set interface? \
+  The `Set` interface in Java is implemented by several classes in the Java Collections Framework that provide
+  different implementations of sets. Some of the common classes that implement the `Set` interface include:
+
+    - **HashSet**: A class that implements the `Set` interface using a hash table data structure. `HashSet` provides
+      constant-time performance for basic operations like adding, removing, and checking the presence of elements.
+    - **LinkedHashSet**: A class that extends `HashSet` and maintains the order of elements based on their insertion
+      order. `LinkedHashSet` provides predictable iteration order and constant-time performance for basic operations.
+    - **TreeSet**: A class that implements the `SortedSet` interface using a red-black tree data structure. `TreeSet`
+      maintains the order of elements based on their natural ordering or a custom comparator and provides log-time
+      performance for basic operations.
+
+  These classes provide different implementations of sets with varying performance characteristics and ordering
+  guarantees.
+- 150 . What is a HashSet? How is it different from a TreeSet? \
+  `HashSet` and `TreeSet` are two common implementations of the `Set` interface in Java that provide different
+  characteristics for working with sets of elements. The main differences between `HashSet` and `TreeSet` include:
+
+    - **Underlying Data Structure**: `HashSet` uses a hash table data structure to store elements, providing constant
+      time performance for basic operations like adding, removing, and checking the presence of elements. `TreeSet` uses
+      a red-black tree data structure to maintain the order of elements based on their natural ordering or a custom
+      comparator.
+    - **Ordering**: `HashSet` does not maintain the order of elements and does not provide any guarantees about the
+      order in which elements are stored. `TreeSet` maintains the order of elements based on their natural ordering or a
+      custom comparator, allowing elements to be sorted in a specific order.
+    - **Performance**: `HashSet` provides constant-time performance for basic operations, making it efficient for
+      adding, removing, and checking the presence of elements. `TreeSet` provides log-time performance for basic
+      operations, making it efficient for maintaining the order of elements and performing range queries.
+
+  In summary, `HashSet` is a hash-based set implementation with no ordering guarantees, while `TreeSet` is a tree-based
+  set implementation that maintains the order of elements based on their natural ordering or a custom comparator.
+- 151 . What is a linkedHashSet? How is different from a HashSet? \
+  `LinkedHashSet` is a class in Java that extends `HashSet` and maintains the order of elements based on their insertion
+  order. Unlike `HashSet`, which does not maintain the order of elements, `LinkedHashSet` provides predictable iteration
+  order and constant-time performance for basic operations. `LinkedHashSet` is implemented using a hash table with a
+  linked list that maintains the order of elements as they are added to the set.
+
+  Some key differences between `LinkedHashSet` and `HashSet` include:
+    - **Ordering**: `LinkedHashSet` maintains the order of elements based on their insertion order, providing
+      predictable
+      iteration order. `HashSet` does not maintain the order of elements and does not provide any guarantees about the
+      order in which elements are stored.
+    - **Underlying Data Structure**: `LinkedHashSet` uses a hash table with a linked list to maintain the order of
+      elements, while `HashSet` uses a hash table data structure. This linked list allows `LinkedHashSet` to provide
+      constant-time performance for maintaining the order of elements.
+
+  In summary, `LinkedHashSet` is a hash-based set implementation that maintains the order of elements based on their
+  insertion order, providing predictable iteration order and constant-time performance for basic operations.
+- 152 . What is a TreeSet? How is different from a HashSet? \
+  `TreeSet` is a class in Java that implements the `SortedSet` interface using a red-black tree data structure.
+  `TreeSet`
+  maintains the order of elements based on their natural ordering or a custom comparator, allowing elements to be sorted
+  in a specific order. Unlike `HashSet`, which does not maintain the order of elements, `TreeSet` provides log-time
+  performance for basic operations like adding, removing, and checking the presence of elements.
+
+  Some key differences between `TreeSet` and `HashSet` include:
+    - **Ordering**: `TreeSet` maintains the order of elements based on their natural ordering or a custom comparator,
+      allowing elements to be sorted in a specific order. `HashSet` does not maintain the order of elements and does
+      not provide any guarantees about the order in which elements are stored.
+    - **Underlying Data Structure**: `TreeSet` uses a red-black tree data structure to maintain the order of elements,
+      while `HashSet` uses a hash table data structure. This tree structure allows `TreeSet` to provide log-time
+      performance for maintaining the order of elements.
+
+  In summary, `TreeSet` is a tree-based set implementation that maintains the order of elements based on their natural
+  ordering or a custom comparator, providing efficient sorting and range query operations. `HashSet` is a hash-based set
+  implementation with no ordering guarantees.
+- 153 . Can you give examples of implementations of navigableSet? \
+  The `NavigableSet` interface in Java is implemented by the `TreeSet` and `ConcurrentSkipListSet` classes in the Java
+  Collections Framework. These classes provide implementations of navigable sets that support navigation methods for
+  accessing elements in a set. Some examples of implementations of `NavigableSet` include:
+
+    - **TreeSet**: A class that implements the `NavigableSet` interface using a red-black tree data structure. `TreeSet`
+      maintains the order of elements based on their natural ordering or a custom comparator and provides navigation
+      methods for accessing elements in the set.
+    - **ConcurrentSkipListSet**: A class that implements the `NavigableSet` interface using a skip list data structure.
+      `ConcurrentSkipListSet` provides a scalable and concurrent implementation of a navigable set that supports
+      efficient navigation and access to elements.
+
+  These classes provide efficient and flexible implementations of navigable sets that allow elements to be accessed,
+  added, and removed based on their order in the set.
+- 154 . Explain briefly about Queue interface? \
+  The `Queue` interface in Java represents a collection of elements in a specific order for processing. Queues follow
+  the First-In-First-Out (FIFO) order, meaning that elements are added to the end of the queue and removed from the
+  front of the queue. The `Queue` interface provides methods for adding, removing, and accessing elements in the queue,
+  as well as for checking the presence of elements.
+
+  Some key features of the `Queue` interface include:
+    - **FIFO Order**: Queues maintain the order in which elements are added and remove elements in the order they were
+      added.
+    - **Adding and Removing Elements**: Queues provide methods for adding elements to the end of the queue and removing
+      elements from the front of the queue.
+    - **Iterating Over Elements**: Queues can be iterated over using an iterator or enhanced for loop.
+    - **Implementations**: The `Queue` interface is implemented by classes like `LinkedList`, `ArrayDeque`, and
+      `PriorityQueue` in the Java Collections Framework.
+
+  The `Queue` interface is commonly used to represent collections of elements that need to be processed in a specific
+  order, such as tasks in a job queue or messages in a message queue. It provides a flexible and efficient way to work
+  with queues of objects in Java.
+- 155 . What are the important interfaces related to the Queue interface? \
+  The `Queue` interface in Java is related to several other interfaces in the Java Collections Framework that provide
+  additional functionality for working with queues of elements. Some of the important interfaces related to the `Queue`
+  interface include:
+
+    - **Deque**: An interface that extends `Queue` and represents a double-ended queue that allows elements to be added
+      or removed from both ends. Deques provide methods for adding, removing, and accessing elements at the front and
+      back of the queue.
+    - **BlockingQueue**: An interface that extends `Queue` and represents a queue that supports blocking operations for
+      adding and removing elements. Blocking queues provide methods for waiting for elements to become available or
+      space to become available in the queue.
+
+  These interfaces build on the functionality provided by the `Queue` interface and offer additional features for
+  working
+  with queues of elements in Java.
+- 156 . Explain about the Deque interface? \
+  The `Deque` interface in Java represents a double-ended queue that allows elements to be added or removed from both
+  ends. Deques provide methods for adding, removing, and accessing elements at the front and back of the queue, making
+  them suitable for a wide range of operations. The `Deque` interface extends the `Queue` interface and provides
+  additional methods for working with double-ended queues.
+
+  Some key features of the `Deque` interface include:
+    - **Double-Ended Queue**: Deques allow elements to be added or removed from both the front and back of the queue.
+    - **Adding and Removing Elements**: Deques provide methods for adding elements to the front and back of the queue
+      and removing elements from the front and back.
+    - **Iterating Over Elements**: Deques can be iterated over using an iterator or enhanced for loop.
+    - **Implementations**: The `Deque` interface is implemented by classes like `ArrayDeque` and `LinkedList` in the
+      Java
+      Collections Framework.
+
+  The `Deque` interface is commonly used to represent double-ended queues that require efficient insertion and removal
+  of elements at both ends. It provides a flexible and efficient way to work with double-ended queues of objects in
+  Java.
+- 157 . Explain the BlockingQueue interface? \
+  The `BlockingQueue` interface in Java represents a queue that supports blocking operations for adding and removing
+  elements. Blocking queues provide methods for waiting for elements to become available or space to become available in
+  the queue, allowing threads to block until the desired condition is met. The `BlockingQueue` interface extends the
+  `Queue` interface and provides additional methods for blocking operations.
+
+  Some key features of the `BlockingQueue` interface include:
+    - **Blocking Operations**: Blocking queues support blocking operations for adding and removing elements, allowing
+      threads to wait until the desired condition is met.
+    - **Waiting for Elements**: Blocking queues provide methods for waiting for elements to become available in the
+      queue, ensuring that threads can block until elements are ready to be processed.
+    - **Waiting for Space**: Blocking queues also provide methods for waiting for space to become available in the
+      queue,
+      allowing threads to block until there is room to add new elements.
+    - **Implementations**: The `BlockingQueue` interface is implemented by classes like `ArrayBlockingQueue`,
+      `LinkedBlockingQueue`, and `PriorityBlockingQueue` in the Java Collections Framework.
+
+  The `BlockingQueue` interface is commonly used in multi-threaded applications to coordinate the processing of elements
+  between producer and consumer threads. It provides a flexible and efficient way to work with blocking queues of
+  objects in Java.
+- 158 . What is a priorityQueue? How is it different from a normal queue? \
+  `PriorityQueue` is a class in Java that implements the `Queue` interface using a priority heap data structure. Unlike
+  a normal queue, which follows the First-In-First-Out (FIFO) order, a `PriorityQueue` maintains elements in a priority
+  order based on their natural ordering or a custom comparator. Elements with higher priority are dequeued before
+  elements with lower priority.
+
+  Some key differences between `PriorityQueue` and a normal queue include:
+    - **Ordering**: `PriorityQueue` maintains elements in a priority order based on their natural ordering or a custom
+      comparator, while a normal queue follows the FIFO order.
+    - **Priority-Based Dequeue**: `PriorityQueue` dequeues elements based on their priority, with higher priority
+      elements
+      dequeued before lower priority elements. A normal queue dequeues elements in the order they were added.
+    - **Underlying Data Structure**: `PriorityQueue` uses a priority heap data structure to maintain the order of
+      elements,
+      while a normal queue uses a different data structure like an array or linked list.
+
+  In summary, `PriorityQueue` is a priority-based queue implementation that maintains elements in a priority order,
+  while
+  a normal queue follows the FIFO order. `PriorityQueue` is commonly used in applications that require elements to be
+  processed based on their priority level.
+- 159 . Can you give example implementations of the BlockingQueue interface? \
+  The `BlockingQueue` interface in Java is implemented by several classes in the Java Collections Framework that provide
+  different implementations of blocking queues. Some examples of implementations of `BlockingQueue` include:
+
+    - **ArrayBlockingQueue**: A class that implements the `BlockingQueue` interface using an array-based data structure.
+      `ArrayBlockingQueue` provides a fixed-size blocking queue that supports blocking operations for adding and
+      removing
+      elements.
+    - **LinkedBlockingQueue**: A class that implements the `BlockingQueue` interface using a linked list data structure.
+      `LinkedBlockingQueue` provides an unbounded blocking queue that supports blocking operations for adding and
+      removing
+      elements.
+    - **PriorityBlockingQueue**: A class that implements the `BlockingQueue` interface using a priority heap data
+      structure.
+      `PriorityBlockingQueue` provides a priority-based blocking queue that maintains elements in a priority order.
+
+  These classes provide different implementations of blocking queues with varying characteristics and performance
+  guarantees. They are commonly used in multi-threaded applications to coordinate the processing of elements between
+  producer and consumer threads.
+- 160 . Can you briefly explain about the Map interface? \
+  The `Map` interface in Java represents a collection of key-value pairs where each key is unique and maps to a single
+  value. Maps provide methods for adding, removing, and accessing key-value pairs, as well as for checking the presence
+  of keys or values. The `Map` interface does not extend the `Collection` interface and provides a separate set of
+  methods for working with key-value pairs.
+
+  Some key features of the `Map` interface include:
+    - **Key-Value Pairs**: Maps store key-value pairs, allowing values to be associated with unique keys.
+    - **Unique Keys**: Keys in a map are unique, meaning that each key maps to a single value.
+    - **Adding and Removing Entries**: Maps provide methods for adding, removing, and updating key-value pairs.
+    - **Iterating Over Entries**: Maps can be iterated over using an iterator or enhanced for loop to access key-value
+      pairs.
+    - **Implementations**: The `Map` interface is implemented by classes like `HashMap`, `TreeMap`, and `LinkedHashMap`
+      in the Java Collections Framework.
+
+  The `Map` interface is commonly used to store and manipulate key-value pairs in Java, providing a flexible and
+  efficient
+  way to work with mappings of objects.
+- 161 . What is difference between Map and SortedMap? \
+  The `Map` and `SortedMap` interfaces in Java are related interfaces in the Java Collections Framework that represent
+  collections of key-value pairs. The main difference between `Map` and `SortedMap` is the ordering of keys:
+
+    - **Map**: The `Map` interface does not maintain the order of keys and does not provide any guarantees about the
+      order in which keys are stored. Maps are typically implemented using hash-based data structures like `HashMap` and
+      `LinkedHashMap`.
+    - **SortedMap**: The `SortedMap` interface extends `Map` and represents a map of key-value pairs sorted in a
+      specific
+      order. Sorted maps maintain the order of keys based on their natural ordering or a custom comparator. Common
+      implementations of `SortedMap` include `TreeMap` and `ConcurrentSkipListMap`.
+
+  In summary, `Map` is a general interface for collections of key-value pairs, while `SortedMap` is a specialized
+  interface for maps that maintain the order of keys based on a specific ordering.
+- 162 . What is a HashMap? How is it different from a TreeMap? \
+  `HashMap` and `TreeMap` are two common implementations of the `Map` interface in Java that provide different
+  characteristics for working with key-value pairs. The main differences between `HashMap` and `TreeMap` include:
+
+    - **Underlying Data Structure**: `HashMap` uses a hash table data structure to store key-value pairs, providing
+      constant-time performance for basic operations like adding, removing, and accessing entries. `TreeMap` uses a
+      red-black
+      tree data structure to maintain the order of keys based on their natural ordering or a custom comparator.
+    - **Ordering**: `HashMap` does not maintain the order of keys and does not provide any guarantees about the order in
+      which keys are stored. `TreeMap` maintains the order of keys based on their natural ordering or a custom
+      comparator,
+      allowing keys to be sorted in a specific order.
+    - **Performance**: `HashMap` provides constant-time performance for basic operations, making it efficient for
+      adding,
+      removing, and accessing entries. `TreeMap` provides log-time performance for basic operations, making it efficient
+      for maintaining the order of keys and performing range queries.
+
+  In summary, `HashMap` is a hash-based map implementation with no ordering guarantees, while `TreeMap` is a tree-based
+  map implementation that maintains the order of keys based on their natural ordering or a custom comparator. `HashMap`
+  is commonly used in applications that require fast access to key-value pairs, while `TreeMap` is used when keys need
+  to be sorted in a specific order.
+- 163 . What are the different methods in a Hash Map? \
+  The `HashMap` class in Java provides a variety of methods for working with key-value pairs stored in a hash table
+  data structure. Some of the common methods provided by the `HashMap` class include:
+
+    - **`put(key, value)`**: Adds a key-value pair to the map, replacing the existing value if the key is already
+      present.
+    - **`get(key)`**: Retrieves the value associated with the specified key, or `null` if the key is not present.
+    - **`containsKey(key)`**: Checks if the map contains the specified key.
+    - **`containsValue(value)`**: Checks if the map contains the specified value.
+    - **`remove(key)`**: Removes the key-value pair associated with the specified key from the map.
+    - **`size()`**: Returns the number of key-value pairs in the map.
+    - **`isEmpty()`**: Checks if the map is empty.
+    - **`keySet()`**: Returns a set of all keys in the map.
+    - **`values()`**: Returns a collection of all values in the map.
+    - **`entrySet()`**: Returns a set of key-value pairs in the map.
+
+  These methods provide a flexible and efficient way to work with key-value pairs stored in a `HashMap` in Java.
+    - 164 . What is a TreeMap? How is different from a HashMap? \
+      `TreeMap` is a class in Java that implements the `SortedMap` interface using a red-black tree data structure.
+      `TreeMap`
+      maintains the order of keys based on their natural ordering or a custom comparator, allowing keys to be sorted in
+      a
+      specific order. Unlike `HashMap`, which does not maintain the order of keys, `TreeMap` provides log-time
+      performance
+      for basic operations like adding, removing, and accessing entries.
+
+      Some key differences between `TreeMap` and `HashMap` include:
+        - **Underlying Data Structure**: `TreeMap` uses a red-black tree data structure to maintain the order of keys,
+          while
+          `HashMap` uses a hash table data structure. This tree structure allows `TreeMap` to provide log-time
+          performance
+          for maintaining the order of keys.
+        - **Ordering**: `TreeMap` maintains the order of keys based on their natural ordering or a custom comparator,
+          allowing keys to be sorted in a specific order. `HashMap` does not maintain the order of keys and does not
+          provide
+          any guarantees about the order in which keys are stored.
+        - **Performance**: `TreeMap` provides log-time performance for basic operations, making it efficient for
+          maintaining
+          the order of keys and performing range queries. `HashMap` provides constant-time performance for basic
+          operations,
+          making it efficient for adding, removing, and accessing entries.
+
+      In summary, `TreeMap` is a tree-based map implementation that maintains the order of keys based on their natural
+      ordering or a custom comparator, while `HashMap` is a hash-based map implementation with no ordering guarantees.
+      `TreeMap` is commonly used in applications that require keys to be sorted in a specific order. `HashMap` is used
+      when a fast access to key-value pairs is required.
+- 165 . Can you give an example of implementation of NavigableMap interface? \
+  The `NavigableMap` interface in Java is implemented by the `TreeMap` class in the Java Collections Framework.
+  `TreeMap`
+  provides a navigable map of key-value pairs sorted in a specific order, allowing elements to be accessed, added, and
+  removed based on their order in the map. Here is an example of using `TreeMap` to implement a `NavigableMap`:
+
+    ```java
+    import java.util.NavigableMap;
+    import java.util.TreeMap;
+
+    public class NavigableMapExample {
+        public static void main(String[] args) {
+            // Create a NavigableMap using TreeMap
+            NavigableMap<Integer, String> map = new TreeMap<>();
+
+            // Add key-value pairs to the map
+            map.put(1, "One");
+            map.put(2, "Two");
+            map.put(3, "Three");
+            map.put(4, "Four");
+            map.put(5, "Five");
+
+            // Print the key-value pairs in ascending order
+            System.out.println("Ascending Order:");
+            for (Integer key : map.keySet()) {
+                System.out.println(key + " - " + map.get(key));
+            }
+
+            // Print the key-value pairs in descending order
+            System.out.println("Descending Order:");
+            for (Integer key : map.descendingKeySet()) {
+                System.out.println(key + " - " + map.get(key));
+            }
+        }
+    }
+    ```
+
+  In this example, a `NavigableMap` is created using a `TreeMap` and key-value pairs are added to the map. The key-value
+  pairs are then printed in ascending order and descending order using the `keySet` and `descendingKeySet` methods of
+  the `NavigableMap` interface.
+- 166 . What are the static methods present in the collections class? \
+  The `Collections` class in Java provides a variety of static methods for working with collections in the Java
+  Collections Framework. Some of the common static methods provided by the `Collections` class include:
+
+    - **`sort(List<T> list)`**: Sorts the elements in the specified list in ascending order.
+    - **`reverse(List<?> list)`**: Reverses the order of elements in the specified list.
+    - **`shuffle(List<?> list)`**: Randomly shuffles the elements in the specified list.
+    - **`binarySearch(List<? extends Comparable<? super T>> list, T key)`**: Searches for the specified key in the
+      specified list using a binary search algorithm.
+    - **`unmodifiableCollection(Collection<? extends T> c)`**: Returns an unmodifiable view of the specified collection.
+    - **`synchronizedCollection(Collection<T> c)`**: Returns a synchronized (thread-safe) view of the specified
+      collection.
+    - **`singleton(T o)`**: Returns an immutable set containing only the specified object.
+    - **`emptyList()`**: Returns an empty list.
+    - **`emptySet()`**: Returns an empty set.
+    - **`emptyMap()`**: Returns an empty map.
+
+  These static methods provide a convenient way to perform common operations on collections in Java.
 
 ### Advanced collections
 
-- 167 . What is the difference between synchronized and concurrent collections in Java?
-- 168 . Explain about the new concurrent collections in Java?
-- 169 . Explain about copyonwrite concurrent collections approach?
-- 170 . What is compareandswap approach?
-- 171 . What is a lock? How is it different from using synchronized approach?
-- 172 . What is initial capacity of a Java collection?
-- 173 . What is load factor?
-- 174 . When does a Java collection throw UnsupportedOperationException?
-- 175 . What is difference between fail-safe and fail-fast iterators?
-- 176 . What are atomic operations in Java?
-- 177 . What is BlockingQueue in Java?
+- 167 . What is the difference between synchronized and concurrent collections in Java? \
+  Synchronized collections and concurrent collections in Java are two approaches to handling thread safety in
+  multi-threaded applications. The main difference between synchronized and concurrent collections is how they achieve
+  thread safety:
+
+    - **Synchronized Collections**: Synchronized collections use explicit synchronization to make the collection
+      thread-safe. This is typically done by wrapping the collection with synchronized blocks or using synchronized
+      methods to ensure that only one thread can access the collection at a time. Synchronized collections are
+      synchronized at the collection level, meaning that all operations on the collection are synchronized.
+    - **Concurrent Collections**: Concurrent collections use non-blocking algorithms and data structures to achieve
+      thread safety. Concurrent collections are designed to be thread-safe without the need for explicit
+      synchronization.
+      They use techniques like compare-and-swap (CAS) operations and lock-free algorithms to allow multiple threads to
+      access the collection concurrently.
+
+  Some key differences between synchronized and concurrent collections include:
+    - **Performance**: Synchronized collections can be slower than concurrent collections due to the overhead of
+      explicit
+      synchronization. Concurrent collections are designed for high concurrency and can provide better performance in
+      multi-threaded applications.
+    - **Scalability**: Concurrent collections are more scalable than synchronized collections because they allow
+      multiple
+      threads to access the collection concurrently. Synchronized collections can suffer from contention and bottlenecks
+      when multiple threads access the collection.
+    - **Ease of Use**: Synchronized collections require explicit synchronization, which can be error-prone and complex.
+      Concurrent collections provide built-in thread safety and are easier to use in multi-threaded applications.
+
+  In general, concurrent collections are preferred for high-concurrency scenarios where performance and scalability are
+  important. Synchronized collections are suitable for simpler applications where thread safety is required but
+  high-concurrency is not a concern.
+- 168 . Explain about the new concurrent collections in Java? \
+  Java provides a set of concurrent collections in the `java.util.concurrent` package that are designed for high
+  concurrency and thread safety in multi-threaded applications. Some of the new concurrent collections introduced in
+  Java include:
+
+    - **`ConcurrentHashMap`**: A hash table-based map implementation that provides thread-safe access to key-value
+      pairs.
+      `ConcurrentHashMap` allows multiple threads to read and write to the map concurrently without the need for
+      explicit
+      synchronization.
+    - **`ConcurrentSkipListMap`**: A skip list-based map implementation that provides thread-safe access to key-value
+      pairs. `ConcurrentSkipListMap` maintains the order of keys and allows multiple threads to access the map
+      concurrently.
+    - **`ConcurrentLinkedQueue`**: A linked list-based queue implementation that provides thread-safe access to
+      elements.
+      `ConcurrentLinkedQueue` allows multiple threads to add and remove elements from the queue concurrently.
+    - **`ConcurrentLinkedDeque`**: A linked list-based double-ended queue implementation that provides thread-safe
+      access
+      to elements at both ends. `ConcurrentLinkedDeque` allows multiple threads to add and remove elements from the
+      front
+      and back of the queue concurrently.
+
+  These concurrent collections are designed to be highly scalable and efficient in multi-threaded applications,
+  providing
+  built-in thread safety and high concurrency support. They are suitable for scenarios where multiple threads need to
+  access and modify collections concurrently.
+- 169 . Explain about copyOnWrite concurrent collections approach? \
+  The copy-on-write (COW) approach is a concurrency control technique used in Java to provide thread-safe access to
+  collections. In the copy-on-write approach, a new copy of the collection is created whenever a modification is made,
+  ensuring that the original collection remains unchanged and can be safely accessed by other threads. This approach
+  eliminates the need for explicit synchronization and provides high concurrency and thread safety.
+
+  Some key features of the copy-on-write approach include:
+    - **Immutable Collections**: The copy-on-write approach uses immutable collections to ensure that the original
+      collection is not modified when a write operation is performed. This allows multiple threads to read from the
+      collection concurrently without the risk of data corruption.
+    - **Copy on Write**: When a modification is made to the collection, a new copy of the collection is created with the
+      updated elements. This copy is then made visible to other threads, ensuring that modifications are isolated and
+      do not affect other threads.
+    - **Read-Heavy Workloads**: The copy-on-write approach is well-suited for scenarios where reads are more frequent
+      than writes. It provides efficient read access to collections and minimizes contention between threads.
+
+  The copy-on-write approach is commonly used in scenarios where high concurrency and thread safety are required, such
+  as in read-heavy workloads or applications with multiple readers and few writers. It provides a simple and efficient
+  way to achieve thread safety without the need for explicit synchronization.
+- 170 . What is compareAndSwap approach? \
+  The compare-and-swap (CAS) operation is an atomic operation used in concurrent programming to implement lock-free
+  algorithms and data structures. The CAS operation allows a thread to update a value in memory if it matches an
+  expected
+  value, ensuring that the update is performed atomically without the need for explicit synchronization.
+
+  The CAS operation typically consists of three steps:
+    - **Read**: The current value of the memory location is read.
+    - **Compare**: The current value is compared with an expected value.
+    - **Swap**: If the current value matches the expected value, a new value is written to the memory location.
+
+  The CAS operation is commonly used in concurrent collections and data structures to implement lock-free algorithms
+  that allow multiple threads to access and modify shared data without the risk of data corruption or lost updates. CAS
+  is a key building block for implementing efficient and scalable concurrent algorithms in Java and other programming
+  languages.
+- 171 . What is a lock? How is it different from using synchronized approach? \
+  A lock is a synchronization mechanism used in Java to control access to shared resources in multi-threaded
+  applications. Locks provide a way to coordinate the execution of threads and ensure that only one thread can access a
+  shared resource at a time. Locks are more flexible and powerful than the `synchronized` keyword in Java and provide
+  additional features for managing concurrency.
+
+  Some key differences between locks and the `synchronized` approach include:
+    - **Explicit Control**: Locks provide explicit control over locking and unlocking operations, allowing threads to
+      acquire and release locks at specific points in the code. The `synchronized` keyword automatically acquires and
+      releases locks based on synchronized blocks or methods.
+    - **Reentrant Locking**: Locks support reentrant locking, meaning that a thread can acquire the same lock multiple
+      times without deadlocking. The `synchronized` keyword does not support reentrant locking.
+    - **Condition Variables**: Locks provide condition variables that allow threads to wait for specific conditions to
+      be
+      met before proceeding. Condition variables are not available with the `synchronized` keyword.
+    - **Fairness**: Locks can be configured to provide fairness in thread scheduling, ensuring that threads are granted
+      access to the lock in the order they requested it. The `synchronized` keyword does not provide fairness
+      guarantees.
+
+  In general, locks are more flexible and powerful than the `synchronized` keyword and provide additional features for
+  managing concurrency in multi-threaded applications. Locks are commonly used in scenarios where fine-grained control
+  over synchronization is required or when additional features like reentrant locking or condition variables are needed.
+- 172 . What is initial capacity of a Java collection? \
+  The initial capacity of a Java collection refers to the number of elements that the collection can initially store
+  before resizing is required. When a collection is created, an initial capacity is specified to allocate memory for
+  storing elements. If the number of elements exceeds the initial capacity, the collection is resized to accommodate
+  additional elements.
+
+  The initial capacity of a collection is typically set when the collection is created using a constructor that accepts
+  an initial capacity parameter. For example, the `ArrayList` class in Java has a constructor that allows an initial
+  capacity to be specified:
+
+    ```java
+    List<String> list = new ArrayList<>(10);
+    ```
+
+  In this example, an `ArrayList` is created with an initial capacity of 10 elements. This means that the `ArrayList`
+  can store up to 10 elements before resizing is required. Setting an appropriate initial capacity can help improve
+  performance by reducing the number of resize operations and memory allocations needed as elements are added to the
+  collection.
+- 173 . What is load factor? \
+  The load factor of a Java collection is a value that determines when the collection should be resized to accommodate
+  additional elements. The load factor is used in hash-based collections like `HashMap` and `HashSet` to control the
+  number of elements that can be stored in the collection before resizing is required. When the number of elements in
+  the collection exceeds the load factor multiplied by the current capacity, the collection is resized to increase its
+  capacity.
+
+  The load factor is typically a value between 0 and 1, representing a percentage of the current capacity at which the
+  collection should be resized. For example, a load factor of 0.75 means that the collection should be resized when it
+  is 75% full. Resizing the collection allows it to accommodate additional elements and maintain efficient performance
+  for adding, removing, and accessing elements.
+
+  The load factor is an important parameter in hash-based collections to balance memory usage and performance. Setting
+  an appropriate load factor can help optimize the performance of the collection by reducing the frequency of resize
+  operations and ensuring that the collection remains efficient as elements are added and removed.
+- 174 . When does a Java collection throw UnsupportedOperationException? \
+  A Java collection throws an `UnsupportedOperationException` when an operation is not supported by the collection. This
+  exception is typically thrown when an attempt is made to modify an immutable or read-only collection, or when an
+  operation is not implemented by the specific collection implementation.
+
+  Some common scenarios where a `UnsupportedOperationException` may be thrown include:
+    - **Modifying an Immutable Collection**: Attempting to add, remove, or modify elements in an immutable collection
+      like
+      `Collections.unmodifiableList` or `Collections.unmodifiableMap` will result in an `UnsupportedOperationException`.
+    - **Unsupported Operations**: Some collection implementations do not support certain operations, such as adding or
+      removing elements, and will throw an `UnsupportedOperationException` if these operations are attempted.
+    - **Read-Only Views**: Collections that provide read-only views of other collections may throw an
+      `UnsupportedOperationException` if modification operations are attempted on the read-only view.
+
+  The `UnsupportedOperationException` is a runtime exception that indicates that an operation is not supported by the
+  collection. It is typically thrown to prevent modifications to collections that are intended to be read-only or
+  immutable.
+- 175 . What is difference between fail-safe and fail-fast iterators? \
+  Fail-safe and fail-fast iterators are two different approaches to handling concurrent modifications to collections in
+  Java. The main difference between fail-safe and fail-fast iterators is how they respond to modifications made to a
+  collection while iterating over it:
+
+    - **Fail-Safe Iterators**: Fail-safe iterators make a copy of the collection when it is created and iterate over
+      the
+      copy rather than the original collection. This ensures that the iterator is not affected by modifications made to
+      the collection during iteration. Fail-safe iterators do not throw `ConcurrentModificationException` and provide a
+      consistent view of the collection.
+    - **Fail-Fast Iterators**: Fail-fast iterators detect concurrent modifications to the collection while iterating and
+      throw a `ConcurrentModificationException` to indicate that the collection has been modified. Fail-fast iterators
+      provide immediate feedback when a concurrent modification occurs and help prevent data corruption or
+      inconsistencies.
+
+  In general, fail-safe iterators are used in concurrent collections like `ConcurrentHashMap` and
+  `ConcurrentSkipListMap`
+  to provide a consistent view of the collection during iteration. Fail-fast iterators are used in non-concurrent
+  collections like `ArrayList` and `HashMap` to detect and prevent concurrent modifications that could lead to data
+  corruption. The choice between fail-safe and fail-fast iterators depends on the requirements of the application and
+  the level of concurrency expected.
+- 176 . What are atomic operations in Java? \
+  Atomic operations in Java are operations that are performed atomically, meaning that they are indivisible and
+  uninterruptible. Atomic operations are used in concurrent programming to ensure that shared data is accessed and
+  modified safely by multiple threads without the risk of data corruption or lost updates. Java provides a set of
+  atomic classes and operations in the `java.util.concurrent.atomic` package to support atomic operations.
+
+  Some common atomic operations in Java include:
+    - **AtomicInteger**: Provides atomic operations on integer values, such as `get`, `set`, `incrementAndGet`, and
+      `compareAndSet`.
+    - **AtomicLong**: Provides atomic operations on long values, such as `get`, `set`, `incrementAndGet`, and
+      `compareAndSet`.
+    - **AtomicReference**: Provides atomic operations on object references, such as `get`, `set`, and `compareAndSet`.
+    - **AtomicBoolean**: Provides atomic operations on boolean values, such as `get`, `set`, and `compareAndSet`.
+
+  Atomic operations are commonly used in multi-threaded applications to ensure that shared data is accessed and modified
+  safely by multiple threads. They provide a simple and efficient way to implement lock-free algorithms and data
+  structures that require atomicity and thread safety.
+- 177 . What is BlockingQueue in Java? \
+  A `BlockingQueue` in Java is a type of queue that supports blocking operations for adding and removing elements. A
+  blocking queue provides methods for waiting for elements to become available or space to become available in the
+  queue, allowing threads to block until the desired condition is met. Blocking queues are commonly used in
+  multi-threaded applications to coordinate the processing of elements between producer and consumer threads.
+
+  Some key features of a `BlockingQueue` include:
+    - **Blocking Operations**: Blocking queues support blocking operations for adding and removing elements, allowing
+      threads to wait until the desired condition is met.
+    - **Waiting for Elements**: Blocking queues provide methods for waiting for elements to become available in the
+      queue, ensuring that threads can block until elements are ready to be processed.
+    - **Waiting for Space**: Blocking queues also provide methods for waiting for space to become available in the
+      queue, allowing threads to block until there is room to add new elements.
+    - **Thread Safety**: Blocking queues are thread-safe data structures that provide built-in support for
+      synchronization and coordination between threads.
+
+  Blocking queues are commonly used in scenarios where multiple threads need to coordinate the processing of elements
+  in a queue. They provide a flexible and efficient way to work with queues of objects in Java.
 
 ### Generics
 
-- 178 . What are Generics?
-- 179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible?
-- 180 . How do you declare a generic class?
-- 181 . What are the restrictions in using generic type that is declared in a class declaration?
-- 182 . How can we restrict Generics to a subclass of particular class?
-- 183 . How can we restrict Generics to a super class of particular class?
-- 184 . Can you give an example of a generic method?
+- 178 . What are Generics? Why do we need Generics? \
+  Generics in Java are a feature that allows classes and methods to be parameterized by one or more types. Generics
+  provide a way to create reusable and type-safe code by allowing classes and methods to work with generic types that
+  are specified at compile time. Generics enable the creation of classes, interfaces, and methods that can work with
+  different types without sacrificing type safety.
+
+  Some key reasons for using generics in Java include:
+    - **Type Safety**: Generics provide compile-time type checking, ensuring that the correct types are used in
+      classes and methods. This helps prevent runtime errors and improves code reliability.
+    - **Code Reusability**: Generics allow classes and methods to be parameterized by types, making them more
+      flexible and reusable. This reduces code duplication and improves maintainability.
+    - **Performance**: Generics can improve performance by avoiding the need for type casting and providing
+      compile-time optimizations. This can lead to faster and more efficient code.
+
+  Generics are an important feature of the Java language that provide a way to create flexible, reusable, and
+  type-safe code. They are commonly used in collections, data structures, and algorithms to work with generic types
+  and improve code quality.
+- 179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible? \
+  Generics in Java are a feature that allows classes and methods to be parameterized by one or more types. Generics
+  provide a way to create reusable and type-safe code by allowing classes and methods to work with generic types that
+  are specified at compile time. Generics enable the creation of classes, interfaces, and methods that can work with
+  different types without sacrificing type safety.
+
+  Generics make a program more flexible by allowing classes and methods to work with generic types that are specified
+  at compile time. This flexibility allows code to be written in a generic and reusable way, reducing code duplication
+  and improving maintainability. For example, consider a generic `Pair` class that can store a pair of values of any
+  type:
+
+    ```java
+    public class Pair<T, U> {
+        private T first;
+        private U second;
+
+        public Pair(T first, U second) {
+            this.first = first;
+            this.second = second;
+        }
+
+        public T getFirst() {
+            return first;
+        }
+
+        public U getSecond() {
+            return second;
+        }
+
+        public static void main(String[] args) {
+            Pair<String, Integer> pair1 = new Pair<>("Hello", 42);
+            Pair<Integer, Double> pair2 = new Pair<>(123, 3.14);
+
+            System.out.println(pair1.getFirst() + " " + pair1.getSecond());
+            System.out.println(pair2.getFirst() + " " + pair2.getSecond());
+        }
+    }
+    ```
+
+  In this example, a generic `Pair` class is created that can store a pair of values of any type. The `Pair` class is
+  parameterized by two types `T` and `U`, allowing it to work with different types of values. This flexibility makes
+  the `Pair` class more generic and reusable, allowing it to store pairs of values of different types without
+  sacrificing type safety.
+- 180 . How do you declare a generic class? \
+  A generic class in Java is declared by specifying one or more type parameters in angle brackets (`<>`) after the class
+  name. The type parameters are used to represent generic types that can be specified at compile time when creating
+  instances of the class. Here is an example of declaring a generic class in Java:
+
+    ```java
+    public class Box<T> {
+        private T value;
+
+        public Box(T value) {
+            this.value = value;
+        }
+
+        public T getValue() {
+            return value;
+        }
+
+        public static void main(String[] args) {
+            Box<String> box1 = new Box<>("Hello");
+            Box<Integer> box2 = new Box<>(42);
+
+            System.out.println(box1.getValue());
+            System.out.println(box2.getValue());
+        }
+    }
+    ```
+
+  In this example, a generic `Box` class is declared with a type parameter `T`. The `Box` class can store a value of any
+  type specified by the type parameter `T`. Instances of the `Box` class are created by specifying the type parameter
+  when creating the instance, such as `Box<String>` or `Box<Integer`. This allows the `Box` class to work with different
+  types of values while maintaining type safety.
+- 181 . What are the restrictions in using generic type that is declared in a class declaration? \
+  When using a generic type that is declared in a class declaration, there are some restrictions and limitations that
+  must be considered:
+
+    - **Type Erasure**: Generics in Java use type erasure, which means that the actual type information is erased at
+      compile time and is not available at runtime. This can lead to limitations in working with generic types, such as
+      not being able to create instances of generic types directly or access the type information at runtime.
+    - **Type Bounds**: Generic types can be bounded by specifying upper bounds, lower bounds, or multiple bounds. These
+      bounds restrict the types that can be used with the generic type and provide compile-time type checking to ensure
+      type safety.
+    - **Type Inference**: Java supports type inference for generic types, allowing the compiler to infer the type
+      arguments based on the context. This can help reduce the need for explicit type declarations and make code more
+      concise and readable.
+    - **Type Compatibility**: Generic types must be compatible with the specified type arguments, ensuring that the
+      types used with the generic type are consistent and compatible with the declared type parameters.
+
+  These restrictions and limitations help ensure type safety and consistency when working with generic types in Java.
+- 182 . How can we restrict Generics to a subclass of particular class? \
+  In Java, it is possible to restrict generics to a subclass of a particular class by using bounded type parameters. By
+  specifying an upper bound for the generic type parameter, you can restrict the types that can be used with the generic
+  class to subclasses of a specific class. Here is an example of restricting generics to a subclass of a particular
+  class:
+
+    ```java
+    public class Box<T extends Number> {
+        private T value;
+
+        public Box(T value) {
+            this.value = value;
+        }
+
+        public T getValue() {
+            return value;
+        }
+
+        public static void main(String[] args) {
+            Box<Integer> box1 = new Box<>(42);
+            Box<Double> box2 = new Box<>(3.14);
+            // Box<String> box3 = new Box<>("Hello"); // Compilation error
+        }
+    }
+    ```
+
+  In this example, the `Box` class is declared with a type parameter `T` that is bounded by `Number`. This means that
+  the generic type `T` must be a subclass of `Number`, such as `Integer`, `Double`, or `Float`. Instances of the `Box`
+  class can be created with types that are subclasses of `Number`, but not with types that are not subclasses of
+  `Number`.
+- 183 . How can we restrict Generics to a super class of particular class? \
+  In Java, it is possible to restrict generics to a super class of a particular class by using bounded type parameters.
+  By specifying a lower bound for the generic type parameter, you can restrict the types that can be used with the
+  generic class to superclasses of a specific class. Here is an example of restricting generics to a superclass of a
+  particular class:
+
+    ```java
+    public class Box<T super Number> {
+        private T value;
+
+        public Box(T value) {
+            this.value = value;
+        }
+
+        public T getValue() {
+            return value;
+        }
+
+        public static void main(String[] args) {
+            Box<Number> box1 = new Box<>(42);
+            Box<Object> box2 = new Box<>("Hello");
+            // Box<String> box3 = new Box<>("Hello"); // Compilation error
+        }
+    }
+    ```
+
+  In this example, the `Box` class is declared with a type parameter `T` that is bounded by `super Number`. This means
+  that the generic type `T` must be a superclass of `Number`, such as `Object` or `Serializable`. Instances of the
+  `Box` class can be created with types that are superclasses of `Number`, but not with types that are not superclasses
+  of `Number`.
+- 184 . Can you give an example of a generic method? \
+  A generic method in Java is a method that is parameterized by one or more types. Generic methods provide a way to
+  create methods that can work with different types of arguments without sacrificing type safety. Here is an example of
+  a generic method that swaps the elements of an array:
+
+    ```java
+    public class ArrayUtils {
+        public static <T> void swap(T[] array, int i, int j) {
+            T temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+
+        public static void main(String[] args) {
+            Integer[] numbers = {1, 2, 3, 4, 5};
+            swap(numbers, 0, 4);
+
+            for (Integer number : numbers) {
+                System.out.print(number + " ");
+            }
+        }
+    }
+    ```
+
+  In this example, the `swap` method is declared as a generic method with a type parameter `T`. The `swap` method takes
+  an array of type `T`, along with two indices `i` and `j`, and swaps the elements at the specified indices. The
+  `swap` method can work with arrays of any type, allowing elements to be swapped in a type-safe way.
 
 ### Multi threading
 
-- 185 . What is the need for threads in Java?
-- 186 . How do you create a thread?
-- 187 . How do you create a thread by extending thread class?
-- 188 . How do you create a thread by implementing runnable interface?
-- 189 . How do you run a thread in Java?
-- 190 . What are the different states of a thread?
-- 191 . What is priority of a thread? How do you change the priority of a thread?
-- 192 . What is executorservice?
-- 193 . Can you give an example for executorservice?
-- 194 . Explain different ways of creating executor services .
-- 195 . How do you check whether an executionservice task executed successfully?
+- 185 . What is the need for threads in Java? \
+  Threads in Java are used to achieve concurrent execution of tasks within a single process. Threads allow multiple
+  operations to be performed simultaneously, enabling applications to take advantage of multi-core processors and
+  improve performance. Threads are lightweight processes that share the same memory space and resources of a process,
+  allowing them to run concurrently and perform tasks in parallel.
+
+  Some key reasons for using threads in Java include:
+    - **Concurrency**: Threads enable multiple tasks to be executed concurrently, improving performance and
+      responsiveness
+      of applications.
+    - **Parallelism**: Threads allow tasks to be executed
+- 186 . How do you create a thread? \
+  There are two main ways to create a thread in Java:
+    - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the
+      `run` method. This approach allows you to define the behavior of the thread by implementing the `run` method.
+    - **Implementing the `Runnable` interface**: You can create a thread by implementing the `Runnable` interface and
+      passing an instance of the class to the `Thread` constructor. This approach separates the thread logic from the
+      class definition and allows for better code reusability.
+
+  Here is an example of creating a thread by extending the `Thread` class:
+
+    ```java
+    public class MyThread extends Thread {
+        @Override
+        public void run() {
+            System.out.println("Hello from a thread!");
+        }
+
+        public static void main(String[] args) {
+            MyThread thread = new MyThread();
+            thread.start();
+        }
+    }
+    ```
+
+  In this example, a `MyThread` class is created by extending the `Thread` class and overriding the `run` method. An
+  instance of the `MyThread` class is then created, and the `start` method is called to start the thread.
+
+  Here is an example of creating a thread by implementing the `Runnable` interface:
+
+    ```java
+    public class MyRunnable implements Runnable {
+        @Override
+        public void run() {
+            System.out.println("Hello from a thread!");
+        }
+
+        public static void main(String[] args) {
+            MyRunnable runnable = new MyRunnable();
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+    }
+    ```
+
+  In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
+  method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
+  called to start the thread.
+- 187 . How do you create a thread by extending thread class? \
+  You can create a thread in Java by extending the `Thread` class and overriding the `run` method. This approach allows
+  you to define the behavior of the thread by implementing the `run` method. Here is an example:
+
+    ```java
+    public class MyThread extends Thread {
+        @Override
+        public void run() {
+            System.out.println("Hello from a thread!");
+        }
+
+        public static void main(String[] args) {
+            MyThread thread = new MyThread();
+            thread.start();
+        }
+    }
+    ```
+
+  In this example, a `MyThread` class is created by extending the `Thread` class and overriding the `run` method. An
+  instance of the `MyThread` class is then created, and the `start` method is called to start the thread.
+- 188 . How do you create a thread by implementing runnable interface? \
+  You can create a thread in Java by implementing the `Runnable` interface and passing an instance of the class to the
+  `Thread` constructor. This approach separates the thread logic from the class definition and allows for better code
+  reusability. Here is an example:
+
+    ```java
+    public class MyRunnable implements Runnable {
+        @Override
+        public void run() {
+            System.out.println("Hello from a thread!");
+        }
+
+        public static void main(String[] args) {
+            MyRunnable runnable = new MyRunnable();
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+    }
+    ```
+
+  In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
+  method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
+  called to start the thread.
+- 189 . How do you run a thread in Java? \
+  There are two main ways to run a thread in Java:
+    - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the `run`
+      method. This approach allows you to define the behavior of the thread by implementing the `run` method. You can
+      then
+      create an instance of the class and call the `start` method to run the thread.
+    - **Implementing the `Runnable` interface**: You can create a thread by implementing the `Runnable` interface and
+      passing an instance of the class to the `Thread` constructor. This approach separates the thread logic from the
+      class definition and allows for better code reusability. You can then create an instance of the class and call the
+      `start` method to run the thread.
+
+  Here is an example of running a thread by extending the `Thread` class:
+
+    ```java
+    public class MyThread extends Thread {
+        @Override
+        public void run() {
+            System.out.println("Hello from a thread!");
+        }
+
+        public static void main(String[] args) {
+            MyThread thread = new MyThread();
+            thread.start();
+        }
+    }
+    ```
+
+  In this example, a `MyThread` class is created by extending the `Thread` class and overriding the `run` method. An
+  instance of the `MyThread` class is then created, and the `start` method is called to run the thread.
+
+  Here is an example of running a thread by implementing the `Runnable` interface:
+
+    ```java
+    public class MyRunnable implements Runnable {
+        @Override
+        public void run() {
+            System.out.println("Hello from a thread!");
+        }
+
+        public static void main(String[] args) {
+            MyRunnable runnable = new MyRunnable();
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+    }
+    ```
+
+  In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
+  method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
+  called to run the thread.
+- 190 . What are the different states of a thread? \
+  Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are:
+    - **New**: A thread is in the new state when it is created but has not yet started.
+    - **Runnable**: A thread is in the runnable state when it is ready to run but is waiting for a processor to execute
+    - 191 . What is priority of a thread? How do you change the priority of a thread? \
+      The priority of a thread in Java is an integer value that determines the scheduling priority of the thread.
+      Threads
+      with higher priority values are given preference by the thread scheduler and are more likely.
+- 192 . What is ExecutorService? \
+  `ExecutorService` is an interface in the Java Concurrency API that provides a higher-level abstraction for managing
+  and executing tasks asynchronously using a pool of threads. `ExecutorService` extends the `Executor` interface and
+  provides additional methods for managing the lifecycle of the executor, submitting tasks for execution, and
+  controlling
+  the execution of tasks.
+
+  Some key features of `ExecutorService` include:
+    - **Task Execution**: `ExecutorService` allows you to submit tasks for execution using methods like `submit` and
+      `invokeAll`.
+    - **Thread Pool Management**: `ExecutorService` manages a pool of worker threads that can be reused for executing
+      tasks.
+    - **Asynchronous
+- 193 . Can you give an example for ExecutorService? \
+  Here is an example of using `ExecutorService` to execute tasks asynchronously in Java:
+
+    ```java
+    import java.util.concurrent.ExecutorService;
+    import java.util.concurrent.Executors;
+
+    public class Main {
+        public static void main(String[] args) {
+            // Create an ExecutorService with a fixed thread pool size
+            ExecutorService executor = Executors.newFixedThreadPool(2);
+
+            // Submit tasks for execution
+            executor.submit(() -> System.out.println("Task 1 executed by thread: " + Thread.currentThread().getName()));
+            executor.submit(() -> System.out.println("Task 2 executed by thread: " + Thread.currentThread().getName()));
+
+            // Shutdown the ExecutorService
+            executor.shutdown();
+        }
+    }
+    ```
+
+  In this example, an `ExecutorService` is created with a fixed thread pool size of 2 using the
+  `Executors.newFixedThreadPool`
+  method. Two tasks are then submitted for execution using the `submit` method, and the tasks are executed
+  asynchronously
+  by the worker threads in the thread pool. Finally, the `ExecutorService` is shut down to release the resources.
+- 194 . Explain different ways of creating executor services. \
+  There are several ways to create `ExecutorService` instances in Java using the `Executors` utility class. Some of the
+  common ways to create `ExecutorService` instances include:
+    - **`newFixedThreadPool(int nThreads)`**: Creates a fixed-size thread pool with the specified number of threads.
+    - **`newCachedThreadPool()`**: Creates a thread pool that creates new threads as needed and reuses idle threads.
+    - **`newSingleThreadExecutor()`**: Creates a single-threaded executor that uses a single worker thread to execute
+      tasks sequentially.
+    - **`newScheduledThreadPool(int corePoolSize)`**: Creates a thread pool that can schedule tasks to run after a
+      specified delay or at a fixed rate.
+
+  These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations
+  based on the requirements of the application.
+- 195 . How do you check whether an ExecutionService task executed successfully?
 - 196 . What is callable? How do you execute a callable from executionservice?
-- 197 . What is synchronization of threads?
-- 198 . Can you give an example of a synchronized block?
-- 199 . Can a static method be synchronized?
-- 200 . What is the use of join method in threads?
+- 197 . What is synchronization of threads? \
+  Synchronization in Java is a mechanism that allows multiple threads to coordinate access to shared resources.
+- 198 . Can you give an example of a synchronized block? \
+  Here is an example of using a synchronized block in Java to synchronize access to a shared resource:
+
+    ```java
+    public class Counter {
+        private int count = 0;
+
+        public void increment() {
+            synchronized (this) {
+                count++;
+            }
+        }
+
+        public int getCount() {
+            synchronized (this) {
+                return count;
+            }
+        }
+
+        public static void main(String[] args) {
+            Counter counter = new Counter();
+
+            // Create multiple threads to increment the counter
+            Thread thread1 = new Thread(() -> {
+                for (int i = 0; i < 1000; i++) {
+                    counter.increment();
+                }
+            });
+
+            Thread thread2 = new Thread(() -> {
+                for (int i = 0; i < 1000; i++) {
+                    counter.increment();
+                }
+            });
+
+            thread1.start();
+            thread2.start();
+
+            // Wait for threads to finish
+            try {
+                thread1.join();
+                thread2.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Print the final count
+            System.out.println("Final count: " + counter.getCount());
+        }
+    }
+    ```
+
+  In this example, a `Counter` class is created with methods to increment and get the count of a shared counter. The
+  `increment` and `getCount` methods are synchronized using a synchronized block with the `this` object as the monitor.
+  Multiple threads are created to increment the counter concurrently, and the final count is printed after the threads
+  have finished.
+- 199 . Can a static method be synchronized? \
+  Yes, a static method can be synchronized in Java. When a static method is synchronized, the lock acquired is on the
+  class object associated with the method's class. This means that only one thread can execute the synchronized static
+  method at a time, regardless of the number of instances of the class.
+
+  Here is an example of a synchronized static method in Java:
+
+    ```java
+    public class Counter {
+        private static int count = 0;
+
+        public static synchronized void increment() {
+            count++;
+        }
+
+        public static int getCount() {
+            return count;
+        }
+
+        public static void main(String[] args) {
+            // Create multiple threads to increment the counter
+            Thread thread1 = new Thread(() -> {
+                for (int i = 0; i < 1000; i++) {
+                    Counter.increment();
+                }
+            });
+
+            Thread thread2 = new Thread(() -> {
+                for (int i = 0; i < 1000; i++) {
+                    Counter.increment();
+                }
+            });
+
+            thread1.start();
+            thread2.start();
+
+            // Wait for threads to finish
+            try {
+                thread1.join();
+                thread2.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Print the final count
+            System.out.println("Final count: " + Counter.getCount());
+        }
+    }
+    ```
+
+  In this example, the `increment` method is a synchronized static method that increments a shared static counter. The
+  `increment` method is synchronized to ensure that only one thread can increment the counter at a time, even when
+  multiple threads are accessing the method concurrently.
+- 200 . What is the use of join method in threads? \
+  The `join` method in Java is used to wait for a thread to complete its execution before continuing with the current
+  thread. When the `join` method is called on a thread, the current thread will block and wait for the specified thread
+  to finish before proceeding.
+
+  Here is an example of using the `join` method in Java:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            Thread thread = new Thread(() -> {
+                System.out.println("Thread started");
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Thread finished");
+            });
+
+            thread.start();
+
+            // Wait for the thread to finish
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("Main thread finished");
+        }
+    }
+    ```
+
+  In this example, a thread is created that sleeps for 2 seconds before finishing. The `join` method is called on the
+  thread to wait for it to finish before printing a message in the main thread. This ensures that the main thread waits
+  for the thread to complete before continuing.
 - 201 . Describe a few other important methods in threads?
-- 202 . What is a deadlock?
-- 203 . What are the important methods in Java for inter-thread communication?
-- 204 . What is the use of wait method?
-- 205 . What is the use of notify method?
-- 206 . What is the use of notifyall method?
-- 207 . Can you write a synchronized program with wait and notify methods?
+- 202 . What is a deadlock? How can you avoid a deadlock? \
+  A deadlock is a situation in multi-threaded programming where two or more threads are blocked forever, waiting for
+  each
+  other to release resources that they need to continue execution. Deadlocks can occur when multiple threads acquire
+  locks on resources in a different order, leading to a circular dependency that prevents any thread from making
+  progress.
 
-### Functional Programming - Lamdba expressions and Streams
+  To avoid deadlocks in multi-threaded programs, you can follow some best practices:
+    - **Avoid Nested Locks**: Try to avoid acquiring multiple locks in nested order, as this can lead to deadlocks.
+    - **Use a Timeout**: Use a timeout when acquiring locks to prevent threads from waiting indefinitely.
+    - **Avoid Circular Dependencies**: Ensure that threads acquire locks in a consistent order to avoid circular
+      dependencies.
+    - **Use Lock Ordering**: Establish a global lock ordering to ensure that threads acquire locks in a consistent
+      order.
+    - **Use Deadlock Detection**: Implement deadlock detection mechanisms to identify and resolve deadlocks when they
+      occur.
 
-- 208 . What is functional programming?
-- 209 . Can you give an example of functional programming?
+  By following these best practices and designing multi-threaded programs carefully, you can reduce the likelihood of
+  deadlocks and improve the reliability of your applications.
+- 203 . What are the important methods in Java for inter-thread communication? \
+  Java provides several methods for inter-thread communication, including:
+    - **`wait` and `notify`**: The `wait` and `notify` methods are used to coordinate the execution of threads by
+      allowing
+      threads to wait for a condition to be met and notify other threads when the condition is satisfied.
+    - **`wait(long timeout)` and `notifyAll`**: The `wait(long timeout)` method allows a thread to wait for a specified
+      amount of time before continuing, while the `notifyAll` method notifies all waiting threads to wake up and
+      continue execution
+- 204 . What is the use of wait method? \
+  The `wait` method in Java is used to make a thread wait until a condition is met. When a thread calls the `wait`
+  method,
+  it releases the lock it holds and enters a waiting state until another thread calls the `notify` or `notifyAll` method
+  on the same object. The `wait` method is typically used for inter-thread communication and synchronization in
+  multi-threaded programs.
+- 205 . What is the use of notify method? \
+  The `notify` method in Java is used to wake up a single thread that is waiting on the same object. When a thread calls
+  the `notify` method, it notifies a single waiting thread to wake up and continue execution. The `notify` method is
+  typically used in conjunction with the `wait` method for inter-thread communication and synchronization in
+  multi-threaded programs.
+- 206 . What is the use of notifyall method? \
+  The `notifyAll` method in Java is used to wake up all threads that are waiting on the same object. When a thread calls
+  the `notifyAll` method, it notifies all waiting threads to wake up and
+- 207 . Can you write a synchronized program with wait and notify methods? \
+  Here is an example of a synchronized program using the `wait` and `notify` methods for inter-thread communication in
+  Java:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            Object lock = new Object();
+
+            Thread producer = new Thread(() -> {
+                synchronized (lock) {
+                    System.out.println("Producer thread started");
+                    try {
+                        lock.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Producer thread resumed");
+                }
+            });
+
+            Thread consumer = new Thread(() -> {
+                synchronized (lock) {
+                    System.out.println("Consumer thread started");
+                    lock.notify();
+                    System.out.println("Consumer thread notified");
+                }
+            });
+
+            producer.start();
+            consumer.start();
+        }
+    }
+    ```
+
+  In this example, a producer thread and a consumer thread are created to demonstrate the use of the `wait` and `notify`
+  methods for inter-thread communication. The producer thread waits for the consumer thread to notify it before
+  continuing, while the consumer thread notifies the producer thread to resume
+
+### Functional Programming - Lambda expressions and Streams
+
+- 208 . What is functional programming? How is it different from object-oriented programming? \
+  Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions
+  and avoids changing state and mutable data. Functional programming focuses on the use of pure functions, higher-order
+  functions, and immutable data structures to achieve declarative and concise code. Functional programming is based on
+  the principles of lambda calculus and emphasizes the use of functions as first-class citizens.
+
+  Some key differences between functional programming and object-oriented programming include:
+    - **State and Mutability**: Functional programming avoids changing state and mutable data, while object-oriented
+      programming uses objects and classes to model state and behavior.
+    - **Functions vs. Objects**: Functional programming focuses on functions as the primary building blocks of programs,
+      while object-oriented programming uses objects to encapsulate state and behavior.
+    - **Immutability**: Functional programming emphasizes the use of immutable data structures to avoid side effects and
+      make programs easier to reason about.
+    - **Declarative vs. Imperative**: Functional programming is more declarative, focusing on what should be done rather
+      than how it should be done, while object-oriented programming is more imperative, specifying the steps to achieve
+      a
+      result.
+    - **Concurrency**: Functional programming is well-suited for concurrent and parallel programming due to its emphasis
+      on immutability and pure functions.
+
+  Functional programming languages like Haskell, Scala, and Clojure provide built-in support for functional programming
+  features, while languages like Java have introduced functional programming concepts like lambda expressions and
+  streams to support functional programming paradigms.
+- 209 . Can you give an example of functional programming? \
+  Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions
+  and avoids changing state and mutable data. Functional programming focuses on the use of pure functions, higher-order
+  functions, and immutable data structures to achieve declarative and concise code. Functional programming is based on
+  the principles of lambda calculus and emphasizes the use of functions as first-class citizens.
+
+  Here is an example of functional programming in Java using lambda expressions:
+
+    ```java
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class Main {
+        public static void main(String[] args) {
+            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+            // Using lambda expression to square each element
+            numbers.stream()
+                   .map(n -> n * n)
+                   .forEach(System.out::println);
+        }
+    }
+    ```
+
+  In this example, a list of integers is created, and a lambda expression is used with the `map` method of the `Stream`
+  interface to square each element in the list. The result is then printed to the console using the `forEach` method.
+  This example demonstrates the use of functional programming concepts like lambda expressions and streams in Java.
 - 210 . What is a stream?
-- 211 . Explain about streams with an example?
-- what are intermediate operations in streams?
-- 212 . What are terminal operations in streams?
-- 213 . What are method references?
-- 214 . What are lambda expressions?
-- 215 . Can you give an example of lambda expression?
-- 216 . Can you explain the relationship between lambda expression and functional interfaces?
-- 217 . What is a predicate?
-- 218 . What is the functional interface - function?
-- 219 . What is a consumer?
-- 220 . Can you give examples of functional interfaces with multiple arguments?
+- 211 . Explain about streams with an example? what are intermediate operations in streams? \
+  Streams in Java provide a way to process collections of elements in a functional and declarative manner. Streams
+  enable you to perform operations like filtering, mapping, sorting, and reducing on collections using a fluent and
+  pipeline-based API. Streams are designed to be lazy, parallelizable, and efficient for processing large amounts of
+  data.
+
+  Here is an example of using streams in Java:
+
+    ```java
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class Main {
+        public static void main(String[] args) {
+            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+            // Using streams to filter and print even numbers
+            numbers.stream()
+                   .filter(n -> n % 2 == 0)
+                   .forEach(System.out::println);
+        }
+    }
+    ```
+
+  In this example, a list of integers is created, and a stream is obtained using the `stream` method. The `filter`
+  method is then used to filter even numbers from the stream, and the result is printed to the console using the
+  `forEach` method. This example demonstrates the use of streams and intermediate operations like `filter` in Java.
+- 212 . What are terminal operations in streams? \
+  Terminal operations in streams are operations that produce a result or a side effect and terminate the stream
+  processing. Terminal operations are the final step in a stream pipeline and trigger the execution of intermediate
+  operations on the stream elements. Some common terminal operations in streams include `forEach`, `collect`, `reduce`,
+  and `count`. Terminal operations are essential for processing streams and obtaining the final result of the stream
+  processing.
+- 213 . What are method references? How are they used in streams? \
+  Method references in Java provide a way to refer to methods or constructors without invoking them. Method references
+  are shorthand syntax for lambda expressions that call a single method or constructor. Method references can be used in
+  streams to simplify the code and make it more readable by replacing lambda expressions with method references.
+
+  Here is an example of using method references in streams in Java:
+
+    ```java
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class Main {
+        public static void main(String[] args) {
+            List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+            // Using method reference to print each name
+            names.forEach(System.out::println);
+        }
+    }
+    ```
+
+  In this example, a list of names is created, and a method reference `System.out::println` is used with the `forEach`
+  method to print each name in the list. The method reference `System.out::println` refers to the `println` method of
+  the
+  `System.out` class and is equivalent to a lambda expression `(name) -> System.out.println(name)`. Method references
+  provide a concise and readable way to refer to methods in streams and other functional programming constructs in Java.
+- 214 . What are lambda expressions? How are they used in streams? \
+  Lambda expressions in Java provide a way to define anonymous functions or blocks of code that can be passed as
+  arguments to methods or stored in variables. Lambda expressions are a concise and expressive way to represent
+  functions and enable functional programming paradigms in Java. Lambda expressions are used in streams to define
+  operations on stream elements in a functional and declarative manner.
+
+  Here is an example of using lambda expressions in streams in Java:
+
+    ```java
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class Main {
+        public static void main(String[] args) {
+            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+            // Using lambda expression to square each element
+            numbers.stream()
+                   .map(n -> n * n)
+                   .forEach(System.out::println);
+        }
+    }
+    ```
+
+  In this example, a list of integers is created, and a lambda expression `n -> n * n` is used with the `map` method of
+  the `Stream` interface to square each element in the list. The result is then printed to the console using the
+  `forEach` method. Lambda expressions provide a concise and expressive way to define operations on stream elements in
+  Java.
+- 215 . Can you give an example of lambda expression? \
+  Lambda expressions in Java provide a way to define anonymous functions or blocks of code that can be passed as
+  arguments to methods or stored in variables. Lambda expressions are a concise and expressive way to represent
+  functions and enable functional programming paradigms in Java.
+
+  Here is an example of a lambda expression in Java:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            // Lambda expression to add two numbers
+            MathOperation add = (a, b) -> a + b;
+
+            int result = add.operate(10, 20);
+            System.out.println("Result: " + result);
+        }
+
+        interface MathOperation {
+            int operate(int a, int b);
+        }
+    }
+    ```
+
+  In this example, a lambda expression `(a, b) -> a + b` is used to define a function that adds two numbers. The lambda
+  expression is assigned to a functional interface `MathOperation` that defines a method `operate` to perform the
+  operation. The lambda expression is then used to add two numbers and print the result to the console.
+- 216 . Can you explain the relationship between lambda expression and functional interfaces? \
+  Lambda expressions in Java are closely related to functional interfaces, which are interfaces that have exactly one
+  abstract method. Lambda expressions can be used to provide an implementation for the abstract method of a functional
+  interface, allowing you to define anonymous functions or blocks of code that can be passed as arguments to methods or
+  stored in variables.
+
+  Here is an example of using a lambda expression with a functional interface in Java:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            // Lambda expression to add two numbers
+            MathOperation add = (a, b) -> a + b;
+
+            int result = add.operate(10, 20);
+            System.out.println("Result: " + result);
+        }
+
+        interface MathOperation {
+            int operate(int a, int b);
+        }
+    }
+    ```
+
+  In this example, a lambda expression `(a, b) -> a + b` is used to define a function that adds two numbers. The lambda
+  expression is assigned to a functional interface `MathOperation` that defines a method `operate` to perform the
+  operation. The lambda expression provides an implementation for the abstract method of the functional interface,
+  allowing you to define and use anonymous functions in Java.
+- 217 . What is a predicate? \
+  A predicate in Java is a functional interface that represents a boolean-valued function of one argument. Predicates
+  are
+  commonly used in functional programming to define conditions or filters that can be applied to elements in a
+  collection. Predicates can be combined using logical operators like `and`, `or`, and `negate` to create complex
+  conditions for filtering elements.
+
+  Here is an example of using a predicate in Java:
+
+    ```java
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.function.Predicate;
+
+    public class Main {
+        public static void main(String[] args) {
+            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+            // Define a predicate to filter even numbers
+            Predicate<Integer> isEven = n -> n % 2 == 0;
+
+            // Filter even numbers from the list
+            numbers.stream()
+                   .filter(isEven)
+                   .forEach(System.out::println);
+        }
+    }
+    ```
+
+  In this example, a predicate `isEven` is defined to filter even numbers from a list of integers. The predicate is used
+  with the `filter` method of the `Stream` interface to apply the condition and print the even numbers to the console.
+- 218 . What is the functional interface - function? \
+  The `Function` interface in Java is a functional interface that represents a function that accepts one argument and
+  produces a result. The `Function` interface is commonly used in functional programming to define transformations or
+  mappings that can be applied to elements in a collection. The `Function` interface provides a method `apply` to
+  perform the transformation and produce the result.
+
+  Here is an example of using the `Function` interface in Java:
+
+    ```java
+    import java.util.function.Function;
+
+    public class Main {
+        public static void main(String[] args) {
+            // Define a function to square a number
+            Function<Integer, Integer> square = n -> n * n;
+
+            // Apply the function to a number
+            int result = square.apply(5);
+            System.out.println("Result: " + result);
+        }
+    }
+    ```
+
+  In this example, a function `square` is defined to square a number. The function is assigned to a `Function` interface
+  that accepts an integer and produces an integer. The function is then applied to a number using the `apply` method to
+  calculate the square and print the result to the console.
+- 219 . What is a consumer? \
+  A consumer in Java is a functional interface that represents an operation that accepts a single input argument and
+  returns no result. Consumers are commonly used in functional programming to perform side effects or actions on
+  elements
+  in a collection without producing a result. Consumers provide a method `accept` to perform the operation on the input
+  argument.
+
+  Here is an example of using a consumer in Java:
+
+    ```java
+    import java.util.function.Consumer;
+
+    public class Main {
+        public static void main(String[] args) {
+            // Define a consumer to print a message
+            Consumer<String> printMessage = message -> System.out::println;
+
+            // Accept the message and print it
+            printMessage.accept("Hello, World!");
+        }
+    }
+    ```
+
+  In this example, a consumer `printMessage` is defined to print a message. The consumer is assigned to a `Consumer`
+  interface that accepts a string and performs the operation to print the message. The consumer is then used to accept
+  the message and print it to the console.
+- 220 . Can you give examples of functional interfaces with multiple arguments? \
+  Functional interfaces in Java can have multiple arguments by defining methods with multiple parameters. You can create
+  functional interfaces with multiple arguments by specifying the number of input arguments in the method signature and
+  using lambda expressions to provide implementations for the method.
+
+  Here is an example of a functional interface with multiple arguments in Java:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            // Define a functional interface with multiple arguments
+            MathOperation add = (a, b) -> a + b;
+
+            int result = add.operate(10, 20);
+            System.out.println("Result: " + result);
+        }
+
+        interface MathOperation {
+            int operate(int a, int b);
+        }
+    }
+    ```
+
+  In this example, a functional interface `MathOperation` is defined with a method `operate` that accepts two integers
+  and returns an integer. The functional interface is used with a lambda expression `(a, b) -> a + b` to define a
+  function that adds two numbers. The lambda expression provides an implementation for the method of the functional
+  interface, allowing you to define and use functions with multiple arguments in Java.
 
 ### New Features
 
-- 221 . What are the new features in Java 5?
-- 222 . What are the new features in Java 6?
-- 223 . What are the new features in Java 7?
-- 224 . What are the new features in Java 8?
+- 221 . What are the new features in Java 5? \
+  Java 5 introduced several new features and enhancements to the Java programming language, including:
+    - **Generics**: Java 5 introduced generics to provide compile-time type safety and reduce the need for explicit
+      casting of objects. Generics allow you to define classes, interfaces, and methods with type parameters that can be
+      used to enforce type constraints and improve code readability.
+    - **Enhanced for Loop**: Java 5 introduced the enhanced for loop, also known as the "for-each" loop, to simplify
+      iterating over collections and arrays. The enhanced for loop provides a more concise syntax for iterating over
+      elements in a collection without the need for explicit indexing.
+    - **Autoboxing and Unboxing**: Java 5 introduced autoboxing and unboxing to automatically convert primitive types to
+      their corresponding wrapper classes and vice versa. Autoboxing allows you to use primitive types and wrapper
+      classes interchangeably, simplifying code and improving readability.
+    - **Varargs**: Java 5 introduced varargs, which allow you to pass a variable number of arguments to a method.
+      Varargs
+      provide a flexible way to define methods that accept a variable number of arguments without the need to create
+      overloaded methods for different argument counts.
+    - **Annotations**: Java 5 introduced annotations to provide metadata about classes, methods, and fields. Annotations
+      allow you to add information to your code that can be used by the compiler, tools, and frameworks to generate
+      code,
+      perform validation, and configure behavior.
+    - **Enumerations**: Java 5 introduced enumerations to provide a type-safe way to define a set of constants.
+      Enumerations
+      allow you to define a fixed set of values that can be used in place of magic numbers or strings, improving code
+      readability and maintainability.
+    - **Static Imports**: Java 5 introduced static imports to allow static members of a class to be imported directly
+      into
+      another class. Static imports provide a way to use static methods and constants without qualifying them with the
+      class name, making code more concise and readable.
+
+  These new features introduced in Java 5 helped to improve the expressiveness, readability, and maintainability of Java
+  code and laid the foundation for future enhancements in the Java programming language.
+- 222 . What are the new features in Java 6? \
+  Java 6 introduced several new features and enhancements to the Java programming language, including:
+    - **Scripting Support**: Java 6 introduced scripting support through the `javax.script` package, allowing you to
+      execute scripts written in languages like JavaScript, Groovy, and Ruby within Java applications. Scripting support
+      provides a way to embed scripting languages in Java applications and execute scripts dynamically at runtime.
+    - **Compiler API**: Java 6 introduced the `javax.tools` package, which provides an API for compiling Java source
+      code
+      programmatically. The compiler API allows you to compile Java source code from within a Java program, enabling
+      dynamic code generation and compilation.
+    - **Pluggable Annotations**: Java 6 introduced pluggable annotations, which allow you to define custom annotations
+      that can be processed at compile time using annotation processors. Pluggable annotations provide a way to extend
+      the Java language with custom metadata and annotations that can be used to generate code, perform validation, and
+      configure behavior.
+    - **JDBC 4.0**: Java 6 introduced JDBC 4.0, which included several enhancements to the JDBC API for interacting with
+      databases. JDBC 4.0 introduced features like automatic driver loading, improved exception handling, and support
+      for
+      SQLXML data types, making it easier to work with databases in Java applications.
+    - **Java Compiler API**: Java 6 introduced the `javax.tools` package, which provides an API for compiling Java
+      source
+      code programmatically. The Java Compiler API allows you to compile Java source code from within a Java program,
+      enabling dynamic code generation and compilation.
+    - **Web Services**: Java 6 included updates to the Java API for XML Web Services (JAX-WS) and the Java Architecture
+      for XML Binding (JAXB) to support the latest web services standards and technologies. These updates made it easier
+      to develop and consume web services in Java applications.
+    - **Java DB**: Java 6 included Java DB (formerly known as Apache Derby) as a built-in database that can be used for
+      developing and testing Java database applications. Java DB provides a lightweight, embeddable database that can be
+      used with Java applications without requiring a separate database installation.
+
+  These new features introduced in Java 6 helped to improve the performance, productivity, and functionality of Java
+  applications and provided developers with new tools and capabilities for building robust and scalable software
+  systems.
+- 223 . What are the new features in Java 7? \
+  Java 7 introduced several new features and enhancements to the Java programming language, including:
+    - **Diamond Operator**: Java 7 introduced the diamond operator (`<>`) to simplify the use of generics by inferring
+      the
+      type arguments from the context. The diamond operator allows you to create instances of generic classes without
+      specifying the type arguments explicitly, reducing boilerplate code and improving readability.
+    - **Try-With-Resources**: Java 7 introduced the try-with-resources statement to simplify resource management and
+      ensure that resources like streams, connections, and files are closed properly after use. The try-with-resources
+      statement automatically closes resources at the end of the block, reducing the risk of resource leaks and
+      simplifying error handling.
+    - **Strings in Switch**: Java 7 introduced the ability to use strings in switch statements, allowing you to switch
+      on
+      string values instead of just primitive types and enums. Strings in switch statements provide a more expressive
+      way
+      to handle multiple cases based on string values, improving code readability and maintainability.
+    - **Binary Literals and Underscores in Numeric Literals**: Java 7 introduced support for binary literals (0b or 0B
+      prefix) and underscores in numeric literals to improve readability and expressiveness when working with binary and
+      numeric values
+    - 224 . What are the new features in Java 8? \
+      Java 8 introduced several new features and enhancements to the Java programming language, including:
+        - **Lambda Expressions**: Java 8 introduced lambda expressions to provide a concise and expressive way to define
+          anonymous functions or blocks of code. Lambda expressions enable functional programming paradigms in Java and
+          simplify the use of functional interfaces like `Predicate`, `Function`, and `Consumer`.
+        - **Streams API**: Java 8 introduced the Streams API to provide a fluent and pipeline-based API for processing
+          collections of elements. Streams enable you to perform operations like filtering, mapping, sorting, and
+          reducing
+          on collections using functional programming constructs like lambda expressions and method references.
+        - **Default Methods**: Java 8 introduced default methods in interfaces to allow interfaces to have concrete
+          implementations for methods. Default methods provide a way to add new methods to interfaces without breaking
+          existing implementations and enable the evolution of interfaces over time.
+        - **Functional Interfaces**: Java 8 introduced the `@FunctionalInterface` annotation to define functional
+          interfaces
+          that have exactly one abstract method. Functional interfaces can be used with lambda expressions and method
+          references to provide implementations for the abstract method.
+        - **Method References**: Java 8 introduced method references to provide a shorthand syntax for lambda
+          expressions
+          that call a single method or constructor. Method references allow you to refer to methods or constructors
+          without
+          invoking them directly, improving code readability and conciseness.
+        - **Optional Class**: Java 8 introduced the `Optional` class to provide a way to handle null values and avoid
+          NullPointerExceptions. The `Optional` class provides methods to check for the presence of a value and safely
+          access
+          the value if it is present.
+        - **Date and Time API**: Java 8 introduced the Date and Time API to provide a modern and comprehensive API for
+          handling date and time values. The Date and Time API includes classes like `LocalDate`, `LocalTime`, and
+          `ZonedDateTime`
+          to represent date, time, and timezone information in a type-safe and immutable way.
+        - **CompletableFuture**: Java 8 introduced the `CompletableFuture` class to provide a way to work with
+          asynchronous
+          computations and handle asynchronous results. `CompletableFuture` enables you to perform non-blocking and
+          asynchronous operations using a fluent API and callbacks.
+
+      These new features introduced in Java 8 helped to modernize the Java programming language and provide developers
+      with new tools and capabilities for building robust and scalable software systems.
+
+- 225 . What are the new features in Java 9? \
+  Java 9 introduced several new features and enhancements to the Java programming language, including:
+    - **Module System (Project Jigsaw)**: Java 9 introduced the module system to provide a way to modularize and
+      encapsulate
+      Java code. The module system allows you to define modules with explicit dependencies and access controls,
+      improving
+      code maintainability and security.
+    - **JShell (Interactive Shell)**: Java 9 introduced JShell, an interactive shell for evaluating Java code snippets
+      and expressions. JShell provides a way to experiment with Java code interactively and quickly test ideas without
+      needing to create a full Java program.
+    - **Private Methods in Interfaces**: Java 9 introduced the ability to define private methods in interfaces to
+      encapsulate common code and reduce duplication. Private methods in interfaces provide a way to share code between
+      default methods without exposing the implementation details.
+    - **Stream API Enhancements**: Java 9 introduced several enhancements to the Streams API, including new methods like
+      `takeWhile`, `dropWhile`, and `ofNullable` to improve the functionality and expressiveness of stream operations.
+    - **Process API Updates**: Java 9 introduced updates to the Process API to provide better
+- 226 . What are the new features in Java 11? \
+  Java 11 introduced several new features and enhancements to the Java programming language, including:
+    - **Local-Variable Syntax for Lambda Parameters**: Java 11 introduced the ability to use `var` as the type of
+      lambda parameters in lambda expressions. This feature allows you to use `var` to declare the type of lambda
+      parameters when the type can be inferred from the context, reducing boilerplate code and improving readability.
+    - **HTTP Client (Standard)**: Java 11 introduced a new HTTP client API as a standard feature to provide a modern
+      and flexible way to send HTTP requests and handle responses. The new HTTP client API supports HTTP/1.1 and HTTP/2
+      protocols and provides a fluent and asynchronous API for working with HTTP.
+    - **Epsilon Garbage Collector**: Java 11 introduced the Epsilon garbage collector, a no-op garbage collector that
+      does not perform any memory reclamation. The Epsilon garbage collector is designed for performance testing and
+      benchmarking to provide a baseline for comparing the performance of other garbage collectors.
+    - **ZGC (Experimental)**: Java 11 introduced the Z Garbage Collector (ZGC) as an experimental feature to provide
+      low-latency garbage collection for large heaps. ZGC is designed to reduce pause times and improve responsiveness
+      for applications that require low-latency garbage collection.
+    - **Flight Recorder (JFR) and Mission Control**: Java 11 introduced Flight Recorder (JFR) and Mission Control as
+      open-source features to provide advanced monitoring and profiling capabilities for Java applications. Flight
+      Recorder allows you to collect detailed runtime information and events, while Mission Control provides a graphical
+      interface for analyzing and visualizing the collected data.
+    - **Nest-Based Access Control**: Java 11 introduced nest-based access control to provide a more flexible and secure
+      way to access private members of classes within the same nest. Nest-based access control allows classes that are
+      logically part of the same group to access each other's private members, improving encapsulation and security.
+    - **Dynamic Class-File Constants**: Java 11 introduced dynamic class-file constants to provide a way to define
+      constants in class files that are dynamically computed at runtime. Dynamic class-file constants allow you to
+      define constants that depend on the class's runtime context, enabling more flexible and dynamic code generation.
+- 227 . What are the new features in Java 13? \
+  Java 13 introduced several new features and enhancements to the Java programming language, including:
+    - **Text Blocks (Preview Feature)**: Java 13 introduced text blocks as a preview feature to provide a more readable
+      and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line strings with
+      improved formatting and indentation, making it easier to write and read complex string literals.
+    - **Switch Expressions (Preview Feature)**: Java 13 introduced switch expressions as a preview feature to provide a
+      more concise and expressive way to write switch statements. Switch expressions allow you to use the `->` operator
+      to return a value from a switch case, enabling you to use switch statements as expressions that produce a result.
+    - **Reimplement the Legacy Socket API**: Java 13 reimplemented the legacy Socket API to provide a more modern and
+      efficient implementation of the socket communication protocol. The new Socket API is designed to improve
+      performance
+      and reliability for socket-based communication in Java applications.
+    - **Dynamic CDS Archives**: Java 13 introduced dynamic class data-sharing (CDS) archives to provide a way to create
+      and use CDS archives at runtime. Dynamic CDS archives allow you to optimize class loading and sharing for improved
+      startup time and memory footprint in Java applications.
+    - **FileSystems.newFileSystem() Method**: Java 13 introduced the `FileSystems.newFileSystem()` method to provide a
+      way to create new file systems dynamically at runtime. The new method allows you to create file systems from
+      various sources like ZIP files, JAR files, and custom providers, enabling more flexible and dynamic file system
+      operations.
+    - **ZGC (Production Feature)**: Java 13 promoted the Z Garbage Collector (ZGC) to a production feature to provide
+      low-latency garbage collection for large heaps. ZGC is designed to reduce pause times and improve responsiveness
+      for applications that require low-latency garbage collection.
+    - **Text Blocks (Second Preview)**: Java 13 introduced text blocks as a second preview feature to provide a more
+      readable and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line
+      strings with improved formatting and indentation, making it easier to write and read complex string literals.
+- 228 . What are the new features in Java 17? \
+  Java 17 introduced several new features and enhancements to the Java programming language, including:
+    - **Sealed Classes (Standard Feature)**: Java 17 introduced sealed classes as a standard feature to provide a way to
+      restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend
+      a class, improving code maintainability and security.
+    - **Pattern Matching for switch (Standard Feature)**: Java 17 introduced pattern matching for switch as a standard
+      feature to provide a more concise and expressive way to write switch statements. Pattern matching for switch
+      allows
+      you to use patterns in switch cases to destructure objects and extract values, enabling more powerful and flexible
+      switch statements.
+    - **JEP 356: Enhanced Pseudo-Random Number Generators**: Java 17 introduced enhanced pseudo-random number generators
+      to provide improved performance and security for generating random numbers. The enhanced pseudo-random number
+      generators use a more efficient algorithm to generate random numbers and provide better randomness and
+      unpredictability.
+    - **JEP 382: New macOS Rendering Pipeline**: Java 17 introduced a new macOS rendering pipeline to provide better
+      performance and compatibility for rendering graphics on macOS. The new rendering pipeline uses the Metal API to
+      improve graphics rendering and reduce latency on macOS systems.
+    - **JEP 391: macOS/AArch64 Port**: Java 17 introduced support for running Java applications on macOS systems with
+      Apple Silicon (ARM64) processors. The macOS/AArch64 port enables Java applications to run natively on Apple
+      Silicon
+      hardware, providing better performance and compatibility for macOS users.
+    - **JEP 411: Deprecate the Security Manager for Removal**: Java 17 deprecated the Security Manager for removal in
+      future releases. The Security Manager is a legacy feature that provides security checks and restrictions for Java
+      applications, but it is no longer widely used and has been replaced by other security mechanisms.
+    - **JEP 412: Foreign Function & Memory API (Incubator)**: Java 17 introduced the Foreign Function & Memory API as
+      an incubator feature to provide a way to interoperate with native code and memory in Java applications. The
+      Foreign
+      Function & Memory API allows you to call native functions and access native memory directly from Java code,
+      enabling
+      better integration with native libraries and systems.
+    - **JEP
+- 228 . What are the new features in Java 21? \
+  Java 21 introduced several new features and enhancements to the Java programming language, including:
+    - **JEP 406: Pattern Matching for switch (Standard Feature)**: Java 21 introduced pattern matching for switch as a
+      standard feature to provide a more concise and expressive way to write switch statements. Pattern matching for
+      switch
+      allows you to use patterns in switch cases to destructure objects and extract values, enabling more powerful and
+      flexible switch statements.
+    - **JEP 413: Code Snippets in Java API Documentation**: Java 21 introduced code snippets in Java API documentation
+      to
+      provide more interactive and informative examples for developers. Code snippets allow you to see and run code
+      examples
+      directly in the API documentation, making it easier to understand and use Java APIs.
+    - **JEP 414: Vector API (Second Incubator)**: Java 21 introduced the Vector API as a second incubator feature to
+      provide a way to perform vectorized operations on arrays and vectors in Java applications. The Vector API allows
+      you
+      to use vector instructions and hardware acceleration to improve performance for numerical and scientific
+      computing.
+    - **JEP 415: Context-Specific Deserialization Filters**: Java 21 introduced context-specific deserialization filters
+      to provide a way to filter and control the deserialization of objects based on the context. Context-specific
+      deserialization filters allow you to define custom filters that can be applied to specific deserialization
+      operations,
+      improving security and performance for Java applications.
+    - **JEP 416: Java Embedded Content API**: Java 21 introduced the Java Embedded Content API to provide a way to embed
+      content like images, videos, and other media in Java applications. The Java Embedded Content API allows you to
+      load,
+      display, and interact with embedded content in Java applications, enabling richer and more interactive user
+      interfaces.
+    - **JEP 417: Vector API (Incubator)**: Java 21 introduced the Vector API as an incubator feature to provide a way to
+      perform vectorized operations on arrays and vectors in Java applications. The Vector API allows you to use vector
+      instructions and hardware acceleration to improve performance for numerical and scientific computing.
+    - **JEP 418: Java on Windows AArch64**: Java 21 introduced support for running Java applications on Windows systems
+      with ARM64 processors. Java on Windows AArch64 enables Java applications to run natively on Windows ARM64
+      hardware,
+    - **JEP 419: Java on Alpine Linux**: Java 21 introduced support for running Java applications on Alpine Linux, a
+      lightweight and secure Linux distribution. Java on Alpine Linux provides better compatibility and performance for
+      Java applications running in containerized environments and cloud-native architectures.
+    - **JEP 420: Java on Docker**: Java 21 introduced support for running Java applications on Docker containers to
+      provide a more seamless and integrated experience for Java developers. Java on Docker enables you to build,
+      package,
+      and deploy Java applications in Docker containers, improving portability and scalability for Java applications.
+    - **JEP 421: Java on Kubernetes**: Java 21 introduced support for running Java applications on Kubernetes, a popular
+      container orchestration platform. Java on Kubernetes provides better integration and management of Java
+      applications
+      in Kubernetes environments, enabling you to deploy and scale Java applications more effectively in cloud-native
+      architectures.
+    - **JEP 422: Java on AWS**: Java 21 introduced support for running Java applications on Amazon Web Services (AWS),
+      a leading cloud computing platform. Java on AWS provides better integration and performance for Java applications
+      running on AWS services, enabling you to build and deploy Java applications in the cloud more effectively.
+    - **JEP 423: Java on Azure**: Java 21 introduced support for running Java applications on Microsoft Azure, a
+      cloud computing platform. Java on Azure provides better integration and scalability for Java applications running
+      on Azure services, enabling you to build and deploy Java applications in the cloud more effectively.
+    - **JEP 424: Java on Google Cloud**: Java 21 introduced support for running Java applications on Google Cloud, a
+      cloud computing platform. Java on Google Cloud provides better integration and performance for Java applications
+      running on Google Cloud services, enabling you to build and deploy Java applications in the cloud more
+      effectively.
 
 ### What you can do next?
 
