@@ -123,17 +123,16 @@ Available in the resources for the course
            which is not possible with primitive types.
     -
         5. **Type Safety**: Wrapper classes enable type safety in generic programming, ensuring that only the correct
-           type
-           of objects are used.
+           type of objects are used.
 - **9 . What are the different ways of creating Wrapper class instances?**
   There are two main ways to create instances of Wrapper classes in Java:
-    - a). **Using Constructors**:
+    - 1. **Using Constructors**:
       Each wrapper class has a constructor that takes a primitive type or a String as an argument.
        ```java
-       Integer intObj1 = new Integer(10);
-       Integer intObj2 = new Integer("10");
+       Integer intObj1 = 10;
+       Integer intObj2 = Integer.valueOf("10");
        ```
-    - b). **Using Static Factory Methods**:
+    - 2. **Using Static Factory Methods**:
       The wrapper classes provide static factory methods like `valueOf` to create instances.
        ```java
        Integer intObj1 = 10;
@@ -261,13 +260,20 @@ Available in the resources for the course
 
   Example using `StringBuilder`:
   ```java
-  StringBuilder sb = new StringBuilder();
-  for (int i = 0; i < 10; i++) {
-      sb.append(i);
+  public class Main {
+      public static void main(String[] args) {
+          StringBuilder sb = new StringBuilder();
+          for (int i = 0; i < 10; i++) {
+              sb.append(i);
+          }
+          String result = sb.toString();
+          System.out.println(result);
+      }
   }
-  String result = sb.toString();
   ```
-
+  In this example, a `StringBuilder` is used to concatenate integers in a loop, and the final result is obtained by
+  calling the `toString` method. This approach is more efficient than using the `+` operator with `String` objects in a
+  loop.
 - **20 . What are the differences between `String` and `StringBuffer`?**
     - **Mutability**: `String` objects are immutable, meaning their values cannot be changed once
       created. `StringBuffer` objects are mutable, allowing their values to be modified.
@@ -1321,7 +1327,8 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 - **70 . What access types of variables can be accessed from a class in different package?** \
   In Java, a class in a different package can access the following types of variables:
     - **Public Variables**: Public variables can be accessed by any class in any package.
-    - **Protected Variables**: Protected variables can be accessed by subclasses in any package, but not by non-subclasses
+    - **Protected Variables**: Protected variables can be accessed by subclasses in any package, but not by
+      non-subclasses
       in different packages.
     - **Default (Package-Private) Variables**: Default variables cannot be accessed by classes in different packages.
     - **Private Variables**: Private variables cannot be accessed by any other class, even in a different package.
@@ -1335,7 +1342,8 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 - **72 . What access types of variables can be accessed from a sub class in different package?** \
   In Java, a subclass in a different package can access the following types of variables:
     - **Public Variables**: Public variables can be accessed by any class in any package.
-    - **Protected Variables**: Protected variables can be accessed by subclasses in any package, but not by non-subclasses
+    - **Protected Variables**: Protected variables can be accessed by subclasses in any package, but not by
+      non-subclasses
       in different packages.
     - **Default (Package-Private) Variables**: \Default variables cannot be accessed by classes in different packages.
     - **Private Variables**: Private variables cannot be accessed by any other class, even in a different package.
@@ -1447,7 +1455,8 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 - **79 . Why should you always use blocks around if statement?** \
   It is a good practice to always use blocks around `if` statements in Java to improve code readability and avoid
   potential bugs. When an `if` statement is not enclosed in a block, only the next statement is considered part of the
-  `if` block. This can lead to confusion and errors if additional statements are added later. By using blocks around `if`
+  `if` block. This can lead to confusion and errors if additional statements are added later. By using blocks around
+  `if`
   statements, you make it clear which statements are part of the conditional block and reduce the risk of errors.
 - **80 . Guess the output**\
   Here is an example to guess the output:
@@ -1463,14 +1472,14 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
         }
     }
     ```
-    The output of this program will be:
+  The output of this program will be:
     ```ruby
         x = 6 
         y = 11 
         z = 16 
     ```
 - **81 . Guess the output**\
-    Here is an example to guess the output:
+  Here is an example to guess the output:
     ```java
     public class GuessOutput {
         public static void main(String[] args) {
@@ -1483,14 +1492,14 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
         }
     }
     ```
-    The output of this program will be:
+  The output of this program will be:
     ```ruby
         a = 2
         b = 6
         c = -3
     ```
 - **82 . Guess the output of this switch block**\
-    Here is an example to guess the output:
+  Here is an example to guess the output:
     ```java
     public class GuessOutput {
         public static void main(String[] args) {
@@ -1526,12 +1535,12 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
         }
     }
     ```
-    The output of this program will be:
+  The output of this program will be:
     ```ruby
         Wednesday
     ```
 - **83 . Guess the output of this switch block?** \
-    Here is an example to guess the output:
+  Here is an example to guess the output:
     ```java
     public class GuessOutput {
         public static void main(String[] args) {
@@ -1553,7 +1562,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
         }
     }
     ```
-    The output of this program will be:
+  The output of this program will be:
     ```ruby
         Five
         Default
@@ -1563,7 +1572,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   optional and can be placed anywhere within the `switch` statement. It is typically used as a catch-all case for values
   that do not match any of the other cases. Placing the `default` case at the end of the `switch` statement is a common
   practice to make it easier to identify and handle unexpected values, but it is not required.
-  By example: 
+  By example:
     ```java
     public class Example {
         public static void main(String[] args) {
@@ -1585,8 +1594,8 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
         }
     }
     ```
-    In this example, the `default` case is placed before the `case 3` statement. This is valid Java syntax, and the
-    `default` case will be executed if the value of `x` does not match any of the other cases.
+  In this example, the `default` case is placed before the `case 3` statement. This is valid Java syntax, and the
+  `default` case will be executed if the value of `x` does not match any of the other cases.
 - **85 . Can a switch statement be used around a String** \
   Yes, a `switch` statement can be used with a `String` in Java starting from Java 7. Prior to Java 7, `switch`
   statements only supported `int`, `byte`, `short`, `char`, and `enum` types. With the introduction of the `String`
@@ -1709,7 +1718,8 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       them from causing the program to fail.
     - **Debugging**: Exception handling provides a way to catch and log errors, making it easier to debug and diagnose
       issues in the code.
-    - **Maintainability**: Exception handling improves the maintainability of the code by separating error-handling logic
+    - **Maintainability**: Exception handling improves the maintainability of the code by separating error-handling
+      logic
       from the main program logic. This makes the code easier to read, understand, and modify.
     - **Security**: Exception handling can help prevent security vulnerabilities by handling errors and exceptions that
       could be exploited by malicious users.
@@ -1789,7 +1799,8 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       `finally` block may not be executed.
     - **StackOverflowError**: If a `StackOverflowError` occurs in the `try` or `catch` block, the code in the `finally`
       block may not be executed.
-    - **OutOfMemoryError**: If an `OutOfMemoryError` occurs in the `try` or `catch` block, the code in the `finally` block
+    - **OutOfMemoryError**: If an `OutOfMemoryError` occurs in the `try` or `catch` block, the code in the `finally`
+      block
       may not be executed.
 - **95 . Will finally be executed in the program below?** \
   Here is an example to determine if the `finally` block will be executed:
@@ -1858,15 +1869,19 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   the exception handling hierarchy are:
 
     - **Throwable**: The `Throwable` class is the root class of the exception hierarchy. It has two main subclasses:
-        - **Error**: Errors are serious issues that are typically outside the control of the program and indicate problems
+        - **Error**: Errors are serious issues that are typically outside the control of the program and indicate
+          problems
           with the environment in which the application is running. Examples include `OutOfMemoryError`,
           `StackOverflowError`, and `VirtualMachineError`.
-        - **Exception**: Exceptions are conditions that a program might want to catch and handle. They are divided into two
+        - **Exception**: Exceptions are conditions that a program might want to catch and handle. They are divided into
+          two
           main categories:
-            - **Checked Exceptions**: These are exceptions that are checked at compile-time. The programmer is required to
+            - **Checked Exceptions**: These are exceptions that are checked at compile-time. The programmer is required
+              to
               handle these exceptions, either by using a `try-catch` block or by declaring them in the method signature
               using the `throws` keyword. Examples include `IOException`, `SQLException`, and `FileNotFoundException`.
-            - **Unchecked Exceptions**: These are exceptions that are not checked at compile-time but occur during runtime.
+            - **Unchecked Exceptions**: These are exceptions that are not checked at compile-time but occur during
+              runtime.
               They are subclasses of `RuntimeException` and do not need to be declared or caught. Examples include
               `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `IllegalArgumentException`.
 
@@ -1921,15 +1936,146 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
        handling or declaring the exception.
     5. **Use a Lambda Expression**: Use a lambda expression to handle the exception in a functional interface that does
        not declare checked exceptions.
-- **104 . How do you create a custom exception?**
-- **105 . How do you handle multiple exception types with same exception handling block?**
-- **106 . Can you explain about try with resources?**
-- **107 . How does try with resources work?**
-- **108 . Can you explain a few exception handling best practices?**
+- **104 . How do you create a custom exception?** \
+  To create a custom exception in Java, you need to define a new class that extends the `Exception` class or one of its
+  subclasses. You can add custom fields, constructors, and methods to the custom exception class to provide additional
+  information about the exception.
+
+  Here is an example of a custom exception class:
+
+    ```java
+    public class CustomException extends Exception {
+        public CustomException(String message) {
+            super(message);
+        }
+    }
+    ```
+
+  In this example, the `CustomException` class extends the `Exception` class and provides a constructor that takes a
+  message as an argument. This allows you to create custom exceptions with a specific error message. You can also add
+  the related mechanisms to handle the new custom exception to provide a more detailed error message, and also
+  use the adequate processing of the exception by the logging system or the user interface.
+  Note: most of the time all the exceptions and custom exceptions are sent to the logging system, and the user
+  interface. The most popular is to log the exceptions using log4j or derivative logging systems like external logging
+  apis for Splunk or ELK. Splunk is a popular tool for monitoring, searching, and analyzing machine-generated big data,
+- **105 . How do you handle multiple exception types with same exception handling block?** \
+  In Java, you can handle multiple exception types with the same exception handling block by using a multi-catch block.
+  This allows you to catch multiple exceptions in a single `catch` block and handle them in a common way. The syntax for
+  a multi-catch block is to specify the exception types separated by a vertical bar (`|`).
+
+  Here is an example of a multi-catch block:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            try {
+                // Code that may throw exceptions
+                int result = 10 / 0;
+            } catch (ArithmeticException | NullPointerException e) {
+                // Handle the exceptions
+                e.printStackTrace();
+            }
+        }
+    }
+    ```
+
+  In this example, the `catch` block catches both `ArithmeticException` and `NullPointerException` exceptions and
+  handles
+  them in a common way. This can help reduce code duplication and improve the readability of the exception handling
+  code.
+- **106 . Can you explain about try with resources?** \
+  Try-with-resources is a feature introduced in Java 7 that simplifies resource management by automatically closing
+  resources that implement the `AutoCloseable` interface. It eliminates the need for explicit `finally` blocks to close
+  resources and ensures that resources are closed properly, even if an exception occurs.
+
+  Here is an example of try-with-resources:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+                String line = reader.readLine();
+                System.out.println(line);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    ```
+
+  In this example, the `try` block contains a `BufferedReader` resource that is automatically closed when the `try`
+  block exits. The `BufferedReader` class implements the `AutoCloseable` interface, which allows it to be used with
+  try-with-resources. If an `IOException` occurs while reading from the file, it is caught and handled in the `catch`
+  block. The `BufferedReader` resource is automatically closed when the `try` block exits, ensuring that resources are
+  released properly.
+  The big advantage of try-with-resources is that it simplifies resource management and reduces the risk of resource
+  leaks and other issues related to manual resource handling.
+- **107 . How does try with resources work?** \
+  Try-with-resources in Java works by automatically closing resources that implement the `AutoCloseable` interface when
+  the `try` block exits. It simplifies resource management by eliminating the need for explicit `finally` blocks to
+  close
+  resources and ensures that resources are closed properly, even if an exception occurs.
+
+  When using try-with-resources, the resources are declared and initialized within the parentheses of the `try`
+  statement.
+  The resources are automatically closed in the reverse order of their declaration when the `try` block exits. If an
+  exception occurs during the execution of the `try` block, the resources are closed before the exception is propagated.
+
+  Here is an example of try-with-resources:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+                String line = reader.readLine();
+                System.out.println(line);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    ```
+
+  In this example, the `BufferedReader` resource is declared and initialized within the parentheses of the `try`
+  statement. The `BufferedReader` resource is automatically closed when the `try` block exits, ensuring that resources
+  are released properly. If an `IOException` occurs while reading from the file, it is caught and handled in the `catch`
+  block. The `BufferedReader` resource is still automatically closed before the exception is propagated.
+- **108 . Can you explain a few exception handling best practices?** \
+  Some exception handling best practices in Java include:
+
+    - **Catch Specific Exceptions**: Catch specific exceptions rather than catching the general `Exception` class. This
+      allows you to handle different types of exceptions in a more targeted way.
+    - **Use try-with-resources**: Use try-with-resources to automatically close resources that implement the
+      `AutoCloseable` interface. This simplifies resource management and reduces the risk of resource leaks.
+    - **Log Exceptions**: Log exceptions using a logging framework like log4j or SLF4J to capture information about
+      errors and exceptions. This can help with debugging and diagnosing issues in the code.
+    - **Handle Exceptions Appropriately**: Handle exceptions appropriately based on the context and severity of the
+      error. This may involve logging the exception, displaying an error message to the user, or taking corrective
+      action.
+    - **Avoid Swallowing Exceptions**: Avoid swallowing exceptions by catching them and not doing anything with them.
+      This can lead to silent failures and make it difficult to diagnose issues in the code.
+    - **Use Checked Exceptions Wisely**: Use checked exceptions judiciously and only for conditions that the caller can
+      reasonably be expected to handle. Consider using unchecked exceptions for exceptional conditions that are outside
+      the control of the caller.
+    - **Throw Custom Exceptions**: Throw custom exceptions to provide more context and information about the error. This
+      can help with debugging and make it easier to handle specific types of errors.
+    - **Follow the Principle of Least Surprise**: Follow the principle of least surprise by handling exceptions in a way
+      that is consistent with the rest of the codebase and does not introduce unexpected behavior.
+    - **Document Exception Handling**: Document exception handling in the code to explain why exceptions are being
+      caught
+      and how they are being handled. This can help other developers understand the intent behind the exception handling
+      logic.
+    - **Test Exception Handling**: Test exception handling code to ensure that it behaves as expected and handles errors
+      correctly in different scenarios. This can help identify and fix issues before they reach production.
+    - **Use Standard Error Codes**: Use standard error codes or messages to provide consistent and meaningful feedback
+      to users when exceptions occur. This can help users understand the cause of the error and take appropriate action.
+    - **Avoid Catching Throwable**: Avoid catching the `Throwable` class, as this can catch errors and other serious
+      issues
+      that should not be caught or handled by the application. Catch specific exceptions instead.
 
 ### Miscellaneous topics
 
-- **109 . What are the default values in an array? ** \
+- **109 . What are the default values in an array?** \
   In Java, when an array is created, the elements are initialized to default values based on the type of the array. The
   default values for primitive types are as follows:
 
@@ -1943,9 +2089,75 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
     - **boolean**: false
 
   For reference types (objects), the default value is `null`. For example, the default value of an `int` array is `0`.
-- **110 . How do you loop around an array using enhanced for loop?**
-- **111 . How do you print the content of an array?**
-- **112 . How do you compare two arrays? ** \
+- **110 . How do you loop around an array using enhanced for loop?** \
+  You can loop around an array using an enhanced for loop in Java. The enhanced for loop, also known as the for-each
+  loop, provides a more concise syntax for iterating over elements in an array or a collection. It eliminates the need
+  for explicit indexing and bounds checking and makes the code more readable.
+
+  Here is an example of looping around an array using an enhanced for loop:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            int[] numbers = {1, 2, 3, 4, 5};
+            for (int number : numbers) {
+                System.out.println(number);
+            }
+        }
+    }
+    ```
+
+  In this example, the enhanced for loop iterates over the `numbers` array and prints each element to the console. The
+  `number` variable represents the current element in the array during each iteration of the loop.
+- **111 . How do you print the content of an array?** \
+  You can print the content of an array in Java by iterating over the elements of the array and printing each element to
+  the console. There are several ways to print the content of an array, including using a `for` loop, an enhanced `for`
+  loop, or the `Arrays.toString` method from the `java.util` package.
+
+  Here are some examples:
+
+    - **Using a For Loop**:
+
+      ```java
+      public class Example {
+          public static void main(String[] args) {
+              int[] numbers = {1, 2, 3, 4, 5};
+              for (int i = 0; i < numbers.length; i++) {
+                  System.out.println(numbers[i]);
+              }
+          }
+      }
+      ```
+
+    - **Using an Enhanced For Loop**:
+
+      ```java
+      public class Example {
+          public static void main(String[] args) {
+              int[] numbers = {1, 2, 3, 4, 5};
+              for (int number : numbers) {
+                  System.out.println(number);
+              }
+          }
+      }
+      ```
+
+    - **Using Arrays.toString**:
+
+      ```java
+      import java.util.Arrays;
+
+      public class Example {
+          public static void main(String[] args) {
+              int[] numbers = {1, 2, 3, 4, 5};
+              System.out.println(Arrays.toString(numbers));
+          }
+      }
+      ```
+
+  In these examples, the content of the `numbers` array is printed to the console using different methods for iterating
+  over the elements of the array.
+- **112 . How do you compare two arrays?** \
   In Java, you can compare two arrays using the `Arrays.equals` method from the `java.util` package. This method
   compares the contents of two arrays to determine if they are equal. It takes two arrays as arguments and returns
   `true` if the arrays are equal and `false` otherwise. The comparison is done element by element, so the arrays must
@@ -1969,7 +2181,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, the `Arrays.equals` method is used to compare the `array1` and `array2` arrays, and the result is
   printed to the console.
-- **113 . What is an enum? ** \
+- **113 . What is an enum?** \
   An enum in Java is a special data type that represents a group of constants (unchangeable variables). It is used to
   define a set of named constants that can be used in place of integer values. Enumerations are defined using the
   `enum` keyword and can contain constructors, methods, and fields.
@@ -1984,7 +2196,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, the `Day` enum defines a set of constants representing the days of the week. Each constant is
   implicitly declared as a public static final field of the `Day` enum.
-- **114 . Can you use a switch statement around an enum? ** \
+- **114 . Can you use a switch statement around an enum?** \
   Yes, you can use a switch statement around an enum in Java. Enumerations are often used with switch statements to
   provide a more readable and type-safe alternative to using integer values. Each constant in the enum can be used as a
   case label in the switch statement.
@@ -2031,7 +2243,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, the `Day` enum is used with a switch statement to print the day of the week based on the value of the
   `day` variable.
-- **115 . What are variable arguments or varargs? ** \
+- **115 . What are variable arguments or varargs?** \
   Variable arguments, also known as varargs, allow you to pass a variable number of arguments to a method. This
   feature was introduced in Java 5 and is denoted by an ellipsis (`...`) after the type of the last parameter in the
   method signature. Varargs are represented as an array within the method and can be used to pass any number of
@@ -2055,16 +2267,234 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, the `printNumbers` method accepts a variable number of `int` arguments using varargs. The method
   can be called with any number of `int` values, and they will be treated as an array within the method.
-- **116 . What are asserts used for?**
-- **117 . When should asserts be used?**
-- **118 . What is garbage collection?**
-- **119 . Can you explain garbage collection with an example?**
-- **120 . When is garbage collection run?**
-- **121 . What are best practices on garbage collection?**
-- **122 . What are initialization blocks?**
-- **123 . What is a static initializer?**
-- **124 . What is an instance initializer block?**
-- **125 . What is tokenizing? ** \
+- **116 . What are asserts used for?** \
+  Asserts in Java are used to test assumptions in the code and validate conditions that should be true during program
+  execution. They are typically used for debugging and testing purposes to catch errors and inconsistencies in the code.
+  Asserts are disabled by default in Java and can be enabled using the `-ea` flag when running the JVM.
+
+  Here is an example of using asserts:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            int x = Integer.parseInt(args[0]);
+            assert x > 0 : "x must be greater than 0";
+        }
+    }
+    ```
+
+  In this example, the `assert` statement checks if the value of `x` is greater than 0 and throws an `AssertionError`
+  with the message `"x must be greater than 0"` if the condition is false. Asserts are typically used to validate
+  assumptions and catch errors early in the development process.
+- **117 . When should asserts be used?** \
+  Asserts in Java should be used in the following scenarios:
+
+    - **Debugging**: Use asserts to catch errors and inconsistencies in the code during development and testing. They
+      can
+      help identify issues early in the development process and provide feedback on incorrect assumptions.
+    - **Testing**: Use asserts to validate conditions and assumptions in unit tests and integration tests. They can help
+      ensure that the code behaves as expected and meets the requirements.
+    - **Preconditions**: Use asserts to check preconditions and validate input parameters in methods. They can help
+      ensure that the method is called with the correct arguments and that the conditions are met.
+    - **Invariants**: Use asserts to check invariants and validate the state of objects or data structures. They can
+      help
+      ensure that the program is in a consistent state and that the data is valid.
+    - **Performance**: Use asserts to check performance-related conditions and validate optimizations. They can help
+      ensure that the code is efficient and performs as expected.
+    - **Security**: Use asserts to check security-related conditions and validate access controls. They can help ensure
+      that the code is secure and protected against vulnerabilities.
+
+  Asserts should be used judiciously and in situations where they provide value in validating assumptions and catching
+  errors. They are typically disabled in production code and enabled during development and testing to provide feedback
+  on incorrect assumptions and conditions.
+  Note: It is important to note that asserts are disabled by default in Java and should not be used as a replacement for
+  proper error handling and validation in production code. They are intended for debugging and testing purposes and
+  should be used judiciously to catch errors and inconsistencies during development and testing. Also the asserts are
+  different from the asserts related to the unit testing framework because these last are particular validations for the
+  output of a unit (method) and asserts in java are checks for correct use of the contract of a method.
+- **118 . What is garbage collection?** \
+  Garbage collection in Java is the process of automatically reclaiming memory that is no longer in use by the program.
+  It is a key feature of the Java Virtual Machine (JVM) that manages memory allocation and deallocation for objects
+  created during program execution. Garbage collection helps prevent memory leaks and ensures that memory is used
+  efficiently by reclaiming unused memory and making it available for new objects.
+
+  The garbage collection process involves several steps, including identifying unreferenced objects, reclaiming memory
+  used by those objects, and compacting memory to reduce fragmentation. Garbage collection is performed by the JVM's
+  garbage collector, which runs in the background and periodically checks for unused objects to reclaim memory.
+
+  Garbage collection is an essential part of Java's memory management model and helps simplify memory management for
+  developers by automating the process of memory allocation and deallocation. It allows developers to focus on writing
+  code without having to worry about manual memory management and memory leaks.
+- **119 . Can you explain garbage collection with an example?** \
+  Garbage collection in Java is the process of automatically reclaiming memory that is no longer in use by the program.
+  It helps prevent memory leaks and ensures that memory is used efficiently by reclaiming unused memory and making it
+  available for new objects. Here is an example of garbage collection in Java:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            // Create an object
+            Object obj = new Object();
+
+            // Set the reference to null
+            obj = null;
+
+            // Request garbage collection
+            System.gc();
+        }
+    }
+    ```
+
+  In this example, an object `obj` is created and then set to `null` to remove the reference to the object. The
+  `System.gc()` method is called to request garbage collection by the JVM. The garbage collector will identify the
+  unreferenced object and reclaim the memory used by the object. This process helps free up memory that is no longer in
+  use and makes it available for new objects.
+- **120 . When is garbage collection run?** \
+  Garbage collection in Java is run by the JVM's garbage collector at specific intervals or when certain conditions are
+  met. The garbage collector runs in the background and periodically checks for unused objects to reclaim memory. The
+  exact timing and frequency of garbage collection depend on the JVM implementation and the garbage collection
+  algorithm used.
+
+  Garbage collection is typically run when one of the following conditions is met:
+
+    - **Memory Pressure**: When the JVM detects that the available memory is running low, it triggers garbage collection
+      to reclaim memory and free up space for new objects.
+    - **Idle Time**: When the JVM is idle or has spare CPU cycles, it may run garbage collection to reclaim memory and
+      optimize memory usage.
+    - **Explicit Request**: Garbage collection can be explicitly triggered by calling the `System.gc()` method or using
+      JVM options like `-XX:+ExplicitGCInvokesConcurrent`.
+    - **Generation Thresholds**: Garbage collection is run based on generation thresholds, such as the young generation
+      and old generation, to optimize memory management and reduce the impact on application performance.
+    - **Heap Size**: Garbage collection is run when the heap size exceeds a certain threshold, such as the maximum heap
+      size specified by the `-Xmx` JVM option.
+
+  The garbage collector uses various algorithms and strategies to determine when and how to reclaim memory based on the
+  application's memory usage and requirements. By running garbage collection at specific intervals or when certain
+  conditions are met, the JVM can optimize memory management and ensure that memory is used efficiently.
+- **121 . What are best practices on garbage collection?** \
+  Some best practices for garbage collection in Java include:
+
+    - **Avoid Premature Optimization**: Avoid premature optimization of memory usage and garbage collection. Let the
+      JVM's garbage collector manage memory automatically and optimize memory usage based on the application's
+      requirements.
+    - **Use Proper Data Structures**: Use appropriate data structures and algorithms to minimize memory usage and
+      reduce the impact on garbage collection. Choose data structures that are efficient and optimized for memory
+      management.
+    - **Minimize Object Creation**: Minimize the creation of unnecessary objects and use object pooling or caching to
+      reuse objects where possible. This can reduce the number of objects that need to be garbage collected and improve
+      performance.
+    - **Avoid Memory Leaks**: Avoid memory leaks by ensuring that objects are properly dereferenced and released when
+      they are no longer needed. Be mindful of retaining references to objects that are no longer in use.
+    - **Tune Garbage Collection**: Tune garbage collection settings and parameters based on the application's memory
+      requirements and performance goals. Experiment with different garbage collection algorithms and options to
+      optimize memory management.
+    - **Monitor Memory Usage**: Monitor memory usage and garbage collection activity to identify potential issues and
+      optimize memory management. Use tools like JVisualVM, VisualVM, or Java Mission Control to analyze memory usage
+      and garbage collection behavior.
+    - **Profile and Optimize**: Profile the application to identify memory bottlenecks and optimize memory usage. Use
+      profiling tools to analyze memory allocation, object creation, and garbage collection patterns to improve
+      performance.
+    - **Use Finalizers Sparingly**: Use finalizers sparingly and avoid relying on them for resource cleanup. Finalizers
+      can introduce performance overhead and may not be called in a timely manner. Consider using try-with-resources or
+      other mechanisms for resource cleanup.
+    - **Avoid Circular References**: Avoid circular references between objects, as they can prevent objects from being
+      garbage collected. Break circular references by using weak references or other techniques to allow objects to be
+      garbage collected when they are no longer needed.
+    - **Optimize Object Lifecycle**: Optimize the lifecycle of objects to minimize memory usage and reduce the impact on
+      garbage collection. Use object pooling, lazy initialization, and other techniques to manage object creation and
+      destruction efficiently.
+    - **Use Memory Profiling Tools**: Use memory profiling tools to analyze memory usage, object allocation, and garbage
+      collection behavior. These tools can help identify memory leaks, performance bottlenecks, and areas for
+      optimization.
+- **122 . What are initialization blocks?** \
+  Initialization blocks in Java are used to initialize instance variables of a class. There are two types of
+  initialization blocks in Java: instance initializer blocks and static initializer blocks.
+
+    - **Instance Initializer Block**: An instance initializer block is used to initialize instance variables of a class.
+      It is executed when an instance of the class is created and can be used to perform complex initialization logic.
+      Instance initializer blocks are defined within curly braces `{}` and are executed before the constructor of the
+      class.
+
+      Here is an example of an instance initializer block:
+
+      ```java
+      public class Example {
+          private int x;
+  
+          {
+              x = 10;
+          }
+  
+          public Example() {
+              System.out.println("Constructor called");
+          }
+  
+          public static void main(String[] args) {
+              Example example = new Example();
+              System.out.println("Value of x: " + example.x);
+          }
+      }
+      ```
+
+    - **Static Initializer Block**: A static initializer block is used to initialize static variables of a class. It is
+      executed when the class is loaded by the JVM and can be used to perform one-time initialization tasks. Static
+      initializer blocks are defined with the `static` keyword and are executed before the class is used.
+
+      Here is an example of a static initializer block:
+
+      ```java
+      public class Example {
+          private static int x;
+  
+          static {
+              x = 10;
+          }
+  
+          public static void main(String[] args) {
+              System.out.println("Value of x: " + x);
+          }
+      }
+      ```
+
+  In these examples, the instance initializer block is used to initialize the `x` instance variable, and the static
+  initializer block is used to initialize the `x` static variable. Initialization blocks are useful for performing
+  complex initialization logic and ensuring that variables are properly initialized when an instance of the class is
+  created.
+- **123 . What is a static initializer?** \
+  A static initializer in Java is used to initialize static variables of a class. It is executed when the class is
+  loaded
+  by the JVM and can be used to perform one-time initialization tasks. Static initializer blocks are defined with the
+  `static` keyword and are executed before the class is used.
+- **124 . What is an instance initializer block?** \
+  An instance initializer block in Java is used to initialize instance variables of a class. It is executed when an
+  instance of the class is created and can be used to perform complex initialization logic. Instance initializer blocks
+  are defined within curly braces `{}` and are executed before the constructor of the class.
+
+  Here is an example of an instance initializer block:
+
+    ```java
+    public class Example {
+        private int x;
+
+        {
+            x = 10;
+        }
+
+        public Example() {
+            System.out.println("Constructor called");
+        }
+
+        public static void main(String[] args) {
+            Example example = new Example();
+            System.out.println("Value of x: " + example.x);
+        }
+    }
+    ```
+
+  In this example, the instance initializer block is used to initialize the `x` instance variable before the constructor
+  is called. The instance initializer block is executed when an instance of the `Example` class is created and sets the
+  value of `x` to `10`.
+- **125 . What is tokenizing?** \
   Tokenizing in Java refers to the process of breaking a string into smaller parts, called tokens. This is often done
   to extract individual words, numbers, or other elements from a larger string. Tokenizing is commonly used in parsing
   and text processing tasks to analyze and manipulate text data.
@@ -2086,18 +2516,308 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, the `split` method is used to tokenize the `sentence` string by splitting it into individual words
   based on the space character. The resulting tokens are then printed to the console.
-- **126 . Can you give an example of tokenizing?**
-- **127 . What is serialization?**
-- **128 . How do you serialize an object using serializable interface?**
-- **129 . How do you de**-serialize in Java?
-- **130 . What do you do if only parts of the object have to be serialized?**
-- **131 . How do you serialize a hierarchy of objects?**
-- **132 . Are the constructors in an object invoked when it is de**-serialized?
-- **133 . Are the values of static variables stored when an object is serialized?**
+- **126 . Can you give an example of tokenizing?** \
+  Tokenizing in Java refers to the process of breaking a string into smaller parts, called tokens. This is often done
+  to extract individual words, numbers, or other elements from a larger string. Tokenizing is commonly used in parsing
+  and text processing tasks to analyze and manipulate text data.
+
+  Here is an example of tokenizing a string:
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            String sentence = "Hello, world! This is a sentence.";
+            String[] tokens = sentence.split(" ");
+
+            for (String token : tokens) {
+                System.out.println(token);
+            }
+        }
+    }
+    ```
+
+  In this example, the `split` method is used to tokenize the `sentence` string by splitting it into individual words
+  based on the space character. The resulting tokens are then printed to the console.
+- **127 . What is serialization?** \
+  Serialization in Java is the process of converting an object into a stream of bytes that can be saved to a file,
+  sent over a network, or stored in a database. Serialization allows objects to be persisted and transferred between
+  different systems and platforms. The serialized object can be deserialized back into an object to restore its state
+  and properties.
+
+  Java provides the `Serializable` interface, which is used to mark classes as serializable. Classes that implement the
+  `Serializable` interface can be serialized and deserialized using the `ObjectOutputStream` and `ObjectInputStream`
+  classes.
+
+  Here is an example of serializing and deserializing an object:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            // Serialize object
+            try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("object.ser"))) {
+                MyClass obj = new MyClass();
+                out.writeObject(obj);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // Deserialize object
+            try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("object.ser"))) {
+                MyClass obj = (MyClass) in.readObject();
+                System.out.println(obj);
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+    }
+    ```
+
+  In this example, the `MyClass` object is serialized to a file named `object.ser` using an `ObjectOutputStream`. The
+  object is then deserialized back into an object using an `ObjectInputStream` and printed to the console.
+- **128 . How do you serialize an object using serializable interface?** \
+  To serialize an object in Java using the `Serializable` interface, follow these steps:
+
+    1. Implement the `Serializable` interface in the class that you want to serialize. The `Serializable` interface is a
+       marker interface that indicates that the class can be serialized.
+
+    2. Create an instance of the `ObjectOutputStream` class and pass it a `FileOutputStream` or other output stream to
+       write the serialized object to a file or other destination.
+
+    3. Call the `writeObject` method on the `ObjectOutputStream` instance and pass the object that you want to serialize
+       as an argument.
+
+    4. Close the `ObjectOutputStream` to flush the output stream and release any system resources.
+
+  Here is an example of serializing an object using the `Serializable` interface:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("object.ser"))) {
+                MyClass obj = new MyClass();
+                out.writeObject(obj);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+    }
+    ```
+
+  In this example, the `MyClass` object is serialized to a file named `object.ser` using an `ObjectOutputStream`. The
+  `MyClass` class implements the `Serializable` interface, which allows it to be serialized and written to the output
+  stream.
+- **129 . How do you de-serialize in Java?** \
+  To deserialize an object in Java, follow these steps:
+
+    1. Create an instance of the `ObjectInputStream` class and pass it a `FileInputStream` or other input stream to read
+       the serialized object from a file or other source.
+
+    2. Call the `readObject` method on the `ObjectInputStream` instance to read the serialized object from the input
+       stream.
+
+    3. Cast the returned object to the appropriate class type to restore the object's state and properties.
+
+    4. Close the `ObjectInputStream` to release any system resources.
+
+  Here is an example of deserializing an object in Java:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("object.ser"))) {
+                MyClass obj = (MyClass) in.readObject();
+                System.out.println(obj);
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+    }
+    ```
+
+  In this example, the `MyClass` object is deserialized from a file named `object.ser` using an `ObjectInputStream`. The
+  serialized object is read from the input stream and cast to the `MyClass` class type to restore its state and
+  properties.
+- **130 . What do you do if only parts of the object have to be serialized?** \
+  If only parts of an object need to be serialized in Java, you can use the `transient` keyword to mark fields that
+  should not be serialized. The `transient` keyword tells the JVM to skip the serialization of the marked field and
+  exclude it from the serialized object.
+
+  Here is an example of using the `transient` keyword to exclude fields from serialization:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("object.ser"))) {
+                MyClass obj = new MyClass();
+                out.writeObject(obj);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+        private transient int x = 10;
+        private int y = 20;
+
+        @Override
+        public String toString() {
+            return "MyClass{" +
+                    "x=" + x +
+                    ", y=" + y +
+                    '}';
+        }
+    }
+    ```
+
+  In this example, the `x` field is marked as `transient` in the `MyClass` class, which excludes it from serialization.
+  When the `MyClass` object is serialized, the `x` field is skipped, and only the `y` field is serialized and
+  deserialized.
+- **131 . How do you serialize a hierarchy of objects?** \
+  To serialize a hierarchy of objects in Java, follow these steps:
+
+    1. Implement the `Serializable` interface in all classes in the hierarchy that need to be serialized. The
+       `Serializable` interface is a marker interface that indicates that the class can be serialized.
+
+    2. Create an instance of the `ObjectOutputStream` class and pass it a `FileOutputStream` or other output stream to
+       write the serialized objects to a file or other destination.
+
+    3. Call the `writeObject` method on the `ObjectOutputStream` instance and pass the root object of the hierarchy that
+       you want to serialize.
+
+    4. Close the `ObjectOutputStream` to flush the output stream and release any system resources.
+
+  Here is an example of serializing a hierarchy of objects in Java:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("object.ser"))) {
+                Parent parent = new Parent();
+                parent.child = new Child();
+                out.writeObject(parent);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class Parent implements Serializable {
+        private static final long serialVersionUID = 1L;
+        Child child;
+    }
+
+    class Child implements Serializable {
+        private static final long serialVersionUID = 1L;
+    }
+    ```
+
+  In this example, the `Parent` and `Child` classes implement the `Serializable` interface, allowing them to be
+  serialized. The `Parent` class contains a reference to a `Child` object, creating a hierarchy of objects that can be
+  serialized and deserialized.
+- **132 . Are the constructors in an object invoked when it is de-serialized?** \
+  When an object is deserialized in Java, the constructors of the object are not invoked. Instead, the object is
+  restored from the serialized form, and its state and properties are reconstructed based on the serialized data. The
+  deserialization process uses the serialized data to recreate the object's state without calling the constructor.
+
+  If the class being deserialized has a `readObject` method, the `readObject` method is called during deserialization to
+  restore the object's state. The `readObject` method can be used to perform custom deserialization logic and initialize
+  transient fields that were excluded from serialization.
+
+  Here is an example of deserializing an object in Java without invoking the constructor:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("object.ser"))) {
+                MyClass obj = (MyClass) in.readObject();
+                System.out.println(obj);
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+
+        public MyClass() {
+            System.out.println("Constructor called");
+        }
+
+        @Override
+        public String toString() {
+            return "MyClass{}";
+        }
+    }
+    ``` 
+- **133 . Are the values of static variables stored when an object is serialized?** \
+  When an object is serialized in Java, the values of static variables are not stored as part of the serialized object.
+  Static variables are associated with the class itself rather than individual instances of the class, so they are not
+  serialized along with the object. When an object is deserialized, the static variables are initialized based on the
+  class definition and are not restored from the serialized data.
+
+  Here is an example that demonstrates that static variables are not stored when an object is serialized:
+
+    ```java
+    import java.io.*;
+
+    public class Main {
+        public static void main(String[] args) {
+            try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("object.ser"))) {
+                MyClass obj = new MyClass();
+                out.writeObject(obj);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+        private static int x = 10;
+
+        @Override
+        public String toString() {
+            return "MyClass{" +
+                    "x=" + x +
+                    '}';
+        }
+    }
+    ```
+
+  In this example, the `MyClass` object is serialized to a file named `object.ser`, but the value of the `x` static
+  variable is not stored as part of the serialized object. When the object is deserialized, the `x` static variable is
+  initialized based on the class definition and is not restored from the serialized data.
 
 ### Collections
 
-- **134 . Why do we need collections in Java? ** \
+- **134 . Why do we need collections in Java?** \
   Collections in Java are used to store, retrieve, manipulate, and process groups of objects. They provide a way to
   organize and manage data in a structured and efficient manner. Collections offer a wide range of data structures and
   algorithms that can be used to perform common operations like searching, sorting, and iterating over elements. By
@@ -2119,7 +2839,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       various operations.
     - **Flexibility**: Collections offer a wide range of data structures and interfaces that can be used to meet
       different requirements and use cases.
-- **135 . What are the important interfaces in the collection hierarchy? ** \
+- **135 . What are the important interfaces in the collection hierarchy?** \
   The Java Collections Framework provides a set of interfaces that define the core functionality of collections in
   Java. Some of the important interfaces in the collection hierarchy include:
 
@@ -2142,7 +2862,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       pairs in a map.
 
   These interfaces define common methods and behaviors that are shared by different types of collections in Java.
-- **136 . What are the important methods that are declared in the collection interface? ** \
+- **136 . What are the important methods that are declared in the collection interface?** \
   The `Collection` interface in Java defines a set of common methods that are shared by all classes that implement the
   interface. Some of the important methods declared in the `Collection` interface include:
 
@@ -2164,7 +2884,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   These methods provide basic functionality for working with collections in Java and are implemented by classes that
   implement the `Collection` interface.
-- **137 . Can you explain briefly about the List interface? ** \
+- **137 . Can you explain briefly about the List interface?** \
   The `List` interface in Java extends the `Collection` interface and represents an ordered collection of elements
   that allows duplicates. Lists maintain the insertion order of elements and provide methods for accessing, adding,
   removing, and updating elements at specific positions. Some of the key features of the `List` interface include:
@@ -2179,7 +2899,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   The `List` interface is implemented by classes like `ArrayList`, `LinkedList`, and `Vector` in the Java Collections
   Framework. It provides a flexible and efficient way to work with ordered collections of elements.
-- **138 . Explain about ArrayList with an example? ** \
+- **138 . Explain about ArrayList with an example?** \
   The `ArrayList` class in Java is a resizable array implementation of the `List` interface. It provides dynamic
   resizing, fast random access, and efficient insertion and deletion of elements. `ArrayList` is part of the Java
   Collections Framework and is commonly used to store and manipulate collections of objects.
@@ -2215,12 +2935,12 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, an `ArrayList` of integers is created, and elements are added, accessed, and removed from the list.
   The `ArrayList` class provides a flexible and efficient way to work with collections of objects in Java.
-- **139 . Can an ArrayList have duplicate elements? ** \
+- **139 . Can an ArrayList have duplicate elements?** \
   Yes, an `ArrayList` in Java can have duplicate elements. Unlike a `Set`, which does not allow duplicates, an
   `ArrayList` allows elements to be added multiple times. This means that an `ArrayList` can contain duplicate elements
   at different positions in the list. The order of elements in an `ArrayList` is maintained, so duplicate elements will
   appear in the list in the order in which they were added.
-- **140 . How do you iterate around an ArrayList using iterator? ** \
+- **140 . How do you iterate around an ArrayList using iterator?** \
   To iterate over an `ArrayList` using an iterator in Java, you can use the `iterator` method provided by the
   `ArrayList` class. The `iterator` method returns an `Iterator` object that can be used to traverse the elements in the
   list. Here is an example:
@@ -2251,7 +2971,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, an `ArrayList` of strings is created, and an iterator is obtained using the `iterator` method. The
   iterator is then used to iterate over the elements in the list and print them to the console.
-- **141 . How do you sort an ArrayList? ** \
+- **141 . How do you sort an ArrayList?** \
   To sort an `ArrayList` in Java, you can use the `Collections.sort` method provided by the `java.util.Collections`
   class. The `Collections.sort` method sorts the elements in the list in ascending order based on their natural order or
   a custom comparator. Here is an example:
@@ -2281,7 +3001,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, an `ArrayList` of integers is created, and the `Collections.sort` method is used to sort the elements
   in the list. The sorted elements are then printed to the console in ascending order.
-- **142 . How do you sort elements in an ArrayList using comparable interface? ** \
+- **142 . How do you sort elements in an ArrayList using comparable interface?** \
   To sort elements in an `ArrayList` using the `Comparable` interface in Java, you need to implement the `Comparable`
   interface in the class of the elements you want to sort. The `Comparable` interface defines a `compareTo` method that
   compares the current object with another object and returns a negative, zero, or positive value based on their
@@ -2326,7 +3046,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, the `Person` class implements the `Comparable` interface and defines a `compareTo` method that
   compares `Person` objects based on their age. The `Collections.sort` method is then used to sort the `ArrayList` of
   `Person` objects based on their age.
-- **143 . How do you sort elements in an ArrayList using comparator interface? ** \
+- **143 . How do you sort elements in an ArrayList using comparator interface?** \
   To sort elements in an `ArrayList` using the `Comparator` interface in Java, you need to create a custom comparator
   class that implements the `Comparator` interface. The `Comparator` interface defines a `compare` method that compares
   two objects and returns a negative, zero, or positive value based on their ordering. Here is an example:
@@ -2373,7 +3093,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a custom comparator class is created using the `Comparator.comparing` method to sort `Person` objects
   based on their name. The `Collections.sort` method is then used to sort the `ArrayList` of `Person` objects using the
   custom comparator.
-- **144 . What is vector class? How is it different from an ArrayList? ** \
+- **144 . What is vector class? How is it different from an ArrayList?** \
   The `Vector` class in Java is a legacy collection class that is similar to an `ArrayList` but is synchronized. This
   means that access to a `Vector` is thread-safe, making it suitable for use in multi-threaded environments. The
   `Vector` class provides methods for adding, removing, and accessing elements in the list, as well as for iterating
@@ -2390,7 +3110,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   Despite these differences, both `Vector` and `ArrayList` provide similar functionality for working with collections of
   objects in Java.
-- **145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList? ** \
+- **145 . What is linkedList? What interfaces does it implement? How is it different from an ArrayList?** \
   The `LinkedList` class in Java is a doubly-linked list implementation of the `List` interface. It provides efficient
   insertion and deletion of elements at the beginning, middle, and end of the list. `LinkedList` implements the `List`,
   `Deque`, and `Queue` interfaces, making it suitable for a wide range of operations.
@@ -2407,7 +3127,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   Despite these differences, both `LinkedList` and `ArrayList` provide similar functionality for working with
   collections of objects in Java, and the choice between them depends on the specific requirements of the application.
-- **146 . Can you briefly explain about the Set interface? ** \
+- **146 . Can you briefly explain about the Set interface?** \
   The `Set` interface in Java extends the `Collection` interface and represents a collection of unique elements with no
   duplicates. Sets do not allow duplicate elements, and they maintain no specific order of elements. The `Set`
   interface provides methods for adding, removing, and checking the presence of elements in the set.
@@ -2424,7 +3144,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   The `Set` interface is commonly used to store collections of unique elements and perform operations like union,
   intersection, and difference on sets. It provides a flexible and efficient way to work with sets of objects in Java.
-- **147 . What are the important interfaces related to the Set interface? ** \
+- **147 . What are the important interfaces related to the Set interface?** \
   The `Set` interface in Java is related to several other interfaces in the Java Collections Framework that provide
   additional functionality for working with sets of elements. Some of the important interfaces related to the `Set`
   interface include:
@@ -2438,7 +3158,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   These interfaces build on the functionality provided by the `Set` interface and offer additional features for working
   with sets of elements in Java.
-- **148 . What is the difference between Set and sortedSet interfaces? ** \
+- **148 . What is the difference between Set and sortedSet interfaces?** \
   The `Set` and `SortedSet` interfaces in Java are related interfaces in the Java Collections Framework that represent
   collections of unique elements with no duplicates. The main difference between `Set` and `SortedSet` is the ordering
   of elements:
@@ -2453,7 +3173,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In summary, `Set` is a general interface for collections of unique elements, while `SortedSet` is a specialized
   interface for sets that maintain the order of elements based on a specific ordering.
-- **149 . Can you give examples of classes that implement the Set interface? ** \
+- **149 . Can you give examples of classes that implement the Set interface?** \
   The `Set` interface in Java is implemented by several classes in the Java Collections Framework that provide
   different implementations of sets. Some of the common classes that implement the `Set` interface include:
 
@@ -2467,7 +3187,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   These classes provide different implementations of sets with varying performance characteristics and ordering
   guarantees.
-- **150 . What is a HashSet? How is it different from a TreeSet? ** \
+- **150 . What is a HashSet? How is it different from a TreeSet?** \
   `HashSet` and `TreeSet` are two common implementations of the `Set` interface in Java that provide different
   characteristics for working with sets of elements. The main differences between `HashSet` and `TreeSet` include:
 
@@ -2484,7 +3204,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In summary, `HashSet` is a hash-based set implementation with no ordering guarantees, while `TreeSet` is a tree-based
   set implementation that maintains the order of elements based on their natural ordering or a custom comparator.
-- **151 . What is a linkedHashSet? How is different from a HashSet? ** \
+- **151 . What is a linkedHashSet? How is different from a HashSet?** \
   `LinkedHashSet` is a class in Java that extends `HashSet` and maintains the order of elements based on their insertion
   order. Unlike `HashSet`, which does not maintain the order of elements, `LinkedHashSet` provides predictable iteration
   order and constant-time performance for basic operations. `LinkedHashSet` is implemented using a hash table with a
@@ -2501,7 +3221,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In summary, `LinkedHashSet` is a hash-based set implementation that maintains the order of elements based on their
   insertion order, providing predictable iteration order and constant-time performance for basic operations.
-- **152 . What is a TreeSet? How is different from a HashSet? ** \
+- **152 . What is a TreeSet? How is different from a HashSet?** \
   `TreeSet` is a class in Java that implements the `SortedSet` interface using a red-black tree data structure.
   `TreeSet`
   maintains the order of elements based on their natural ordering or a custom comparator, allowing elements to be sorted
@@ -2519,7 +3239,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In summary, `TreeSet` is a tree-based set implementation that maintains the order of elements based on their natural
   ordering or a custom comparator, providing efficient sorting and range query operations. `HashSet` is a hash-based set
   implementation with no ordering guarantees.
-- **153 . Can you give examples of implementations of navigableSet? ** \
+- **153 . Can you give examples of implementations of navigableSet?** \
   The `NavigableSet` interface in Java is implemented by the `TreeSet` and `ConcurrentSkipListSet` classes in the Java
   Collections Framework. These classes provide implementations of navigable sets that support navigation methods for
   accessing elements in a set. Some examples of implementations of `NavigableSet` include:
@@ -2533,7 +3253,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   These classes provide efficient and flexible implementations of navigable sets that allow elements to be accessed,
   added, and removed based on their order in the set.
-- **154 . Explain briefly about Queue interface? ** \
+- **154 . Explain briefly about Queue interface?** \
   The `Queue` interface in Java represents a collection of elements in a specific order for processing. Queues follow
   the First-In-First-Out (FIFO) order, meaning that elements are added to the end of the queue and removed from the
   front of the queue. The `Queue` interface provides methods for adding, removing, and accessing elements in the queue,
@@ -2551,7 +3271,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   The `Queue` interface is commonly used to represent collections of elements that need to be processed in a specific
   order, such as tasks in a job queue or messages in a message queue. It provides a flexible and efficient way to work
   with queues of objects in Java.
-- **155 . What are the important interfaces related to the Queue interface? ** \
+- **155 . What are the important interfaces related to the Queue interface?** \
   The `Queue` interface in Java is related to several other interfaces in the Java Collections Framework that provide
   additional functionality for working with queues of elements. Some of the important interfaces related to the `Queue`
   interface include:
@@ -2566,7 +3286,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   These interfaces build on the functionality provided by the `Queue` interface and offer additional features for
   working
   with queues of elements in Java.
-- **156 . Explain about the Deque interface? ** \
+- **156 . Explain about the Deque interface?** \
   The `Deque` interface in Java represents a double-ended queue that allows elements to be added or removed from both
   ends. Deques provide methods for adding, removing, and accessing elements at the front and back of the queue, making
   them suitable for a wide range of operations. The `Deque` interface extends the `Queue` interface and provides
@@ -2584,7 +3304,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   The `Deque` interface is commonly used to represent double-ended queues that require efficient insertion and removal
   of elements at both ends. It provides a flexible and efficient way to work with double-ended queues of objects in
   Java.
-- **157 . Explain the BlockingQueue interface? ** \
+- **157 . Explain the BlockingQueue interface?** \
   The `BlockingQueue` interface in Java represents a queue that supports blocking operations for adding and removing
   elements. Blocking queues provide methods for waiting for elements to become available or space to become available in
   the queue, allowing threads to block until the desired condition is met. The `BlockingQueue` interface extends the
@@ -2604,7 +3324,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   The `BlockingQueue` interface is commonly used in multi-threaded applications to coordinate the processing of elements
   between producer and consumer threads. It provides a flexible and efficient way to work with blocking queues of
   objects in Java.
-- **158 . What is a priorityQueue? How is it different from a normal queue? ** \
+- **158 . What is a priorityQueue? How is it different from a normal queue?** \
   `PriorityQueue` is a class in Java that implements the `Queue` interface using a priority heap data structure. Unlike
   a normal queue, which follows the First-In-First-Out (FIFO) order, a `PriorityQueue` maintains elements in a priority
   order based on their natural ordering or a custom comparator. Elements with higher priority are dequeued before
@@ -2624,7 +3344,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   while
   a normal queue follows the FIFO order. `PriorityQueue` is commonly used in applications that require elements to be
   processed based on their priority level.
-- **159 . Can you give example implementations of the BlockingQueue interface? ** \
+- **159 . Can you give example implementations of the BlockingQueue interface?** \
   The `BlockingQueue` interface in Java is implemented by several classes in the Java Collections Framework that provide
   different implementations of blocking queues. Some examples of implementations of `BlockingQueue` include:
 
@@ -2643,7 +3363,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   These classes provide different implementations of blocking queues with varying characteristics and performance
   guarantees. They are commonly used in multi-threaded applications to coordinate the processing of elements between
   producer and consumer threads.
-- **160 . Can you briefly explain about the Map interface? ** \
+- **160 . Can you briefly explain about the Map interface?** \
   The `Map` interface in Java represents a collection of key-value pairs where each key is unique and maps to a single
   value. Maps provide methods for adding, removing, and accessing key-value pairs, as well as for checking the presence
   of keys or values. The `Map` interface does not extend the `Collection` interface and provides a separate set of
@@ -2661,7 +3381,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   The `Map` interface is commonly used to store and manipulate key-value pairs in Java, providing a flexible and
   efficient
   way to work with mappings of objects.
-- **161 . What is difference between Map and SortedMap? ** \
+- **161 . What is difference between Map and SortedMap?** \
   The `Map` and `SortedMap` interfaces in Java are related interfaces in the Java Collections Framework that represent
   collections of key-value pairs. The main difference between `Map` and `SortedMap` is the ordering of keys:
 
@@ -2675,7 +3395,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In summary, `Map` is a general interface for collections of key-value pairs, while `SortedMap` is a specialized
   interface for maps that maintain the order of keys based on a specific ordering.
-- **162 . What is a HashMap? How is it different from a TreeMap? ** \
+- **162 . What is a HashMap? How is it different from a TreeMap?** \
   `HashMap` and `TreeMap` are two common implementations of the `Map` interface in Java that provide different
   characteristics for working with key-value pairs. The main differences between `HashMap` and `TreeMap` include:
 
@@ -2696,7 +3416,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   map implementation that maintains the order of keys based on their natural ordering or a custom comparator. `HashMap`
   is commonly used in applications that require fast access to key-value pairs, while `TreeMap` is used when keys need
   to be sorted in a specific order.
-- **163 . What are the different methods in a Hash Map? ** \
+- **163 . What are the different methods in a Hash Map?** \
   The `HashMap` class in Java provides a variety of methods for working with key-value pairs stored in a hash table
   data structure. Some of the common methods provided by the `HashMap` class include:
 
@@ -2713,7 +3433,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
     - **`entrySet()`**: Returns a set of key-value pairs in the map.
 
   These methods provide a flexible and efficient way to work with key-value pairs stored in a `HashMap` in Java.
-    - **164 . What is a TreeMap? How is different from a HashMap? ** \
+    - **164 . What is a TreeMap? How is different from a HashMap?** \
       `TreeMap` is a class in Java that implements the `SortedMap` interface using a red-black tree data structure.
       `TreeMap`
       maintains the order of keys based on their natural ordering or a custom comparator, allowing keys to be sorted in
@@ -2742,7 +3462,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       ordering or a custom comparator, while `HashMap` is a hash-based map implementation with no ordering guarantees.
       `TreeMap` is commonly used in applications that require keys to be sorted in a specific order. `HashMap` is used
       when a fast access to key-value pairs is required.
-- **165 . Can you give an example of implementation of NavigableMap interface? ** \
+- **165 . Can you give an example of implementation of NavigableMap interface?** \
   The `NavigableMap` interface in Java is implemented by the `TreeMap` class in the Java Collections Framework.
   `TreeMap`
   provides a navigable map of key-value pairs sorted in a specific order, allowing elements to be accessed, added, and
@@ -2782,7 +3502,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a `NavigableMap` is created using a `TreeMap` and key-value pairs are added to the map. The key-value
   pairs are then printed in ascending order and descending order using the `keySet` and `descendingKeySet` methods of
   the `NavigableMap` interface.
-- **166 . What are the static methods present in the collections class? ** \
+- **166 . What are the static methods present in the collections class?** \
   The `Collections` class in Java provides a variety of static methods for working with collections in the Java
   Collections Framework. Some of the common static methods provided by the `Collections` class include:
 
@@ -2803,7 +3523,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
 ### Advanced collections
 
-- **167 . What is the difference between synchronized and concurrent collections in Java? ** \
+- **167 . What is the difference between synchronized and concurrent collections in Java?** \
   Synchronized collections and concurrent collections in Java are two approaches to handling thread safety in
   multi-threaded applications. The main difference between synchronized and concurrent collections is how they achieve
   thread safety:
@@ -2833,7 +3553,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In general, concurrent collections are preferred for high-concurrency scenarios where performance and scalability are
   important. Synchronized collections are suitable for simpler applications where thread safety is required but
   high-concurrency is not a concern.
-- **168 . Explain about the new concurrent collections in Java? ** \
+- **168 . Explain about the new concurrent collections in Java?** \
   Java provides a set of concurrent collections in the `java.util.concurrent` package that are designed for high
   concurrency and thread safety in multi-threaded applications. Some of the new concurrent collections introduced in
   Java include:
@@ -2859,7 +3579,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   providing
   built-in thread safety and high concurrency support. They are suitable for scenarios where multiple threads need to
   access and modify collections concurrently.
-- **169 . Explain about copyOnWrite concurrent collections approach? ** \
+- **169 . Explain about copyOnWrite concurrent collections approach?** \
   The copy-on-write (COW) approach is a concurrency control technique used in Java to provide thread-safe access to
   collections. In the copy-on-write approach, a new copy of the collection is created whenever a modification is made,
   ensuring that the original collection remains unchanged and can be safely accessed by other threads. This approach
@@ -2878,7 +3598,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   The copy-on-write approach is commonly used in scenarios where high concurrency and thread safety are required, such
   as in read-heavy workloads or applications with multiple readers and few writers. It provides a simple and efficient
   way to achieve thread safety without the need for explicit synchronization.
-- **170 . What is compareAndSwap approach? ** \
+- **170 . What is compareAndSwap approach?** \
   The compare-and-swap (CAS) operation is an atomic operation used in concurrent programming to implement lock-free
   algorithms and data structures. The CAS operation allows a thread to update a value in memory if it matches an
   expected
@@ -2893,7 +3613,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   that allow multiple threads to access and modify shared data without the risk of data corruption or lost updates. CAS
   is a key building block for implementing efficient and scalable concurrent algorithms in Java and other programming
   languages.
-- **171 . What is a lock? How is it different from using synchronized approach? ** \
+- **171 . What is a lock? How is it different from using synchronized approach?** \
   A lock is a synchronization mechanism used in Java to control access to shared resources in multi-threaded
   applications. Locks provide a way to coordinate the execution of threads and ensure that only one thread can access a
   shared resource at a time. Locks are more flexible and powerful than the `synchronized` keyword in Java and provide
@@ -2914,7 +3634,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In general, locks are more flexible and powerful than the `synchronized` keyword and provide additional features for
   managing concurrency in multi-threaded applications. Locks are commonly used in scenarios where fine-grained control
   over synchronization is required or when additional features like reentrant locking or condition variables are needed.
-- **172 . What is initial capacity of a Java collection? ** \
+- **172 . What is initial capacity of a Java collection?** \
   The initial capacity of a Java collection refers to the number of elements that the collection can initially store
   before resizing is required. When a collection is created, an initial capacity is specified to allocate memory for
   storing elements. If the number of elements exceeds the initial capacity, the collection is resized to accommodate
@@ -3040,7 +3760,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   Generics are an important feature of the Java language that provide a way to create flexible, reusable, and
   type-safe code. They are commonly used in collections, data structures, and algorithms to work with generic types
   and improve code quality.
-- **179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible? ** \
+- **179 . Why do we need Generics? Can you give an example of how Generics make a program more flexible?** \
   Generics in Java are a feature that allows classes and methods to be parameterized by one or more types. Generics
   provide a way to create reusable and type-safe code by allowing classes and methods to work with generic types that
   are specified at compile time. Generics enable the creation of classes, interfaces, and methods that can work with
@@ -3083,7 +3803,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   parameterized by two types `T` and `U`, allowing it to work with different types of values. This flexibility makes
   the `Pair` class more generic and reusable, allowing it to store pairs of values of different types without
   sacrificing type safety.
-- **180 . How do you declare a generic class? ** \
+- **180 . How do you declare a generic class?** \
   A generic class in Java is declared by specifying one or more type parameters in angle brackets (`<>`) after the class
   name. The type parameters are used to represent generic types that can be specified at compile time when creating
   instances of the class. Here is an example of declaring a generic class in Java:
@@ -3114,7 +3834,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   type specified by the type parameter `T`. Instances of the `Box` class are created by specifying the type parameter
   when creating the instance, such as `Box<String>` or `Box<Integer`. This allows the `Box` class to work with different
   types of values while maintaining type safety.
-- **181 . What are the restrictions in using generic type that is declared in a class declaration? ** \
+- **181 . What are the restrictions in using generic type that is declared in a class declaration?** \
   When using a generic type that is declared in a class declaration, there are some restrictions and limitations that
   must be considered:
 
@@ -3131,7 +3851,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       types used with the generic type are consistent and compatible with the declared type parameters.
 
   These restrictions and limitations help ensure type safety and consistency when working with generic types in Java.
-- **182 . How can we restrict Generics to a subclass of particular class? ** \
+- **182 . How can we restrict Generics to a subclass of particular class?** \
   In Java, it is possible to restrict generics to a subclass of a particular class by using bounded type parameters. By
   specifying an upper bound for the generic type parameter, you can restrict the types that can be used with the generic
   class to subclasses of a specific class. Here is an example of restricting generics to a subclass of a particular
@@ -3161,7 +3881,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   the generic type `T` must be a subclass of `Number`, such as `Integer`, `Double`, or `Float`. Instances of the `Box`
   class can be created with types that are subclasses of `Number`, but not with types that are not subclasses of
   `Number`.
-- **183 . How can we restrict Generics to a super class of particular class? ** \
+- **183 . How can we restrict Generics to a super class of particular class?** \
   In Java, it is possible to restrict generics to a super class of a particular class by using bounded type parameters.
   By specifying a lower bound for the generic type parameter, you can restrict the types that can be used with the
   generic class to superclasses of a specific class. Here is an example of restricting generics to a superclass of a
@@ -3191,7 +3911,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   that the generic type `T` must be a superclass of `Number`, such as `Object` or `Serializable`. Instances of the
   `Box` class can be created with types that are superclasses of `Number`, but not with types that are not superclasses
   of `Number`.
-- **184 . Can you give an example of a generic method? ** \
+- **184 . Can you give an example of a generic method?** \
   A generic method in Java is a method that is parameterized by one or more types. Generic methods provide a way to
   create methods that can work with different types of arguments without sacrificing type safety. Here is an example of
   a generic method that swaps the elements of an array:
@@ -3221,7 +3941,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
 ### Multi threading
 
-- **185 . What is the need for threads in Java? ** \
+- **185 . What is the need for threads in Java?** \
   Threads in Java are used to achieve concurrent execution of tasks within a single process. Threads allow multiple
   operations to be performed simultaneously, enabling applications to take advantage of multi-core processors and
   improve performance. Threads are lightweight processes that share the same memory space and resources of a process,
@@ -3232,7 +3952,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       responsiveness
       of applications.
     - **Parallelism**: Threads allow tasks to be executed
-- **186 . How do you create a thread? ** \
+- **186 . How do you create a thread?** \
   There are two main ways to create a thread in Java:
     - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the
       `run` method. This approach allows you to define the behavior of the thread by implementing the `run` method.
@@ -3279,7 +3999,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
   method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
   called to start the thread.
-- **187 . How do you create a thread by extending thread class? ** \
+- **187 . How do you create a thread by extending thread class?** \
   You can create a thread in Java by extending the `Thread` class and overriding the `run` method. This approach allows
   you to define the behavior of the thread by implementing the `run` method. Here is an example:
 
@@ -3299,7 +4019,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   In this example, a `MyThread` class is created by extending the `Thread` class and overriding the `run` method. An
   instance of the `MyThread` class is then created, and the `start` method is called to start the thread.
-- **188 . How do you create a thread by implementing runnable interface? ** \
+- **188 . How do you create a thread by implementing runnable interface?** \
   You can create a thread in Java by implementing the `Runnable` interface and passing an instance of the class to the
   `Thread` constructor. This approach separates the thread logic from the class definition and allows for better code
   reusability. Here is an example:
@@ -3322,7 +4042,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
   method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
   called to start the thread.
-- **189 . How do you run a thread in Java? ** \
+- **189 . How do you run a thread in Java?** \
   There are two main ways to run a thread in Java:
     - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the `run`
       method. This approach allows you to define the behavior of the thread by implementing the `run` method. You can
@@ -3372,15 +4092,15 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a `MyRunnable` class is created by implementing the `Runnable` interface and defining the `run`
   method. An instance of the `MyRunnable` class is then passed to the `Thread` constructor, and the `start` method is
   called to run the thread.
-- **190 . What are the different states of a thread? ** \
+- **190 . What are the different states of a thread?** \
   Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are:
     - **New**: A thread is in the new state when it is created but has not yet started.
     - **Runnable**: A thread is in the runnable state when it is ready to run but is waiting for a processor to execute
-    - **191 . What is priority of a thread? How do you change the priority of a thread? ** \
+    - **191 . What is priority of a thread? How do you change the priority of a thread?** \
       The priority of a thread in Java is an integer value that determines the scheduling priority of the thread.
       Threads
       with higher priority values are given preference by the thread scheduler and are more likely.
-- **192 . What is ExecutorService? ** \
+- **192 . What is ExecutorService?** \
   `ExecutorService` is an interface in the Java Concurrency API that provides a higher-level abstraction for managing
   and executing tasks asynchronously using a pool of threads. `ExecutorService` extends the `Executor` interface and
   provides additional methods for managing the lifecycle of the executor, submitting tasks for execution, and
@@ -3393,7 +4113,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
     - **Thread Pool Management**: `ExecutorService` manages a pool of worker threads that can be reused for executing
       tasks.
     - **Asynchronous
-- **193 . Can you give an example for ExecutorService? ** \
+- **193 . Can you give an example for ExecutorService?** \
   Here is an example of using `ExecutorService` to execute tasks asynchronously in Java:
 
     ```java
@@ -3432,7 +4152,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
   These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations
   based on the requirements of the application.
-- **195 . How do you check whether an ExecutionService task executed successfully? ** \
+- **195 . How do you check whether an ExecutionService task executed successfully?** \
   The `Future` interface in the Java Concurrency API provides a way to check whether an `ExecutorService` task executed
   successfully and retrieve the result of the task. The `Future` interface represents the result of an asynchronous
   computation and provides methods for checking the status of the task, waiting for the task to complete, and retrieving
@@ -3478,7 +4198,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   result of the task. The `isDone` method is used to check if the task has completed, and the `get` method is used to
   retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the
   `ExecutorService` is shut down to release the resources.
-- **196 . What is callable? How do you execute a callable from executionservice? ** \
+- **196 . What is callable? How do you execute a callable from executionservice?** \
   `Callable` is a functional interface in the Java Concurrency API that represents a task that can be executed
   asynchronously and return a result. `Callable` is similar to `Runnable`, but it can return a result or throw an
   exception. The `Callable` interface defines a single method, `call`, that takes no arguments and returns a result of
@@ -3530,9 +4250,9 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   to
   retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the
   `ExecutorService` is shut down to release the resources.
-- **197 . What is synchronization of threads? ** \
+- **197 . What is synchronization of threads?** \
   Synchronization in Java is a mechanism that allows multiple threads to coordinate access to shared resources.
-- **198 . Can you give an example of a synchronized block? ** \
+- **198 . Can you give an example of a synchronized block?** \
   Here is an example of using a synchronized block in Java to synchronize access to a shared resource:
 
     ```java
@@ -3588,7 +4308,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   `increment` and `getCount` methods are synchronized using a synchronized block with the `this` object as the monitor.
   Multiple threads are created to increment the counter concurrently, and the final count is printed after the threads
   have finished.
-- **199 . Can a static method be synchronized? ** \
+- **199 . Can a static method be synchronized?** \
   Yes, a static method can be synchronized in Java. When a static method is synchronized, the lock acquired is on the
   class object associated with the method's class. This means that only one thread can execute the synchronized static
   method at a time, regardless of the number of instances of the class.
@@ -3641,7 +4361,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, the `increment` method is a synchronized static method that increments a shared static counter. The
   `increment` method is synchronized to ensure that only one thread can increment the counter at a time, even when
   multiple threads are accessing the method concurrently.
-- **200 . What is the use of join method in threads? ** \
+- **200 . What is the use of join method in threads?** \
   The `join` method in Java is used to wait for a thread to complete its execution before continuing with the current
   thread. When the `join` method is called on a thread, the current thread will block and wait for the specified thread
   to finish before proceeding.
@@ -3678,7 +4398,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a thread is created that sleeps for 2 seconds before finishing. The `join` method is called on the
   thread to wait for it to finish before printing a message in the main thread. This ensures that the main thread waits
   for the thread to complete before continuing.
-- **201 . Describe a few other important methods in threads? ** \
+- **201 . Describe a few other important methods in threads?** \
   Some other important methods in Java threads include:
     - **`start`**: The `start` method is used to start a thread and execute its `run` method asynchronously.
     - **`sleep`**: The `sleep` method is used to pause the execution of a thread for a specified amount of time.
@@ -3697,7 +4417,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
       has been interrupted.
     - **`run`**: The `run` method is the entry point for a thread's execution and contains the code that the thread will
       run.
-- **202 . What is a deadlock? How can you avoid a deadlock? ** \
+- **202 . What is a deadlock? How can you avoid a deadlock?** \
   A deadlock is a situation in multi-threaded programming where two or more threads are blocked forever, waiting for
   each
   other to release resources that they need to continue execution. Deadlocks can occur when multiple threads acquire
@@ -3724,21 +4444,21 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
     - **`wait(long timeout)` and `notifyAll`**: The `wait(long timeout)` method allows a thread to wait for a specified
       amount of time before continuing, while the `notifyAll` method notifies all waiting threads to wake up and
       continue execution
-- **204 . What is the use of wait method? ** \
+- **204 . What is the use of wait method?** \
   The `wait` method in Java is used to make a thread wait until a condition is met. When a thread calls the `wait`
   method,
   it releases the lock it holds and enters a waiting state until another thread calls the `notify` or `notifyAll` method
   on the same object. The `wait` method is typically used for inter-thread communication and synchronization in
   multi-threaded programs.
-- **205 . What is the use of notify method? ** \
+- **205 . What is the use of notify method?** \
   The `notify` method in Java is used to wake up a single thread that is waiting on the same object. When a thread calls
   the `notify` method, it notifies a single waiting thread to wake up and continue execution. The `notify` method is
   typically used in conjunction with the `wait` method for inter-thread communication and synchronization in
   multi-threaded programs.
-- **206 . What is the use of notifyall method? ** \
+- **206 . What is the use of notifyall method?** \
   The `notifyAll` method in Java is used to wake up all threads that are waiting on the same object. When a thread calls
   the `notifyAll` method, it notifies all waiting threads to wake up and
-- **207 . Can you write a synchronized program with wait and notify methods? ** \
+- **207 . Can you write a synchronized program with wait and notify methods?** \
   Here is an example of a synchronized program using the `wait` and `notify` methods for inter-thread communication in
   Java:
 
@@ -3802,7 +4522,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   Functional programming languages like Haskell, Scala, and Clojure provide built-in support for functional programming
   features, while languages like Java have introduced functional programming concepts like lambda expressions and
   streams to support functional programming paradigms.
-- **209 . Can you give an example of functional programming? ** \
+- **209 . Can you give an example of functional programming?** \
   Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions
   and avoids changing state and mutable data. Functional programming focuses on the use of pure functions, higher-order
   functions, and immutable data structures to achieve declarative and concise code. Functional programming is based on
@@ -3830,7 +4550,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   interface to square each element in the list. The result is then printed to the console using the `forEach` method.
   This example demonstrates the use of functional programming concepts like lambda expressions and streams in Java.
 - **210 . What is a stream?**
-- **211 . Explain about streams with an example? what are intermediate operations in streams? ** \
+- **211 . Explain about streams with an example? what are intermediate operations in streams?** \
   Streams in Java provide a way to process collections of elements in a functional and declarative manner. Streams
   enable you to perform operations like filtering, mapping, sorting, and reducing on collections using a fluent and
   pipeline-based API. Streams are designed to be lazy, parallelizable, and efficient for processing large amounts of
@@ -3857,13 +4577,13 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a list of integers is created, and a stream is obtained using the `stream` method. The `filter`
   method is then used to filter even numbers from the stream, and the result is printed to the console using the
   `forEach` method. This example demonstrates the use of streams and intermediate operations like `filter` in Java.
-- **212 . What are terminal operations in streams? ** \
+- **212 . What are terminal operations in streams?** \
   Terminal operations in streams are operations that produce a result or a side effect and terminate the stream
   processing. Terminal operations are the final step in a stream pipeline and trigger the execution of intermediate
   operations on the stream elements. Some common terminal operations in streams include `forEach`, `collect`, `reduce`,
   and `count`. Terminal operations are essential for processing streams and obtaining the final result of the stream
   processing.
-- **213 . What are method references? How are they used in streams? ** \
+- **213 . What are method references? How are they used in streams?** \
   Method references in Java provide a way to refer to methods or constructors without invoking them. Method references
   are shorthand syntax for lambda expressions that call a single method or constructor. Method references can be used in
   streams to simplify the code and make it more readable by replacing lambda expressions with method references.
@@ -3889,7 +4609,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   the
   `System.out` class and is equivalent to a lambda expression `(name) -> System.out.println(name)`. Method references
   provide a concise and readable way to refer to methods in streams and other functional programming constructs in Java.
-- **214 . What are lambda expressions? How are they used in streams? ** \
+- **214 . What are lambda expressions? How are they used in streams?** \
   Lambda expressions in Java provide a way to define anonymous functions or blocks of code that can be passed as
   arguments to methods or stored in variables. Lambda expressions are a concise and expressive way to represent
   functions and enable functional programming paradigms in Java. Lambda expressions are used in streams to define
@@ -3917,7 +4637,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   the `Stream` interface to square each element in the list. The result is then printed to the console using the
   `forEach` method. Lambda expressions provide a concise and expressive way to define operations on stream elements in
   Java.
-- **215 . Can you give an example of lambda expression? ** \
+- **215 . Can you give an example of lambda expression?** \
   Lambda expressions in Java provide a way to define anonymous functions or blocks of code that can be passed as
   arguments to methods or stored in variables. Lambda expressions are a concise and expressive way to represent
   functions and enable functional programming paradigms in Java.
@@ -3943,7 +4663,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a lambda expression `(a, b) -> a + b` is used to define a function that adds two numbers. The lambda
   expression is assigned to a functional interface `MathOperation` that defines a method `operate` to perform the
   operation. The lambda expression is then used to add two numbers and print the result to the console.
-- **216 . Can you explain the relationship between lambda expression and functional interfaces? ** \
+- **216 . Can you explain the relationship between lambda expression and functional interfaces?** \
   Lambda expressions in Java are closely related to functional interfaces, which are interfaces that have exactly one
   abstract method. Lambda expressions can be used to provide an implementation for the abstract method of a functional
   interface, allowing you to define anonymous functions or blocks of code that can be passed as arguments to methods or
@@ -3971,7 +4691,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   expression is assigned to a functional interface `MathOperation` that defines a method `operate` to perform the
   operation. The lambda expression provides an implementation for the abstract method of the functional interface,
   allowing you to define and use anonymous functions in Java.
-- **217 . What is a predicate? ** \
+- **217 . What is a predicate?** \
   A predicate in Java is a functional interface that represents a boolean-valued function of one argument. Predicates
   are
   commonly used in functional programming to define conditions or filters that can be applied to elements in a
@@ -4028,7 +4748,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a function `square` is defined to square a number. The function is assigned to a `Function` interface
   that accepts an integer and produces an integer. The function is then applied to a number using the `apply` method to
   calculate the square and print the result to the console.
-- **219 . What is a consumer? ** \
+- **219 . What is a consumer?** \
   A consumer in Java is a functional interface that represents an operation that accepts a single input argument and
   returns no result. Consumers are commonly used in functional programming to perform side effects or actions on
   elements
@@ -4054,7 +4774,7 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
   In this example, a consumer `printMessage` is defined to print a message. The consumer is assigned to a `Consumer`
   interface that accepts a string and performs the operation to print the message. The consumer is then used to accept
   the message and print it to the console.
-- **220 . Can you give examples of functional interfaces with multiple arguments? ** \
+- **220 . Can you give examples of functional interfaces with multiple arguments?** \
   Functional interfaces in Java can have multiple arguments by defining methods with multiple parameters. You can create
   functional interfaces with multiple arguments by specifying the number of input arguments in the method signature and
   using lambda expressions to provide implementations for the method.
