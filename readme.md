@@ -110,8 +110,7 @@ Available in the resources for the course
   Wrapper classes in Java are needed for the following reasons:
     -
         1. **Object-Oriented Programming**: Wrapper classes allow primitive data types to be treated as objects,
-           enabling
-           them to be used in object-oriented programming contexts.
+           enabling them to be used in object-oriented programming contexts.
     -
         2. **Collections**: Collections in Java, such as `ArrayList`, can only store objects. Wrapper classes allow
            primitive types to be stored in collections.
@@ -126,18 +125,20 @@ Available in the resources for the course
            type of objects are used.
 - **9 . What are the different ways of creating Wrapper class instances?**
   There are two main ways to create instances of Wrapper classes in Java:
-    - 1. **Using Constructors**:
-      Each wrapper class has a constructor that takes a primitive type or a String as an argument.
-       ```java
-       Integer intObj1 = 10;
-       Integer intObj2 = Integer.valueOf("10");
-       ```
-    - 2. **Using Static Factory Methods**:
-      The wrapper classes provide static factory methods like `valueOf` to create instances.
-       ```java
-       Integer intObj1 = 10;
-       Integer intObj2 = Integer.valueOf("10");
-       ```
+    -
+        1. **Using Constructors**:
+           Each wrapper class has a constructor that takes a primitive type or a String as an argument.
+     ```java
+     Integer intObj1 = 10;
+     Integer intObj2 = Integer.valueOf("10");
+     ```
+    -
+        2. **Using Static Factory Methods**:
+           The wrapper classes provide static factory methods like `valueOf` to create instances.
+     ```java
+     Integer intObj1 = 10;
+     Integer intObj2 = Integer.valueOf("10");
+     ```
 - **10 . What are differences in the two ways of creating Wrapper classes?** \
   The two ways of creating Wrapper class instances in Java are using constructors and using static factory methods. Here
   are the differences:
@@ -958,18 +959,18 @@ public class Dog implements Animal {
 
     No, this code will not compile due to a missing semicolon at the end of the `System.out.println` statement. In Java,
 
-- **52 . What is the use of this**() keyword in Java?\
+- **52 . What is the use of this() keyword in Java?** \
   The `this` keyword in Java is a reference to the current object within a method or constructor. It can be used to
   access instance variables, call other constructors, or pass the current object as a parameter to other methods. The
   use of `this` is optional, but it can help clarify code and avoid naming conflicts between instance variables and
   method parameters.
 
-- **53 . Can a constructor be called directly from a method?**\
+- **53 . Can a constructor be called directly from a method?** \
   No, a constructor cannot be called directly from a method. Constructors are special methods that are called only when
   an object is created. However, you can call another constructor from a constructor using `this()` or `super()`. If you
   need to initialize an object within a method, you should create a new instance of the class using the `new` keyword.
 
-- **54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?**\
+- **54 . Is a super class constructor called even when there is no explicit call from a sub class constructor?** \
   Yes, a superclass constructor is always called, even if there is no explicit call from a subclass constructor. If a
   subclass constructor does not explicitly call a superclass constructor using `super()`, the Java compiler
   automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a
