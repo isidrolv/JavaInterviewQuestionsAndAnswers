@@ -1093,41 +1093,37 @@ public class Dog implements Animal {
   An inner class in Java is a class that is defined within another class. Inner classes can access the members (
   including private members) of the outer class. There are four types of inner classes in Java:
 
-    -
-        1. **Member Inner Class**: A class defined within another class.
-    -
-        2. **Static Nested Class**: A static class defined within another class.
-    -
-        3. **Local Inner Class**: A class defined within a method.
-    -
-        4. **Anonymous Inner Class**: A class without a name, defined and instantiated in a single statement.
+  - 1. **Member Inner Class**: A class defined within another class.
+  - 2. **Static Nested Class**: A static class defined within another class.
+  - 3. **Local Inner Class**: A class defined within a method.
+  - 4. **Anonymous Inner Class**: A class without a name, defined and instantiated in a single statement.
 
   Inner classes are useful for grouping related classes together, improving encapsulation, and reducing code complexity.
--
+  They can be used to implement callbacks, event handling, and other design patterns.
 
-Here is an example of a member inner class:
-
-  ```java
-  public class OuterClass {
-    private int outerField = 10;
-
-    class InnerClass {
-        void display() {
-            System.out.println("Outer field value: " + outerField);
+    Here is an example of a member inner class:
+    
+    ```java
+      public class OuterClass {
+        private int outerField = 10;
+    
+        class InnerClass {
+            void display() {
+                System.out.println("Outer field value: " + outerField);
+            }
+    
         }
-
+    
+        public static void main(String[] args) {
+            OuterClass outer = new OuterClass();
+            OuterClass.InnerClass inner = outer.new InnerClass();
+            inner.display();
+        }
+    
     }
-
-    public static void main(String[] args) {
-        OuterClass outer = new OuterClass();
-        OuterClass.InnerClass inner = outer.new InnerClass();
-        inner.display();
-    }
-
-}
-  ```
-
-In this example, `InnerClass` is an inner class within `OuterClass` and can access the `outerField` of `OuterClass`.
+   ```
+    
+   In this example, `InnerClass` is an inner class within `OuterClass` and can access the `outerField` of `OuterClass`.
 
 - **61 . What is a static inner class?**\  
   A static inner class in Java is a nested class that is defined as a static member of the outer class. It does not have
