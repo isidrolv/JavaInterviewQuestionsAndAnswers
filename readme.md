@@ -1444,30 +1444,435 @@ In this example, `InnerClass` is an inner class within `OuterClass` and can acce
 
 ### conditions & loops
 
-- **79 . Why should you always use blocks around if statement?**
-- **80 . Guess the output**
-- **81 . Guess the output**
-- **82 . Guess the output of this switch block **.
-- **83 . Guess the output of this switch block?**
-- **84 . Should default be the last case in a switch statement?**
-- **85 . Can a switch statement be used around a String**
-- **86 . Guess the output of this for loop **(P.S. there is an error as the output of given question should be
-  0-1-2-3-4-5-6-7-8-9. So please ignore that.)
-- **87 . What is an enhanced for loop?**
-- **88 . What is the output of the for loop below?**
-- **89 . What is the output of the program below?**
-- **90 . What is the output of the program below?**
+- **79 . Why should you always use blocks around if statement?** \
+  It is a good practice to always use blocks around `if` statements in Java to improve code readability and avoid
+  potential bugs. When an `if` statement is not enclosed in a block, only the next statement is considered part of the
+  `if` block. This can lead to confusion and errors if additional statements are added later. By using blocks around `if`
+  statements, you make it clear which statements are part of the conditional block and reduce the risk of errors.
+- **80 . Guess the output**\
+  Here is an example to guess the output:
+    ```java
+    public class GuessOutput {
+        public static void main(String[] args) {
+            int x = 5;
+            int y = 10;
+            int z = x++ + ++y;
+            System.out.println("x = " + x);
+            System.out.println("y = " + y);
+            System.out.println("z = " + z);
+        }
+    }
+    ```
+    The output of this program will be:
+    ```ruby
+        x = 6 
+        y = 11 
+        z = 16 
+    ```
+- **81 . Guess the output**\
+    Here is an example to guess the output:
+    ```java
+    public class GuessOutput {
+        public static void main(String[] args) {
+            int a = 3;
+            int b = 7;
+            int c = a-- - --b;
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);
+            System.out.println("c = " + c);
+        }
+    }
+    ```
+    The output of this program will be:
+    ```ruby
+        a = 2
+        b = 6
+        c = -3
+    ```
+- **82 . Guess the output of this switch block**\
+    Here is an example to guess the output:
+    ```java
+    public class GuessOutput {
+        public static void main(String[] args) {
+            int day = 3;
+            String dayString;
+            switch (day) {
+                case 1:
+                    dayString = "Monday";
+                    break;
+                case 2:
+                    dayString = "Tuesday";
+                    break;
+                case 3:
+                    dayString = "Wednesday";
+                    break;
+                case 4:
+                    dayString = "Thursday";
+                    break;
+                case 5:
+                    dayString = "Friday";
+                    break;
+                case 6:
+                    dayString = "Saturday";
+                    break;
+                case 7:
+                    dayString = "Sunday";
+                    break;
+                default:
+                    dayString = "Invalid day";
+                    break;
+            }
+            System.out.println(dayString);
+        }
+    }
+    ```
+    The output of this program will be:
+    ```ruby
+        Wednesday
+    ```
+- **83 . Guess the output of this switch block?** \
+    Here is an example to guess the output:
+    ```java
+    public class GuessOutput {
+        public static void main(String[] args) {
+            int x = 5;
+            switch (x) {
+                case 1:
+                    System.out.println("One");
+                case 2:
+                    System.out.println("Two");
+                case 3:
+                    System.out.println("Three");
+                case 4:
+                    System.out.println("Four");
+                case 5:
+                    System.out.println("Five");
+                default:
+                    System.out.println("Default");
+            }
+        }
+    }
+    ```
+    The output of this program will be:
+    ```ruby
+        Five
+        Default
+    ```
+- **84 . Should default be the last case in a switch statement?** \
+  No, the `default` case does not have to be the last case in a `switch` statement in Java. The `default` case is
+  optional and can be placed anywhere within the `switch` statement. It is typically used as a catch-all case for values
+  that do not match any of the other cases. Placing the `default` case at the end of the `switch` statement is a common
+  practice to make it easier to identify and handle unexpected values, but it is not required.
+  By example: 
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            int x = 5;
+            switch (x) {
+                case 1:
+                    System.out.println("One");
+                    break;
+                case 2:
+                    System.out.println("Two");
+                    break;
+                default:
+                    System.out.println("Default");
+                    break;
+                case 3:
+                    System.out.println("Three");
+                    break;
+            }
+        }
+    }
+    ```
+    In this example, the `default` case is placed before the `case 3` statement. This is valid Java syntax, and the
+    `default` case will be executed if the value of `x` does not match any of the other cases.
+- **85 . Can a switch statement be used around a String** \
+  Yes, a `switch` statement can be used with a `String` in Java starting from Java 7. Prior to Java 7, `switch`
+  statements only supported `int`, `byte`, `short`, `char`, and `enum` types. With the introduction of the `String`
+  `switch` feature in Java 7, you can now use `String` values as case labels in a `switch` statement.
+
+  Here is an example:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            String day = "Monday";
+            switch (day) {
+                case "Monday":
+                    System.out.println("It's Monday!");
+                    break;
+                case "Tuesday":
+                    System.out.println("It's Tuesday!");
+                    break;
+                default:
+                    System.out.println("It's not Monday or Tuesday.");
+                    break;
+            }
+        }
+    }
+    ```
+
+  In this example, the `switch` statement uses a `String` value (`day`) as the expression and `String` case labels
+  (`"Monday"` and `"Tuesday"`). This feature allows for more expressive and readable code when working with `String`
+  values.
+- **86 . Guess the output of this for loop** \
+  Here is an example to guess the output:
+  ```java
+  public class GuessOutput {
+      public static void main(String[] args) {
+          for (int i = 0; i < 5; i++) {
+              System.out.println("i = " + i);
+          }
+      }
+  }
+  ```
+  The output of this program will be:
+  ```ruby
+      i = 0
+      i = 1
+      i = 2
+      i = 3
+      i = 4
+  ```
+- **87 . What is an enhanced for loop?** \
+  An enhanced for loop, also known as a for-each loop, is a simplified way to iterate over elements in an array or a
+  collection in Java. It provides a more concise syntax for iterating over elements without the need for explicit
+  indexing or bounds checking. The enhanced for loop was introduced in Java 5 and is commonly used for iterating over
+  arrays, lists, sets, and other collections.
+
+  Here is an example of an enhanced for loop:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            int[] numbers = {1, 2, 3, 4, 5};
+            for (int number : numbers) {
+                System.out.println(number);
+            }
+        }
+    }
+    ```
+
+  In this example, the enhanced for loop iterates over the `numbers` array and prints each element to the console.
+- **88 . What is the output of the for loop below?** \
+  Here is an example to guess the output:
+  ```java
+  public class GuessOutput {
+      public static void main(String[] args) {
+          for (int i = 0; i < 5; i++) {
+              if (i == 3) {
+                  continue;
+              }
+              System.out.println("i = " + i);
+          }
+      }
+  }
+  ```
+- **89 . What is the output of the program below?** \
+  Here is an example to guess the output:
+  ```java
+  public class GuessOutput {
+      public static void main(String[] args) {
+          for (int i = 1; i < 15; i++) {
+              if (i == 13) {
+                  break;
+              }
+              System.out.println("i = " + i);
+          }
+      }
+  }
+  ```
+- **90 . What is the output of the program below?** \
+  Here is an example to guess the output:
+  ```java
+  public class GuessOutput {
+      public static void main(String[] args) {
+          for (int i = 0; i < 10; i++) {
+              if (i == 13) {
+                  break;
+              }
+              System.out.println("i = " + i);
+          }
+      }
+  }
+  ```
 
 ### Exception handling
 
-- **91 . Why is exception handling important?**
-- **92 . What design pattern is used to implement exception handling features in most languages?**
-- **93 . What is the need for finally block?**
-- **94 . In what scenarios is code in finally not executed?**
-- **95 . Will finally be executed in the program below?**
-- **96 . Is try without a catch is allowed?**
-- **97 . Is try without catch and finally allowed?**
-- **98 . Can you explain the hierarchy of exception handling classes?**
+- **91 . Why is exception handling important?** \
+  Exception handling is important in Java for the following reasons:
+    - **Error Handling**: Exception handling allows you to gracefully handle errors and exceptions that occur during
+      program execution. This helps prevent the program from crashing and provides a way to recover from unexpected
+      situations.
+    - **Robustness**: Exception handling makes your code more robust by handling unexpected conditions and preventing
+      them from causing the program to fail.
+    - **Debugging**: Exception handling provides a way to catch and log errors, making it easier to debug and diagnose
+      issues in the code.
+    - **Maintainability**: Exception handling improves the maintainability of the code by separating error-handling logic
+      from the main program logic. This makes the code easier to read, understand, and modify.
+    - **Security**: Exception handling can help prevent security vulnerabilities by handling errors and exceptions that
+      could be exploited by malicious users.
+    - **User Experience**: Exception handling improves the user experience by providing informative error messages and
+      handling errors in a user-friendly way.
+- **92 . What design pattern is used to implement exception handling features in most languages?** \
+  The most common design pattern used to implement exception handling features in most programming languages, including
+  Java, is the `try-catch-finally` pattern. This pattern consists of three main components:
+
+    - **Try Block**: The `try` block contains the code that may throw an exception. It is used to enclose the code that
+      needs to be monitored for exceptions.
+    - **Catch Block**: The `catch` block is used to handle exceptions that are thrown in the `try` block. It specifies
+      the type of exception to catch and the code to execute when the exception occurs.
+    - **Finally Block**: The `finally` block is used to execute code that should always run, regardless of whether an
+      exception occurs. It is typically used to release resources or clean up after the `try` block.
+
+  Here is an example of the `try-catch-finally` pattern in Java:
+
+    ```java
+        public class Example {
+        
+            public static void main(String[] args) {
+                try {
+                    // Code that may throw an exception
+                    File file = new File("\+example.txt");   
+                } catch (Exception e) {
+                    // Handle the exception
+                    e.printStackTrace();
+                } finally {
+                    // Cleanup code
+                    System.out.println("Finally block executed");
+                }
+            }
+        }
+    ```
+
+  In this example, the `try` block contains the code that may throw an exception, the `catch` block handles the
+  exception, and the `finally` block contains cleanup code that should always run, regardless of whether an exception
+  occurs.
+- **93 . What is the need for finally block?** \
+  The `finally` block in Java is used to execute code that should always run, regardless of whether an exception occurs.
+  It is typically used to release resources, close connections, or perform cleanup operations that need to be done
+  regardless of the outcome of the `try` block. The `finally` block is guaranteed to run, even if an exception is thrown
+  and caught in the `try` block.
+
+  Here is an example:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            try {
+                // Code that may throw an exception
+                int result = 10 / 0;
+            } catch (ArithmeticException e) {
+                // Handle the exception
+                e.printStackTrace();
+            } finally {
+                // Cleanup code
+                System.out.println("Finally block executed");
+            }
+        }
+    }
+    ```
+
+  In this example, the `finally` block contains cleanup code that should always run, regardless of whether an exception
+  occurs in the `try` block. This ensures that resources are released and cleanup operations are performed, even if an
+  exception is thrown.
+- **94 . In what scenarios is code in finally not executed?** \
+  The code in a `finally` block is not executed in the following scenarios:
+    - **System.exit()**: If the `System.exit()` method is called in the `try` or `catch` block, the program will
+      terminate immediately, and the code in the `finally` block will not be executed.
+    - **Infinite Loop**: If the code in the `try` or `catch` block results in an infinite loop or hangs the program, the
+      `finally` block will not be executed.
+    - **JVM Shutdown**: If the JVM is shut down abruptly, such as by killing the process or a power failure, the code in
+      the `finally` block may not be executed.
+    - **Thread Interruption**: If the thread executing the `try` or `catch` block is interrupted, the code in the
+      `finally` block may not be executed.
+    - **StackOverflowError**: If a `StackOverflowError` occurs in the `try` or `catch` block, the code in the `finally`
+      block may not be executed.
+    - **OutOfMemoryError**: If an `OutOfMemoryError` occurs in the `try` or `catch` block, the code in the `finally` block
+      may not be executed.
+- **95 . Will finally be executed in the program below?** \
+  Here is an example to determine if the `finally` block will be executed:
+  ```java
+  public class Example {
+      public static void main(String[] args) {
+          try {
+              System.out.println("Try block");
+              System.exit(0);
+          } catch (Exception e) {
+              System.out.println("Catch block");
+          } finally {
+              System.out.println("Finally block");
+          }
+      }
+  }
+  ```
+  In this example, the `System.exit(0)` method is called in the `try` block, which will terminate the program
+  immediately. As a result, the code in the `finally` block will not be executed.
+- **96 . Is try without a catch is allowed?** \
+  Yes, a `try` block without a `catch` block is allowed in Java. This is known as a try-with-resources statement and is
+  used to automatically close resources that implement the `AutoCloseable` interface. The `try` block can be followed by
+  one or more `catch` blocks or a `finally` block, but it is not required to have a `catch` block.
+
+  Here is an example of a try-with-resources statement:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+                String line = reader.readLine();
+                System.out.println(line);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    ```
+
+  In this example, the `try` block contains a `BufferedReader` resource that is automatically closed when the `try`
+  block exits. The `catch` block handles any `IOException` that may occur while reading from the file.
+- **97 . Is try without catch and finally allowed?** \
+  Yes, a `try` block without a `catch` or `finally` block is allowed in Java. This is known as a try-with-resources
+  statement and is used to automatically close resources that implement the `AutoCloseable` interface. The `try` block
+  can be followed by one or more `catch` blocks or a `finally` block, but it is not required to have a `catch` or
+  `finally` block.
+
+  Here is an example of a try-with-resources statement without a `catch` or `finally` block:
+
+    ```java
+    public class Example {
+        public static void main(String[] args) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+                String line = reader.readLine();
+                System.out.println(line);
+            }
+        }
+    }
+    ```
+
+  In this example, the `try` block contains a `BufferedReader` resource that is automatically closed when the `try`
+  block exits. There is no `catch` or `finally` block, as the resource is automatically closed by the try-with-resources
+  statement.
+- **98 . Can you explain the hierarchy of exception handling classes?** \
+  In Java, exception handling is based on a hierarchy of classes that extend the `Throwable` class. The main classes in
+  the exception handling hierarchy are:
+
+    - **Throwable**: The `Throwable` class is the root class of the exception hierarchy. It has two main subclasses:
+        - **Error**: Errors are serious issues that are typically outside the control of the program and indicate problems
+          with the environment in which the application is running. Examples include `OutOfMemoryError`,
+          `StackOverflowError`, and `VirtualMachineError`.
+        - **Exception**: Exceptions are conditions that a program might want to catch and handle. They are divided into two
+          main categories:
+            - **Checked Exceptions**: These are exceptions that are checked at compile-time. The programmer is required to
+              handle these exceptions, either by using a `try-catch` block or by declaring them in the method signature
+              using the `throws` keyword. Examples include `IOException`, `SQLException`, and `FileNotFoundException`.
+            - **Unchecked Exceptions**: These are exceptions that are not checked at compile-time but occur during runtime.
+              They are subclasses of `RuntimeException` and do not need to be declared or caught. Examples include
+              `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `IllegalArgumentException`.
+
+  The exception handling hierarchy allows for different types of exceptions to be caught and handled in a structured
+  way. By understanding the hierarchy of exception handling classes, you can write more robust and reliable code that
+  handles errors and exceptions effectively.
 - **99 . What is the difference between error and exception?**
   Errors and exceptions are both types of problems that can occur during the execution of a program, but they are
   handled differently in Java:
