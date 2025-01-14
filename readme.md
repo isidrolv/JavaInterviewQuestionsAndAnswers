@@ -33,25 +33,14 @@ Available in the resources for the course
 - **1 . Why is Java so popular?**
     - Java is popular for several reasons:
 
-        -
-            1. **Platform Independence**: Java programs can run on any device that has the Java Virtual Machine (JVM),
-               making it
-               highly portable.
-        -
-            2. **Object-Oriented**: Java's object-oriented nature allows for modular programs and reusable code.
-        -
-            3. **Robust and Secure**: Java has strong memory management, exception handling, and security features.
-        -
-            4. **Rich API**: Java provides a vast standard library that simplifies many programming tasks.
-        -
-            5. **Community Support**: Java has a large and active community, providing extensive resources and support.
-        -
-            6. **Performance**: Java's performance has improved significantly with Just-In-Time (JIT) compilers and
-               other
-               optimizations.
-        -
-            7. **Enterprise Use**: Java is widely used in enterprise environments, particularly for server-side
-               applications.
+        1. **Platform Independence**: Java programs can run on any device that has the Java Virtual Machine (JVM),
+               making it highly portable.
+        2. **Object-Oriented**: Java's object-oriented nature allows for modular programs and reusable code.
+        3. **Robust and Secure**: Java has strong memory management, exception handling, and security features.
+        4. **Rich API**: Java provides a vast standard library that simplifies many programming tasks.
+        5. **Community Support**: Java has a large and active community, providing extensive resources and support.
+        6. **Performance**: Java's performance has improved significantly with Just-In-Time (JIT) compilers and other optimizations.
+        7. **Enterprise Use**: Java is widely used in enterprise environments, particularly for server-side applications.
 - **2 . What is platform independence?**
   Platform independence refers to the ability of a programming language or software to run on various types of computer
   systems without modification. In the context of Java, platform independence is achieved through the use of the Java
@@ -143,27 +132,25 @@ Available in the resources for the course
   The two ways of creating Wrapper class instances in Java are using constructors and using static factory methods. Here
   are the differences:
 
-    -
-        1. **Using Constructors**:
-           Each wrapper class has a constructor that takes a primitive type or a `String` as an argument. \
-           Example:
-            ```java
-            Integer intObj1 = new Integer(10);
-            Integer intObj2 = new Integer("10");
-            ```
-    -
-        2. **Using Static Factory Methods**:
-           Wrapper classes provide static factory methods like `valueOf` to create instances.\
-           Example:
-            ```java
-            Integer intObj1 = Integer.valueOf(10);
-            Integer intObj2 = Integer.valueOf("10");
-            ```
+  1. **Using Constructors**:
+         Each wrapper class has a constructor that takes a primitive type or a `String` as an argument. \
+         Example:
+    ```java
+          Integer intObj1 = new Integer(10);
+          Integer intObj2 = new Integer("10");
+    ```
+  2. **Using Static Factory Methods**:
+       Wrapper classes provide static factory methods like `valueOf` to create instances.\
+       Example:
+        ```java
+        Integer intObj1 = Integer.valueOf(10);
+        Integer intObj2 = Integer.valueOf("10");
+        ```
   **Differences**:
-    - **Performance**: Static factory methods are generally preferred over constructors because they can cache
-      frequently requested values, improving performance.
-    - **Readability**: Using `valueOf` is often more readable and expressive.
-    - **Deprecation**: Some constructors in wrapper classes are deprecated in favor of static factory methods.
+   - **Performance**: Static factory methods are generally preferred over constructors because they can cache
+     frequently requested values, improving performance.
+   - **Readability**: Using `valueOf` is often more readable and expressive.
+   - **Deprecation**: Some constructors in wrapper classes are deprecated in favor of static factory methods.
 - **11 . What is auto boxing?**
   Autoboxing in Java is the automatic conversion that the Java compiler makes between the primitive types and their
   corresponding object wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and
@@ -495,21 +482,21 @@ Available in the resources for the course
     - `Dog` is the subclass that inherits the `eat()` method from `Animal` and also has its own method `bark()`.
     - In the `Main` class, an instance of `Dog` can call both `eat()` and `bark()` methods.
 
-- **33 . What is method overloading?**
+- **33. What is method overloading?**
   Method overloading in Java is a feature that allows a class to have more than one method with the same name, provided
   their parameter lists are different. This means that the methods must differ in the type, number, or order of their
   parameters. Method overloading is a compile-time polymorphism technique, enabling different methods to perform similar
   operations with varying inputs. It enhances code readability and reusability by allowing the same method name to be
   used for different tasks, based on the arguments passed. Overloaded methods can have different return types, but this
   alone is not enough for overloading; the parameter list must be different.
-- **34 . What is method overriding?**
+- **34. What is method overriding?**
   Method overriding in Java is a feature that allows a subclass to provide a specific implementation of a method that is
   already provided by its superclass. When a method in a subclass has the same name, return type, and parameters as a
   method in its superclass, it is said to override the superclass method. Method overriding is a runtime polymorphism
   technique, enabling a subclass to provide its own implementation of a method inherited from a superclass. This allows
   for more specific behavior to be defined in the subclass, while still maintaining a common interface with the
   superclass. Method overriding is used to achieve dynamic polymorphism in Java.
-- **35 . Can super class reference variable can hold an object of sub class?**
+- **35. Can super class reference variable can hold an object of sub class?**
   Yes, a superclass reference variable can hold an object of a subclass in Java. This is known as polymorphism and is a
   key feature of object-oriented programming. When a superclass reference variable holds an object of a subclass, it can
   only access the methods and fields that are defined in the superclass. If the subclass has additional methods or
@@ -2710,6 +2697,7 @@ public class Dog implements Animal {
     ```java
     import java.io.*;
 
+    @Slf4j
     public class Main {
         public static void main(String[] args) {
             try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("object.ser"))) {
@@ -2717,17 +2705,19 @@ public class Dog implements Animal {
                 parent.child = new Child();
                 out.writeObject(parent);
             } catch (IOException e) {
-                e.printStackTrace();
+                log.error("Error serializing object", e);
             }
         }
     }
 
     class Parent implements Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
         Child child;
     }
 
     class Child implements Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
     }
     ```
@@ -3945,10 +3935,10 @@ public class Dog implements Animal {
   allowing them to run concurrently and perform tasks in parallel.
 
   Some key reasons for using threads in Java include:
-    - **Concurrency**: Threads enable multiple tasks to be executed concurrently, improving performance and
+    - **Concurrency**: threads enable multiple tasks to be executed concurrently, improving performance and
       responsiveness
       of applications.
-    - **Parallelism**: Threads allow tasks to be executed
+    - **Parallelism**: threads allow tasks to be executed
 - **186 . How do you create a thread?** \
   There are two main ways to create a thread in Java:
     - **Extending the `Thread` class**: You can create a thread by extending the `Thread` class and overriding the
