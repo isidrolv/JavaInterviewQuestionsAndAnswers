@@ -1,32 +1,41 @@
 # Java Interview Questions and Answers
 
-[![Image](https://www.springboottutorial.com/images/Course-Java-Interview-Guide-200-Interview-Questions-and-Answers.png "Java Interview Guide : 200+ Interview Questions and Answers")](https://www.udemy.com/course/java-interview-questions-and-answers/)
-
-## Expectations
-
-- Good Java Knowledge
-
-## Complete Course Link
-
-- https://www.udemy.com/course/java-interview-questions-and-answers/?couponCode=NOVEMBER-2019
-
-## Things You Need to Know
-
-### Github Repository
-
-https://github.com/in28minutes/JavaInterviewQuestionsAndAnswers
-
-### PDF Guide
-
-Available in the resources for the course
-
-### Installing Eclipse, Java and Maven
-
-- PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
-- Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-- GIT Repository : https://github.com/in28minutes/getting-started-in-5-steps
+This guide has the purpose of providing a wide set of Java interview questions and answers required for the sourcing of Java developer, Junior, Senior, or Architect. 
 
 ## 200+ Interview Questions
+
+<!-- TOC -->
+* [Java Interview Questions and Answers](#java-interview-questions-and-answers)
+  * [200+ Interview Questions](#200-interview-questions)
+    * [Java Platform](#java-platform)
+    * [Wrapper Classes](#wrapper-classes)
+    * [Strings](#strings)
+    * [Object oriented programming basics](#object-oriented-programming-basics)
+    * [Advanced object oriented concepts](#advanced-object-oriented-concepts)
+    * [Modifiers](#modifiers)
+    * [conditions & loops](#conditions--loops)
+    * [Exception handling](#exception-handling)
+    * [Miscellaneous topics](#miscellaneous-topics)
+    * [Collections](#collections)
+    * [Advanced collections](#advanced-collections)
+    * [Generics](#generics)
+    * [Multi threading](#multi-threading)
+    * [Functional Programming - Lambda expressions and Streams](#functional-programming---lambda-expressions-and-streams)
+    * [New Features](#new-features)
+    * [1.- Counter Component (useState)](#1--counter-component-usestate)
+    * [2.- Toggle Button](#2--toggle-button)
+    * [3.- Fetch API Data](#3--fetch-api-data)
+    * [4.- Form Input Control](#4--form-input-control)
+    * [5.- Conditional Rendering](#5--conditional-rendering)
+    * [6.- Todo List](#6--todo-list)
+    * [7.- Theme Switcher (Dark/Light Mode)](#7--theme-switcher-darklight-mode)
+    * [8.- Stopwatch (Timer)](#8--stopwatch-timer)
+    * [9.- Search Filter](#9--search-filter)
+    * [10.- Custom Hook (useLocalStorage)](#10--custom-hook-uselocalstorage)
+    * [What you can do next?](#what-you-can-do-next)
+    * [Troubleshooting](#troubleshooting)
+  * [Youtube Playlists - 500+ Videos](#youtube-playlists---500-videos)
+<!-- TOC -->
 
 ### Java Platform
 
@@ -97,8 +106,7 @@ Available in the resources for the course
   on the values.
 - **8 . Why do we need Wrapper classes in Java?**
   Wrapper classes in Java are needed for the following reasons:
-    -
-        1. **Object-Oriented Programming**: Wrapper classes allow primitive data types to be treated as objects,
+    - 1. **Object-Oriented Programming**: Wrapper classes allow primitive data types to be treated as objects,
            enabling them to be used in object-oriented programming contexts.
     -
         2. **Collections**: Collections in Java, such as `ArrayList`, can only store objects. Wrapper classes allow
@@ -114,8 +122,7 @@ Available in the resources for the course
            type of objects are used.
 - **9 . What are the different ways of creating Wrapper class instances?**
   There are two main ways to create instances of Wrapper classes in Java:
-    -
-        1. **Using Constructors**:
+    - 1. **Using Constructors**:
            Each wrapper class has a constructor that takes a primitive type or a String as an argument.
      ```java
      Integer intObj1 = 10;
@@ -166,8 +173,7 @@ Available in the resources for the course
   In this example, the primitive `int` is automatically converted to an `Integer` object.
 - **12 . What are the advantages of auto boxing?**
   Autoboxing in Java provides several advantages:
-    -
-        1. **Simplicity**: Autoboxing simplifies the process of working with primitive types in contexts that require
+    - 1. **Simplicity**: Autoboxing simplifies the process of working with primitive types in contexts that require
            objects,
            such as collections.
     -
@@ -182,8 +188,7 @@ Available in the resources for the course
            objects, without the need for explicit conversion.
 - **13 . What is casting?**
   Casting in Java is the process of converting a value of one data type to another. There are two types of casting:
-    -
-        1. **Implicit Casting**: When a smaller data type is converted to a larger data type, Java automatically
+    - 1. **Implicit Casting**: When a smaller data type is converted to a larger data type, Java automatically
            performs
            the
            conversion. For example, converting an `int` to a `double`.
@@ -655,7 +660,7 @@ public class Dog implements Animal {
 - **40 . Can you explain a few tricky things about interfaces?**
   Here are a few tricky things about interfaces in Java:
 
-    1. **Default Methods**: Interfaces can have default methods with a body. This allows adding new methods to
+  1. **Default Methods**: Interfaces can have default methods with a body. This allows adding new methods to
        interfaces without breaking existing implementations.
         ```java
         public interface MyInterface {
@@ -3422,12 +3427,9 @@ public class Dog implements Animal {
   These methods provide a flexible and efficient way to work with key-value pairs stored in a `HashMap` in Java.
     - **164 . What is a TreeMap? How is different from a HashMap?** \
       `TreeMap` is a class in Java that implements the `SortedMap` interface using a red-black tree data structure.
-      `TreeMap`
-      maintains the order of keys based on their natural ordering or a custom comparator, allowing keys to be sorted in
-      a
-      specific order. Unlike `HashMap`, which does not maintain the order of keys, `TreeMap` provides log-time
-      performance
-      for basic operations like adding, removing, and accessing entries.
+      `TreeMap` maintains the order of keys based on their natural ordering or a custom comparator, allowing keys
+       to be sorted in a specific order. Unlike `HashMap`, which does not maintain the order of keys, `TreeMap` 
+       provides log-time performance for basic operations like adding, removing, and accessing entries.
 
       Some key differences between `TreeMap` and `HashMap` include:
         - **Underlying Data Structure**: `TreeMap` uses a red-black tree data structure to maintain the order of keys,
@@ -4791,7 +4793,7 @@ public class Dog implements Animal {
 
 ### New Features
 
-- **221 . What are the new features in Java **5? \
+- **221 . What are the new features in Java 5?** \
   Java 5 introduced several new features and enhancements to the Java programming language, including:
     - **Generics**: Java 5 introduced generics to provide compile-time type safety and reduce the need for explicit
       casting of objects. Generics allow you to define classes, interfaces, and methods with type parameters that can be
@@ -4821,7 +4823,7 @@ public class Dog implements Animal {
 
   These new features introduced in Java 5 helped to improve the expressiveness, readability, and maintainability of Java
   code and laid the foundation for future enhancements in the Java programming language.
-- **222 . What are the new features in Java **6? \
+- **222 . What are the new features in Java 6?** \
   Java 6 introduced several new features and enhancements to the Java programming language, including:
     - **Scripting Support**: Java 6 introduced scripting support through the `javax.script` package, allowing you to
       execute scripts written in languages like JavaScript, Groovy, and Ruby within Java applications. Scripting support
@@ -4852,7 +4854,7 @@ public class Dog implements Animal {
   These new features introduced in Java 6 helped to improve the performance, productivity, and functionality of Java
   applications and provided developers with new tools and capabilities for building robust and scalable software
   systems.
-- **223 . What are the new features in Java **7? \
+- **223 . What are the new features in Java 7?**\
   Java 7 introduced several new features and enhancements to the Java programming language, including:
     - **Diamond Operator**: Java 7 introduced the diamond operator (`<>`) to simplify the use of generics by inferring
       the
@@ -4907,7 +4909,7 @@ public class Dog implements Animal {
       These new features introduced in Java 8 helped to modernize the Java programming language and provide developers
       with new tools and capabilities for building robust and scalable software systems.
 
-- **225 . What are the new features in Java **9? \
+- **225 . What are the new features in Java 9?** \
   Java 9 introduced several new features and enhancements to the Java programming language, including:
     - **Module System (Project Jigsaw)**: Java 9 introduced the module system to provide a way to modularize and
       encapsulate
@@ -4923,7 +4925,7 @@ public class Dog implements Animal {
     - **Stream API Enhancements**: Java 9 introduced several enhancements to the Streams API, including new methods like
       `takeWhile`, `dropWhile`, and `ofNullable` to improve the functionality and expressiveness of stream operations.
     - **Process API Updates**: Java 9 introduced updates to the Process API to provide better
-- **226 . What are the new features in Java **11? \
+- **226 . What are the new features in Java 11?** \
   Java 11 introduced several new features and enhancements to the Java programming language, including:
     - **Local-Variable Syntax for Lambda Parameters**: Java 11 introduced the ability to use `var` as the type of
       lambda parameters in lambda expressions. This feature allows you to use `var` to declare the type of lambda
@@ -4947,7 +4949,7 @@ public class Dog implements Animal {
     - **Dynamic Class-File Constants**: Java 11 introduced dynamic class-file constants to provide a way to define
       constants in class files that are dynamically computed at runtime. Dynamic class-file constants allow you to
       define constants that depend on the class's runtime context, enabling more flexible and dynamic code generation.
-- **227 . What are the new features in Java **13? \
+- **227 . What are the new features in Java 13?** \
   Java 13 introduced several new features and enhancements to the Java programming language, including:
     - **Text Blocks (Preview Feature)**: Java 13 introduced text blocks as a preview feature to provide a more readable
       and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line strings with
@@ -4972,7 +4974,7 @@ public class Dog implements Animal {
     - **Text Blocks (Second Preview)**: Java 13 introduced text blocks as a second preview feature to provide a more
       readable and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line
       strings with improved formatting and indentation, making it easier to write and read complex string literals.
-- **228 . What are the new features in Java **17? \
+- **228 . What are the new features in Java 17?** \
   Java 17 introduced several new features and enhancements to the Java programming language, including:
     - **Sealed Classes (Standard Feature)**: Java 17 introduced sealed classes as a standard feature to provide a way to
       restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend
@@ -5003,7 +5005,7 @@ public class Dog implements Animal {
       enabling
       better integration with native libraries and systems.
     - **JEP
-- **228 . What are the new features in Java **21? \
+- **228 . What are the new features in Java 21?** \
   Java 21 introduced several new features and enhancements to the Java programming language, including:
     - **JEP 406: Pattern Matching for switch (Standard Feature)**: Java 21 introduced pattern matching for switch as a
       standard feature to provide a more concise and expressive way to write switch statements. Pattern matching for
@@ -5058,6 +5060,474 @@ public class Dog implements Animal {
       cloud computing platform. Java on Google Cloud provides better integration and performance for Java applications
       running on Google Cloud services, enabling you to build and deploy Java applications in the cloud more
       effectively.
+  
+- **229 . What are the new features in Java 23?** \
+  This section previously contained incorrect and fabricated JEP references (e.g., JEP 425–429 with IBM platform/cloud claims). 
+  Remove misinformation. Update this answer once JDK 23 is officially released by consulting the OpenJDK Release Notes 
+  and the list of JEPs targeted to JDK 23: https://openjdk.org/ \
+  Until the official feature list is confirmed, avoid speculative content. Recommended placeholder answer: \
+  "Refer to the official JDK 23 Release Notes and JEP index for the authoritative list of features. Replace this placeholder when the release is finalized."
+
+- **230. What is a Hash Table as a data structure and how it is implemented?** \
+  A hash table is a data structure that stores data in a key-value pair format. The key is used to access the
+  corresponding value. The hash table is used to store data in a more efficient way than a conventional array or
+  list. The hash table is implemented using an array of buckets. Each bucket is a linked list that stores the data
+  associated with the corresponding key. The hash function is used to map the key to the corresponding bucket index.
+  The hash function is used to calculate the index of the bucket where the data is stored. The hash function is
+  responsible for mapping the key to the corresponding bucket index.  
+
+**Addendum: 10 coding challenge exercises**.
+
+Each exercise includes:
+
+* **Task description**
+* **Starting code sample (incomplete or incorrect)**
+* **Final expected solution**
+
+---
+
+### 1.- Counter Component (useState)
+
+**Task:** Create a simple counter with increment and decrement buttons.
+
+**Starting Code:**
+
+```jsx
+import React from "react";
+
+function Counter() {
+  let count = 0;
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button>Increment</button>
+      <button>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+---
+
+### 2.- Toggle Button
+
+**Task:** Implement a button that toggles between “ON” and “OFF”.
+
+**Starting Code:**
+
+```jsx
+function Toggle() {
+  let state = "OFF";
+
+  return (
+    <button>
+      {state}
+    </button>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function Toggle() {
+  const [isOn, setIsOn] = useState(false);
+
+  return (
+    <button onClick={() => setIsOn(!isOn)}>
+      {isOn ? "ON" : "OFF"}
+    </button>
+  );
+}
+
+export default Toggle;
+```
+
+---
+
+### 3.- Fetch API Data
+
+**Task:** Fetch and display posts from JSONPlaceholder API.
+
+**Starting Code:**
+
+```jsx
+function Posts() {
+  let posts = [];
+
+  return (
+    <div>
+      <h2>Posts</h2>
+      {posts.map(p => <p>{p.title}</p>)}
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useEffect, useState } from "react";
+
+function Posts() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(res => res.json())
+      .then(data => setPosts(data.slice(0, 5)));
+  }, []);
+
+  return (
+    <div>
+      <h2>Posts</h2>
+      {posts.map(p => <p key={p.id}>{p.title}</p>)}
+    </div>
+  );
+}
+
+export default Posts;
+```
+
+---
+
+### 4.- Form Input Control
+
+**Task:** Capture and display input text in real-time.
+
+**Starting Code:**
+
+```jsx
+function InputForm() {
+  let value = "";
+
+  return (
+    <div>
+      <input />
+      <p>You typed: {value}</p>
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function InputForm() {
+  const [value, setValue] = useState("");
+
+  return (
+    <div>
+      <input value={value} onChange={e => setValue(e.target.value)} />
+      <p>You typed: {value}</p>
+    </div>
+  );
+}
+
+export default InputForm;
+```
+
+---
+
+### 5.- Conditional Rendering
+
+**Task:** Show “Welcome, User!” if logged in, otherwise show “Please log in.”
+
+**Starting Code:**
+
+```jsx
+function Greeting() {
+  let loggedIn = false;
+
+  return (
+    <div>
+      Welcome!
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function Greeting() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  return (
+    <div>
+      {loggedIn ? "Welcome, User!" : "Please log in."}
+      <br />
+      <button onClick={() => setLoggedIn(!loggedIn)}>
+        {loggedIn ? "Logout" : "Login"}
+      </button>
+    </div>
+  );
+}
+
+export default Greeting;
+```
+
+---
+
+### 6.- Todo List
+
+**Task:** Build a simple todo list where users can add tasks.
+
+**Starting Code:**
+
+```jsx
+function TodoApp() {
+  let todos = [];
+
+  return (
+    <div>
+      <input />
+      <button>Add</button>
+      {todos.map(t => <li>{t}</li>)}
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function TodoApp() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
+
+  const addTodo = () => {
+    if (input.trim() !== "") {
+      setTodos([...todos, input]);
+      setInput("");
+    }
+  };
+
+  return (
+    <div>
+      <input value={input} onChange={e => setInput(e.target.value)} />
+      <button onClick={addTodo}>Add</button>
+      <ul>
+        {todos.map((t, i) => <li key={i}>{t}</li>)}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoApp;
+```
+
+---
+
+### 7.- Theme Switcher (Dark/Light Mode)
+
+**Task:** Toggle between dark and light theme.
+
+**Starting Code:**
+
+```jsx
+function Theme() {
+  let theme = "light";
+
+  return (
+    <div className={theme}>
+      <button>Switch Theme</button>
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function Theme() {
+  const [theme, setTheme] = useState("light");
+
+  return (
+    <div className={theme}>
+      <p>Current Theme: {theme}</p>
+      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        Switch Theme
+      </button>
+    </div>
+  );
+}
+
+export default Theme;
+```
+
+---
+
+### 8.- Stopwatch (Timer)
+
+**Task:** Build a stopwatch with start and stop buttons.
+
+**Starting Code:**
+
+```jsx
+function Stopwatch() {
+  let time = 0;
+
+  return (
+    <div>
+      <p>{time}</p>
+      <button>Start</button>
+      <button>Stop</button>
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState, useEffect, useRef } from "react";
+
+function Stopwatch() {
+  const [time, setTime] = useState(0);
+  const [running, setRunning] = useState(false);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    if (running) {
+      intervalRef.current = setInterval(() => {
+        setTime(t => t + 1);
+      }, 1000);
+    } else {
+      clearInterval(intervalRef.current);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [running]);
+
+  return (
+    <div>
+      <p>{time} seconds</p>
+      <button onClick={() => setRunning(true)}>Start</button>
+      <button onClick={() => setRunning(false)}>Stop</button>
+    </div>
+  );
+}
+
+export default Stopwatch;
+```
+
+---
+
+### 9.- Search Filter
+
+**Task:** Filter a list of names as the user types.
+
+**Starting Code:**
+
+```jsx
+function SearchList() {
+  const names = ["Alice", "Bob", "Charlie"];
+
+  return (
+    <div>
+      <input />
+      <ul>
+        {names.map(n => <li>{n}</li>)}
+      </ul>
+    </div>
+  );
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import React, { useState } from "react";
+
+function SearchList() {
+  const names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+  const [query, setQuery] = useState("");
+
+  const filtered = names.filter(n =>
+    n.toLowerCase().includes(query.toLowerCase())
+  );
+
+  return (
+    <div>
+      <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search..." />
+      <ul>
+        {filtered.map((n, i) => <li key={i}>{n}</li>)}
+      </ul>
+    </div>
+  );
+}
+
+export default SearchList;
+```
+
+---
+
+### 10.- Custom Hook (useLocalStorage)
+
+**Task:** Create a custom hook to persist state in localStorage.
+
+**Starting Code:**
+
+```jsx
+function useLocalStorage(key, value) {
+  return value;
+}
+```
+
+**Final Expected Code:**
+
+```jsx
+import { useState, useEffect } from "react";
+
+function useLocalStorage(key, initialValue) {
+  const [stored, setStored] = useState(() => {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : initialValue;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(stored));
+  }, [key, stored]);
+
+  return [stored, setStored];
+}
+
+export default useLocalStorage;
+```
+---
 
 ### What you can do next?
 
@@ -5075,7 +5545,4 @@ public class Dog implements Animal {
 
 [Click here - 30+ Playlists with 500+ Videos on Spring, Spring Boot, REST, Microservices and the Cloud](https://www.youtube.com/user/rithustutorials/playlists?view=1&sort=lad&flow=list)
 
-## Keep Learning in28Minutes
 
-in28Minutes is creating amazing solutions for you to learn Spring Boot, Full Stack and the Cloud - Docker, Kubernetes,
-AWS, React, Angular etc. - [Check out all our courses here](https://github.com/in28minutes/learn)
