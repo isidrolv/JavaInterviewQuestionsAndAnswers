@@ -167,22 +167,39 @@ class JavaQuizApp(tk.Tk):
         q_frame = ttk.Frame(self, padding=(10, 0, 10, 10))
         q_frame.pack(fill=tk.BOTH, expand=True)
 
-        # Style for option radio buttons
         self.style = ttk.Style(self)
-        self.style.configure('Option.TRadiobutton', font=self.font_option)
 
         self.question_text = tk.Text(q_frame, wrap='word', height=5, font=self.font_question)
         self.question_text.configure(state='disabled', background=self.cget('background'), relief='flat')
         self.question_text.pack(fill=tk.X, padx=4, pady=(4, 8))
 
-        # Options
+        # Options – use tk.Radiobutton (not ttk) so we can set wraplength
+        # for answers that span more than one line.
         self.selected_var = tk.StringVar(value='')
         self.option_buttons = []
+        bg = self.cget('background')
         for i in range(4):
-            rb = ttk.Radiobutton(q_frame, text='', value=chr(97 + i), variable=self.selected_var)
-            rb.configure(style=f'Option.TRadiobutton')
-            rb.pack(anchor='w', pady=4)
+            rb = tk.Radiobutton(
+                q_frame,
+                text='',
+                value=chr(97 + i),
+                variable=self.selected_var,
+                font=self.font_option,
+                anchor='w',
+                justify='left',
+                wraplength=0,          # will be set dynamically
+                bg=bg,
+                activebackground=bg,
+                selectcolor=bg,
+                borderwidth=0,
+                highlightthickness=0,
+            )
+            rb.pack(anchor='w', fill=tk.X, pady=4, padx=4)
             self.option_buttons.append(rb)
+
+        # Keep a reference to q_frame so we can recalculate wraplength
+        self._q_frame = q_frame
+        q_frame.bind('<Configure>', self._on_q_frame_configure)
 
         # Explanation area
         self.expl_label = ttk.Label(q_frame, text='Explicación:', font=self.font_expl_label)
@@ -203,6 +220,14 @@ class JavaQuizApp(tk.Tk):
 
         self.next_button = ttk.Button(bottom, text='Siguiente', command=self.on_next, state='disabled')
         self.next_button.pack(side=tk.RIGHT, padx=(0, 8))
+
+    def _on_q_frame_configure(self, event=None):
+        """Recalculate wraplength for option buttons when the frame is resized."""
+        # Leave some horizontal margin for the radio indicator and padding
+        padding = 60
+        new_wrap = max(200, self._q_frame.winfo_width() - padding)
+        for rb in self.option_buttons:
+            rb.configure(wraplength=new_wrap)
 
     def load_current_question(self):
         q = self.questions[self.index]
