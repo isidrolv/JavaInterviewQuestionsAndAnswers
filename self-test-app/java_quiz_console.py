@@ -11,9 +11,6 @@ except Exception:
     YAML_AVAILABLE = False
 
 BASE_DIR = os.path.dirname(__file__)
-QUESTIONS_FILE = os.path.join(BASE_DIR, 'data/java-questions.json')
-CONFIG_FILE = os.path.join(BASE_DIR, 'config.yml')
-BASE_DIR = os.path.dirname(__file__)
 QUESTIONS_FILE_NAME = os.environ.get('QUESTIONS_FILE_NAME')
 QUESTIONS_FILE = os.path.join(BASE_DIR, QUESTIONS_FILE_NAME or 'data/java-questions.json')
 CONFIG_FILE = os.path.join(BASE_DIR, 'config.yml')

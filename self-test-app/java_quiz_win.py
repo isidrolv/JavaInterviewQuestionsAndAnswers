@@ -316,7 +316,7 @@ class JavaQuizApp(tk.Tk):
         aprobado = porcentaje >= PASS_THRESHOLD
         msg = (
             f"Respuestas correctas: {self.correct_count}/{self.total} ({porcentaje*100:.1f}%)\n\n" +
-            ("🎉 ¡Aprobaste el test de React!" if aprobado else "❌ No aprobaste. ¡Sigue practicando!")
+            ("🎉 ¡Aprobaste el test de Java!" if aprobado else "❌ No aprobaste. ¡Sigue practicando!")
         )
         messagebox.showinfo('Resultado', msg)
         if self.winfo_exists():
