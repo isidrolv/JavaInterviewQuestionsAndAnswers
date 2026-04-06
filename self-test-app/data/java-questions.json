@@ -1055,12 +1055,12 @@
   {
     "id": 86,
     "category": "Java 8 Features",
-    "question": "Guess the output of this for loop",
+    "question": "Guess the output of this for loop: for(int i = 0; i < 5; i++) { System.out.println(i); }",
     "options": [
-      "Esta funcionalidad no existe en Java.",
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "Here is an example to guess the output:"
+  "Here is an example to guess the output:\n 0\n 1\n 2\n 3\n 4\n",
+      "This is a feature exclusive to other programming languages.",
+      "This functionality does not exist in Java.",
+      "Java does not support this feature until very recent versions."
     ],
     "answer": "d",
     "explanation": "Here is an example to guess the output: public class GuessOutput {"
@@ -1348,8 +1348,8 @@
       "Esta funcionalidad no existe en Java.",
       "Esta es una característica exclusiva de otros lenguajes de programación."
     ],
-    "answer": "a",
-    "explanation": "In Java, when an array is created, the elements are initialized to default values based on the type of the array. The default values for primitive types are as follows:"
+    "answer": "c",
+    "explanation": "In Java, when an array is created, the elements are initialized to default values based on the type of the array. The default values for primitive types are as follows: `int` - 0, `float` - 0.0f, `double` - 0.0d, `char` - '\u0000', `boolean` - false. For object references, the default value is null."
   },
   {
     "id": 110,
@@ -2396,13 +2396,13 @@
     "category": "Frameworks",
     "question": "What are the different states of a thread?",
     "options": [
-      "Java no soporta programación concurrente nativa.",
-      "Los threads en Java no pueden compartir memoria.",
-      "Synchronized solo funciona con métodos estáticos.",
-      "Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are:"
+      "Threads in Java cannot share memory.",
+      "Synchronized only works with static methods.",
+      "Java does not support native concurrent programming.",
+      "Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are: New, Runnable, Blocked, Waiting, Timed Waiting, and Terminated."
     ],
     "answer": "d",
-    "explanation": "Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are:"
+    "explanation": "Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are: New, Runnable, Blocked, Waiting, Timed Waiting, and Terminated. Each state represents a different stage in the lifecycle of a thread and determines how the thread is scheduled and executed by the Java Virtual Machine (JVM)."
   },
   {
     "id": 191,
@@ -2414,8 +2414,8 @@
       "Los threads en Java no pueden compartir memoria.",
       "Synchronized solo funciona con métodos estáticos."
     ],
-    "answer": "a",
-    "explanation": "The priority of a thread in Java is an integer value that determines the scheduling priority of the thread. with higher priority values are given preference by the thread scheduler and are more likely."
+    "answer": "d",
+    "explanation": "The priority of a thread in Java is an integer value that determines the scheduling priority of the thread. Threads with higher priority values are given preference by the thread scheduler and are more likely to be executed before threads with lower priority values."
   },
   {
     "id": 192,
@@ -2786,10 +2786,10 @@
     "category": "Modern Java Features",
     "question": "What are the new features in Java 5?",
     "options": [
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Java 5 introduced several new features and enhancements to the Java programming language, including:",
-      "Esta funcionalidad no existe en Java.",
-      "Esta es una característica exclusiva de otros lenguajes de programación."
+      "Java 5 introduced several new features and enhancements to the Java programming language, including: \ncasting of objects. \nGenerics allow you to define classes, interfaces, and methods with type parameters that can be specified at runtime. An example of this is List<String> list = new ArrayList<>();",
+      "This is a feature exclusive to other programming languages.",
+      "Java does not support this feature until very recent versions.",
+      "This functionality does not exist in Java."
     ],
     "answer": "b",
     "explanation": "Java 5 introduced several new features and enhancements to the Java programming language, including: casting of objects. Generics allow you to define classes, interfaces, and methods with type parameters that can be"
@@ -2799,88 +2799,88 @@
     "category": "Modern Java Features",
     "question": "What are the new features in Java 6?",
     "options": [
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "Esta funcionalidad no existe en Java.",
-      "Java 6 introduced several new features and enhancements to the Java programming language, including:",
-      "Java no soporta esta característica hasta versiones muy recientes."
+      "This is a feature exclusive to other programming languages.",
+      "This functionality does not exist in Java.",
+      "Java does not support this feature until very recent versions.",
+      "Java 6 introduced several new features and enhancements to the Java programming language, including: execute scripts written in languages like JavaScript, Groovy, and Ruby within Java applications. Scripting support in Java."
     ],
-    "answer": "c",
-    "explanation": "Java 6 introduced several new features and enhancements to the Java programming language, including: execute scripts written in languages like JavaScript, Groovy, and Ruby within Java applications. Scripting support"
+    "answer": "d",
+    "explanation": "Java 6 introduced several new features and enhancements to the Java programming language, including: execute scripts written in languages like JavaScript, Groovy, and Ruby within Java applications. Scripting support in Java."
   },
   {
     "id": 223,
     "category": "Modern Java Features",
     "question": "What are the new features in Java 7?",
     "options": [
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "Java 7 introduced several new features and enhancements to the Java programming language, including:",
-      "Esta funcionalidad no existe en Java."
+      "This functionality does not exist in Java.",
+      "Java does not support this feature until very recent versions.",
+      "This is a feature exclusive to other programming languages.",
+      "Java 7 introduced several new features and enhancements to the Java programming language, including: type arguments from the context. The diamond operator allows you to create instances of generic classes without specifying the type arguments on the right-hand side of the assignment."
     ],
-    "answer": "c",
-    "explanation": "Java 7 introduced several new features and enhancements to the Java programming language, including: type arguments from the context. The diamond operator allows you to create instances of generic classes without"
+    "answer": "d",
+    "explanation": "Java 7 introduced several new features and enhancements to the Java programming language, including: type arguments from the context. The diamond operator allows you to create instances of generic classes without specifying the type arguments on the right-hand side of the assignment."
   },
   {
     "id": 224,
     "category": "Modern Java Features",
-    "question": "What are the new features in Java",
+    "question": "What are the new features in Java 8?",
     "options": [
-      "Esta funcionalidad no existe en Java.",
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Java 8 introduced several new features and enhancements to the Java programming language, including:",
-      "Esta es una característica exclusiva de otros lenguajes de programación."
+      "This is a feature exclusive to other programming languages.",
+      "Java does not support this feature until very recent versions.",
+      "Java 8 introduced several new features and enhancements to the Java programming language, including: lambda expressions, the Stream API, and the new Date and Time API.",
+      "This functionality does not exist in Java."
     ],
     "answer": "c",
-    "explanation": "Java 8 introduced several new features and enhancements to the Java programming language, including: anonymous functions or blocks of code. Lambda expressions enable functional programming paradigms in Java and"
+    "explanation": "Java 8 introduced several new features and enhancements to the Java programming language, including: lambda expressions, the Stream API, and the new Date and Time API."
   },
   {
     "id": 225,
     "category": "Modern Java Features",
     "question": "What are the new features in Java 9?",
     "options": [
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Esta funcionalidad no existe en Java.",
-      "Java 9 introduced several new features and enhancements to the Java programming language, including:",
-      "Esta es una característica exclusiva de otros lenguajes de programación."
+      "Java 9 introduced several new features and enhancements to the Java programming language, including: encapsulate modules. The module system allows you to organize your code into modules and control the visibility of packages and classes within those modules.",
+      "This functionality does not exist in Java.",
+      "This is a feature exclusive to other programming languages.",
+      "Java does not support this feature until very recent versions."
     ],
-    "answer": "c",
-    "explanation": "Java 9 introduced several new features and enhancements to the Java programming language, including: encapsulate"
+    "answer": "a",
+    "explanation": "Java 9 introduced several new features and enhancements to the Java programming language, including: encapsulate modules. The module system allows you to organize your code into modules and control the visibility of packages and classes within those modules."
   },
   {
     "id": 226,
     "category": "Modern Java Features",
     "question": "What are the new features in Java 11?",
     "options": [
-      "Java 11 introduced several new features and enhancements to the Java programming language, including:",
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "Esta funcionalidad no existe en Java.",
-      "Java no soporta esta característica hasta versiones muy recientes."
+      "This is a feature exclusive to other programming languages.",
+      "This functionality does not exist in Java.",
+      "Java does not support this feature until very recent versions.",
+      "Java 11 introduced several new features and enhancements to the Java programming language, including: lambda parameters in lambda expressions. This feature allows you to use `var` to declare the type of lambda parameters, making the code more concise and readable."
     ],
-    "answer": "a",
-    "explanation": "Java 11 introduced several new features and enhancements to the Java programming language, including: lambda parameters in lambda expressions. This feature allows you to use `var` to declare the type of lambda"
+    "answer": "d",
+    "explanation": "Java 11 introduced several new features and enhancements to the Java programming language, including: lambda parameters in lambda expressions. This feature allows you to use `var` to declare the type of lambda parameters, making the code more concise and readable."
   },
   {
     "id": 227,
     "category": "Modern Java Features",
     "question": "What are the new features in Java 13?",
     "options": [
-      "Java 13 introduced several new features and enhancements to the Java programming language, including:",
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Esta funcionalidad no existe en Java.",
-      "Esta es una característica exclusiva de otros lenguajes de programación."
+      "This functionality does not exist in Java.",
+      "Java 13 introduced several new features and enhancements to the Java programming language, including: text blocks. Text blocks provide a more readable and maintainable way to write multi-line strings in Java.",
+      "This is a feature exclusive to other programming languages.",
+      "Java does not support this feature until very recent versions."
     ],
-    "answer": "a",
-    "explanation": "Java 13 introduced several new features and enhancements to the Java programming language, including: and maintainable way to write multi-line strings in Java. Text blocks allow you to define multi-line strings with"
+    "answer": "b",
+    "explanation": "Java 13 introduced several new features and enhancements to the Java programming language, including: text blocks. Text blocks provide a more readable and maintainable way to write multi-line strings in Java."
   },
   {
     "id": 228,
     "category": "Modern Java Features",
     "question": "What are the new features in Java 17?",
     "options": [
-      "Esta funcionalidad no existe en Java.",
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Java 17 introduced several new features and enhancements to the Java programming language, including:"
+      "Java does not support this feature until very recent versions.",
+      "Java 17 introduced several new features and enhancements to the Java programming language, including: restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend or implement a sealed class or interface, providing better control over the class hierarchy and improving security and maintainability.",
+      "This is a feature exclusive to other programming languages.",
+      "This functionality does not exist in Java."
     ],
     "answer": "d",
     "explanation": "Java 17 introduced several new features and enhancements to the Java programming language, including: restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend"
@@ -2890,26 +2890,26 @@
     "category": "Modern Java Features",
     "question": "What are the new features in Java 21?",
     "options": [
-      "Esta funcionalidad no existe en Java.",
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "Java no soporta esta característica hasta versiones muy recientes.",
-      "Java 21 introduced several new features and enhancements to the Java programming language, including:"
+      "Java does not support this feature until very recent versions.",
+      "This is a feature exclusive to other programming languages.",
+      "This functionality does not exist in Java.",
+      "Java 21 introduced several new features and enhancements to the Java programming language, including: standard feature to provide a more concise and expressive way to write switch statements. Pattern matching for instanceof, which allows you to test an object against a type and extract its components in a single expression.  Records, which are a new type of class that provides a compact syntax for declaring classes that are primarily used to store data. Virtual threads, which are lightweight threads that can be created and managed more efficiently than traditional threads, allowing for better scalability and performance in concurrent applications."
     ],
     "answer": "d",
-    "explanation": "Java 21 introduced several new features and enhancements to the Java programming language, including: standard feature to provide a more concise and expressive way to write switch statements. Pattern matching for"
+    "explanation": "Java 21 introduced several new features and enhancements to the Java programming language, including: standard feature to provide a more concise and expressive way to write switch statements. Pattern matching for instanceof, which allows you to test an object against a type and extract its components in a single expression.  Records, which are a new type of class that provides a compact syntax for declaring classes that are primarily used to store data. Virtual threads, which are lightweight threads that can be created and managed more efficiently than traditional threads, allowing for better scalability and performance in concurrent applications."
   },
   {
     "id": 229,
     "category": "Modern Java Features",
     "question": "What are the new features in Java 23?",
     "options": [
-      "Esta funcionalidad no existe en Java.",
-      "Esta es una característica exclusiva de otros lenguajes de programación.",
-      "This section previously contained incorrect and fabricated JEP references (e.g., JEP 425–429 with IBM platform/cloud claims).",
-      "Java no soporta esta característica hasta versiones muy recientes."
+      "The Java 23 introduced several new features and enhancements to the Java programming language, including: pattern matching for switch, which allows you to use patterns in switch statements to match against the structure of objects and extract their components. This feature provides a more concise and expressive way to write switch statements and improves code readability and maintainability.",
+      "This functionality does not exist in Java.",
+      "Java does not support this feature until very recent versions.",
+      "This is a feature exclusive to other programming languages."
     ],
-    "answer": "c",
-    "explanation": "This section previously contained incorrect and fabricated JEP references (e.g., JEP 425–429 with IBM platform/cloud claims). Remove misinformation. Update this answer once JDK 23 is officially released by consulting the OpenJDK Release Notes"
+    "answer": "a",
+    "explanation": "The Java 23 introduced several new features and enhancements to the Java programming language, including: pattern matching for switch, which allows you to use patterns in switch statements to match against the structure of objects and extract their components. This feature provides a more concise and expressive way to write switch statements and improves code readability and maintainability."
   },
   {
     "id": 230,
