@@ -11,7 +11,7 @@ import os
 
 def read_java_readme():
     """Lee el archivo readme.md con las preguntas de Java"""
-    readme_path = os.environ.get('README_PATH', os.path.join(os.getcwd(), 'readme.md'))
+    readme_path = os.environ.get('README_PATH', os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'readme.md')))
     try:
         with open(readme_path, 'r', encoding='utf-8') as file:
             content = file.read()

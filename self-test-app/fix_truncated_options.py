@@ -6,8 +6,9 @@ punctuation), replace it with the explanation text trimmed to the last
 complete sentence.
 """
 import json
+import os
 
-INPUT = "data/java-questions.json"
+INPUT = os.path.join(os.path.dirname(__file__), 'data', 'java-questions.json')
 ANSWER_MAP = {"a": 0, "b": 1, "c": 2, "d": 3}
 
 
