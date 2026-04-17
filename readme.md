@@ -4202,7 +4202,7 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
             executor.shutdown();
         }
     }
-    ```
+```
 
   In this example, an `ExecutorService` is created with a fixed thread pool size of 2 using the
   `Executors.newFixedThreadPool`
@@ -4211,17 +4211,13 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
   by the worker threads in the thread pool. Finally, the `ExecutorService` is shut down to release the resources.
 
 - **194 . Explain different ways of creating executor services**. \
-  There are several ways to create `ExecutorService` instances in Java using the `Executors` utility class. Some of the
-  common ways to create `ExecutorService` instances include:
+  There are several ways to create `ExecutorService` instances in Java using the `Executors` utility class. Some of the common ways to create `ExecutorService` instances include:
     - **`newFixedThreadPool(int nThreads)`**: Creates a fixed-size thread pool with the specified number of threads.
     - **`newCachedThreadPool()`**: Creates a thread pool that creates new threads as needed and reuses idle threads.
-    - **`newSingleThreadExecutor()`**: Creates a single-threaded executor that uses a single worker thread to execute
-      tasks sequentially.
-    - **`newScheduledThreadPool(int corePoolSize)`**: Creates a thread pool that can schedule tasks to run after a
-      specified delay or at a fixed rate.
+    - **`newSingleThreadExecutor()`**: Creates a single-threaded executor that uses a single worker thread to execute tasks sequentially.
+    - **`newScheduledThreadPool(int corePoolSize)`**: Creates a thread pool that can schedule tasks to run after a specified delay or at a fixed rate.
 
-  These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations
-  based on the requirements of the application.
+  These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations based on the requirements of the application.
 
 - **195 . How do you check whether an ExecutionService task executed successfully?** \
   The `Future` interface in the Java Concurrency API provides a way to check whether an `ExecutorService` task executed
