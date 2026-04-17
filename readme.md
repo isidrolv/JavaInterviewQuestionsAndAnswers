@@ -4073,7 +4073,7 @@ public class Dog implements Animal {
   Threads in Java can be in different states during their lifecycle. The main states of a thread in Java are:
     - **New**: A thread is in the new state when it is created but has not yet started.
     - **Runnable**: A thread is in the runnable state when it is ready to run but is waiting for a processor to execute
-    - **191 . What is priority of a thread? How do you change the priority of a thread?** \
+- **191 . What is priority of a thread? How do you change the priority of a thread?** \
       The priority of a thread in Java is an integer value that determines the scheduling priority of the thread.
       Threads
       with higher priority values are given preference by the thread scheduler and are more likely.
@@ -4089,7 +4089,7 @@ public class Dog implements Animal {
 You can think of it as a way to decouple task submission from thread creation. Once you finish using it, you call its `shutdown()` method to stop accepting new tasks and eventually wind down gracefully.
 
 
-  Some key features of `ExecutorService` include:
+Some key features of `ExecutorService` include:
     - **Task Execution**: `ExecutorService` allows you to submit tasks for execution using methods like `submit` and
       `invokeAll`.
     - **Thread Pool Management**: `ExecutorService` manages a pool of worker threads that can be reused for executing
