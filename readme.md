@@ -4209,6 +4209,7 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
   method. Two tasks are then submitted for execution using the `submit` method, and the tasks are executed
   asynchronously
   by the worker threads in the thread pool. Finally, the `ExecutorService` is shut down to release the resources.
+
 - **194 . Explain different ways of creating executor services**. \
   There are several ways to create `ExecutorService` instances in Java using the `Executors` utility class. Some of the
   common ways to create `ExecutorService` instances include:
@@ -4221,6 +4222,7 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
 
   These methods provide different ways to create `ExecutorService` instances with varying thread pool configurations
   based on the requirements of the application.
+
 - **195 . How do you check whether an ExecutionService task executed successfully?** \
   The `Future` interface in the Java Concurrency API provides a way to check whether an `ExecutorService` task executed
   successfully and retrieve the result of the task. The `Future` interface represents the result of an asynchronous
@@ -4319,8 +4321,10 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
   to
   retrieve the result of the task. If the task is done, the result is printed to the console. Finally, the
   `ExecutorService` is shut down to release the resources.
+
 - **197 . What is synchronization of threads?** \
   Synchronization in Java is a mechanism that allows multiple threads to coordinate access to shared resources.
+
 - **198 . Can you give an example of a synchronized block?** \
   Here is an example of using a synchronized block in Java to synchronize access to a shared resource:
 
@@ -4377,6 +4381,7 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
   `increment` and `getCount` methods are synchronized using a synchronized block with the `this` object as the monitor.
   Multiple threads are created to increment the counter concurrently, and the final count is printed after the threads
   have finished.
+
 - **199 . Can a static method be synchronized?** \
   Yes, a static method can be synchronized in Java. When a static method is synchronized, the lock acquired is on the
   class object associated with the method's class. This means that only one thread can execute the synchronized static
@@ -4430,6 +4435,7 @@ So in practice, ExecutorService handles the execution infrastructure, while Comp
   In this example, the `increment` method is a synchronized static method that increments a shared static counter. The
   `increment` method is synchronized to ensure that only one thread can increment the counter at a time, even when
   multiple threads are accessing the method concurrently.
+
 - **200 . What is the use of join method in threads?** \
   The `join` method in Java is used to wait for a thread to complete its execution before continuing with the current
   thread. When the `join` method is called on a thread, the current thread will block and wait for the specified thread
