@@ -1057,7 +1057,7 @@
     "category": "Java 8 Features",
     "question": "Guess the output of this for loop: for(int i = 0; i < 5; i++) { System.out.println(i); }",
     "options": [
-      "Una lectura superficial concluye que este ciclo for imprime solo el último valor del contador, ignorando que se ejecuta una impresión por cada iteración válida.",
+      "Una lectura superficial concluye que el código for(int i = 0; i < 5; i++) imprime solo el último valor del contador, ignorando que se ejecuta una impresión por cada iteración válida.",
       "Una suposición común pero incorrecta indica que i++ incrementa el contador en dos unidades por vuelta en este ejemplo, como si el operador de incremento tuviera semántica distinta en Java.",
       "Una explicación imprecisa afirma que la condición i < 5 incluye también el valor 5 en la salida, aunque el límite superior de esa comparación es exclusivo.",
       "Java does not support this feature until very recent versions."
@@ -2878,12 +2878,12 @@
     "question": "What are the new features in Java 17?",
     "options": [
       "Una versión equivocada sostiene que Java 17 se centró únicamente en actualizar JDBC sin cambios en el lenguaje, al analizar \"What are the new features in Java 17\", como si no existieran mejoras sintácticas recientes.",
-      "Una lectura superficial concluye que en Java 17 todas las mejoras de pattern matching ya quedaron finales. Esa interpretación confunde cuáles JEPs se estandarizaron y cuáles continuaron como vista previa.",
+      "Una lectura superficial concluye que Java 17 no incorporó avances reales en pattern matching, confundiendo el progreso de esa familia de mejoras en el lenguaje.",
       "Una narrativa inexacta plantea que Java 17 prohibió el uso de sealed classes para simplificar la herencia, al analizar \"What are the new features in Java 17\", ignorando precisamente una de sus adiciones destacadas.",
       "This functionality does not exist in Java."
     ],
     "answer": "d",
-    "explanation": "Java 17 introduced several important enhancements, including sealed classes, which let you restrict which classes can extend a superclass or implement an interface. This helps model closed hierarchies more safely and makes domain constraints explicit at compile time. Java 17 also delivered other notable improvements such as pattern matching progress and API/runtime refinements."
+    "explanation": "Java 17 introduced important enhancements, including sealed classes, which let you restrict which classes can extend a superclass or implement an interface. This makes closed hierarchies safer and clearer in domain modeling."
   },
   {
     "id": 228,
