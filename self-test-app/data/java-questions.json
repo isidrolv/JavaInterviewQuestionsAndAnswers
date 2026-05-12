@@ -1057,9 +1057,9 @@
     "category": "Java 8 Features",
     "question": "Guess the output of this for loop: for(int i = 0; i < 5; i++) { System.out.println(i); }",
     "options": [
-      "Una lectura superficial concluye que el ciclo for imprime solo el último valor del contador, al analizar \"Guess the output of this for loop: for int i = 0\", ignorando cómo avanza realmente la iteración.",
-      "Una suposición común pero incorrecta indica que i++ incrementa el contador en dos unidades por vuelta en este ejemplo, al analizar \"Guess the output of this for loop: for int i = 0\", como si las reglas del compilador no aplicaran.",
-      "Una explicación imprecisa afirma que la condición i < 5 incluye también el valor 5 en la salida, al analizar \"Guess the output of this for loop: for int i = 0\", aunque el límite superior es exclusivo.",
+      "Una lectura superficial concluye que el ciclo for imprime solo el último valor del contador, al analizar \"Guess the output of this for loop: for (int i = 0\", ignorando cómo avanza realmente la iteración.",
+      "Una suposición común pero incorrecta indica que i++ incrementa el contador en dos unidades por vuelta en este ejemplo, al analizar \"Guess the output of this for loop: for (int i = 0\", como si las reglas del compilador no aplicaran.",
+      "Una explicación imprecisa afirma que la condición i < 5 incluye también el valor 5 en la salida, al analizar \"Guess the output of this for loop: for (int i = 0\", aunque el límite superior es exclusivo.",
       "Java does not support this feature until very recent versions."
     ],
     "answer": "d",
@@ -2409,7 +2409,7 @@
     "category": "Frameworks",
     "question": "What is priority of a thread? How do you change the priority of a thread?",
     "options": [
-      "Una explicación inexacta sugiere que la prioridad de un hilo determina un orden de ejecución obligatorio y siempre respetado por la JVM, al analizar \"What is priority of a thread\", como si el planificador fuera determinista.",
+      "Una explicación inexacta sugiere que la prioridad de un hilo determina un orden de ejecución obligatorio y siempre respetado por la JVM, al analizar \"What is priority of a thread and how do you change the priority\", como si el planificador fuera determinista.",
       "Una lectura superficial concluye que cambiar la prioridad de un hilo exige reiniciar la aplicación para que tenga efecto, al analizar \"How do you change the priority of a thread\", aunque puede ajustarse en tiempo de ejecución.",
       "Una suposición común pero incorrecta afirma que setPriority permite asignar cualquier entero sin límites en Java, al analizar \"What is priority of a thread\", ignorando el rango permitido por la API.",
       "Synchronized solo funciona con métodos estáticos."
@@ -2883,7 +2883,7 @@
       "This functionality does not exist in Java."
     ],
     "answer": "d",
-    "explanation": "Java 17 introduced several new features and enhancements to the Java programming language, including: restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend"
+    "explanation": "Java 17 introduced several new features and enhancements to the Java programming language, including sealed classes, which restrict the subclasses of a class. Sealed classes allow you to define a limited set of subclasses that can extend a class or implement an interface."
   },
   {
     "id": 228,
