@@ -1057,9 +1057,9 @@
     "category": "Java 8 Features",
     "question": "Guess the output of this for loop: for(int i = 0; i < 5; i++) { System.out.println(i); }",
     "options": [
-      "Una versión desalineada del tema propone que default significa acceso global dentro de toda la aplicación, incluso en otros módulos, al analizar \"Guess the output of this for loop forint\", como si fuera una limitación histórica obligatoria.",
-      "Un resumen inexacto sugiere que public restringe el uso a clases ubicadas en el mismo archivo fuente, al analizar \"Guess the output of this for loop forint\", como si las reglas del compilador no aplicaran en este caso.",
-      "Una interpretación equivocada sostiene que private permite acceso directo desde cualquier clase del mismo paquete y desde subclases externas, al analizar \"Guess the output of this for loop forint\", sin depender del diseño real del lenguaje.",
+      "Una lectura superficial concluye que el ciclo for imprime solo el último valor del contador, al analizar \"Guess the output of this for loop: for int i = 0\", ignorando cómo avanza realmente la iteración.",
+      "Una suposición común pero incorrecta indica que i++ incrementa el contador en dos unidades por vuelta en este ejemplo, al analizar \"Guess the output of this for loop: for int i = 0\", como si las reglas del compilador no aplicaran.",
+      "Una explicación imprecisa afirma que la condición i < 5 incluye también el valor 5 en la salida, al analizar \"Guess the output of this for loop: for int i = 0\", aunque el límite superior es exclusivo.",
       "Java does not support this feature until very recent versions."
     ],
     "answer": "d",
@@ -1343,10 +1343,10 @@
     "category": "Database Connectivity",
     "question": "What are the default values in an array?",
     "options": [
-      "Un enfoque simplista plantea que los wrappers consumen menos memoria que los primitivos en cualquier contexto, al analizar \"What are the default values in an array\", sin depender del diseño real del lenguaje.",
-      "Una explicación imprecisa afirma que Integer y Long comparan igualdad de valor correctamente solo usando el operador ==, al analizar \"What are the default values in an array\", sin considerar las diferencias entre compilación y ejecución.",
+      "Una interpretación equivocada sostiene que todos los arrays numéricos se inicializan en 1 para evitar valores vacíos, al analizar \"What are the default values in an array\", sin depender del tipo declarado.",
+      "Un enfoque simplista plantea que los arrays de boolean se inicializan en true para facilitar condiciones iniciales, al analizar \"What are the default values in an array\", pasando por alto el valor por defecto real.",
       "Esta funcionalidad no existe en Java.",
-      "Una suposición común pero incorrecta indica que autoboxing solo funciona con tipos numéricos y excluye boolean y char, al analizar \"What are the default values in an array\", aunque el comportamiento real de Java va en otra dirección."
+      "Una narrativa alternativa describe que los arrays de referencias crean automáticamente objetos vacíos en cada posición, al analizar \"What are the default values in an array\", como si null no existiera en este contexto."
     ],
     "answer": "c",
     "explanation": "In Java, when an array is created, the elements are initialized to default values based on the type of the array. The default values for primitive types are as follows: `int` - 0, `float` - 0.0f, `double` - 0.0d, `char` - '\u0000', `boolean` - false. For object references, the default value is null."
@@ -2409,9 +2409,9 @@
     "category": "Frameworks",
     "question": "What is priority of a thread? How do you change the priority of a thread?",
     "options": [
-      "Una lectura superficial concluye que parseInt devuelve null cuando el texto no es numérico en lugar de lanzar excepción, al analizar \"What is priority of a thread How do\", ignorando las garantías que define la plataforma.",
-      "Una suposición común pero incorrecta indica que autoboxing solo funciona con tipos numéricos y excluye boolean y char, al analizar \"What is priority of a thread How do\", aunque el comportamiento real de Java va en otra dirección.",
-      "Una narrativa alternativa describe que los wrappers consumen menos memoria que los primitivos en cualquier contexto, al analizar \"What is priority of a thread How do\", como si todas las APIs siguieran ese mismo patrón rígido.",
+      "Una explicación inexacta sugiere que la prioridad de un hilo determina un orden de ejecución obligatorio y siempre respetado por la JVM, al analizar \"What is priority of a thread\", como si el planificador fuera determinista.",
+      "Una lectura superficial concluye que cambiar la prioridad de un hilo exige reiniciar la aplicación para que tenga efecto, al analizar \"How do you change the priority of a thread\", aunque puede ajustarse en tiempo de ejecución.",
+      "Una suposición común pero incorrecta afirma que setPriority permite asignar cualquier entero sin límites en Java, al analizar \"What is priority of a thread\", ignorando el rango permitido por la API.",
       "Synchronized solo funciona con métodos estáticos."
     ],
     "answer": "d",
@@ -2786,10 +2786,10 @@
     "category": "Modern Java Features",
     "question": "What are the new features in Java 5?",
     "options": [
-      "Un enfoque simplista plantea que encapsulación consiste en exponer todos los atributos como públicos para facilitar el acceso, al analizar \"What are the new features in Java 5\", pasando por alto cómo se implementa en la JVM.",
+      "Una narrativa desalineada propone que Java 5 incorporó records y sealed classes como base del modelo de datos moderno, al analizar \"What are the new features in Java 5\", aunque esas funciones aparecieron mucho después.",
       "This is a feature exclusive to other programming languages.",
-      "Una lectura superficial concluye que sobrescribir y sobrecargar son exactamente el mismo mecanismo con distinto nombre, al analizar \"What are the new features in Java 5\", aunque el comportamiento real de Java va en otra dirección.",
-      "Una suposición común pero incorrecta indica que la herencia múltiple de clases concretas está permitida y es la forma recomendada en Java, al analizar \"What are the new features in Java 5\", sin considerar las diferencias entre compilación y ejecución."
+      "Una explicación imprecisa afirma que Java 5 eliminó por completo los genéricos en favor de colecciones sin tipos, al analizar \"What are the new features in Java 5\", contradiciendo uno de sus cambios más conocidos.",
+      "Un resumen inexacto sugiere que Java 5 introdujo exclusivamente cambios de interfaz gráfica y no del lenguaje, al analizar \"What are the new features in Java 5\", pasando por alto anotaciones, autoboxing y varargs."
     ],
     "answer": "b",
     "explanation": "Java 5 introduced several new features and enhancements to the Java programming language, including: casting of objects. Generics allow you to define classes, interfaces, and methods with type parameters that can be"
@@ -2877,9 +2877,9 @@
     "category": "Modern Java Features",
     "question": "What are the new features in Java 17?",
     "options": [
-      "Una suposición común pero incorrecta indica que todas las colecciones tienen complejidad constante en inserción, búsqueda y borrado, al analizar \"What are the new features in Java 17\", como si fuera una limitación histórica obligatoria.",
-      "Una narrativa alternativa describe que HashMap mantiene siempre el orden de inserción sin necesidad de implementaciones especiales, al analizar \"What are the new features in Java 17\", aunque el comportamiento real de Java va en otra dirección.",
-      "Una versión desalineada del tema propone que List, Set y Map son intercambiables porque usan exactamente la misma semántica interna, al analizar \"What are the new features in Java 17\", como si todas las APIs siguieran ese mismo patrón rígido.",
+      "Una versión equivocada sostiene que Java 17 se centró únicamente en actualizar JDBC sin cambios en el lenguaje, al analizar \"What are the new features in Java 17\", como si no existieran mejoras sintácticas recientes.",
+      "Una lectura superficial concluye que Java 17 retiró records y pattern matching por problemas de compatibilidad, al analizar \"What are the new features in Java 17\", aunque en realidad consolidó varias de esas capacidades.",
+      "Una narrativa inexacta plantea que Java 17 prohibió el uso de sealed classes para simplificar la herencia, al analizar \"What are the new features in Java 17\", ignorando precisamente una de sus adiciones destacadas.",
       "This functionality does not exist in Java."
     ],
     "answer": "d",
