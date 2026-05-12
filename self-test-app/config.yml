@@ -16,10 +16,11 @@ fonts:
 # Window settings for the Windows GUI app
 window:
   title: "Java Quiz (Windows)"
-  width: 900
-  height: 600
+  width: 1300
+  height: 1000
   min_width: 720
   min_height: 520
+  alignment: center
 
 # Quiz logic
 max_questions: 60      # if more exist, pick a random subset of this many

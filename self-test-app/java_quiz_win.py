@@ -35,10 +35,11 @@ DEFAULT_FONTS = {
 DEFAULT_FONT_SCALE = 2.0  # double by default
 DEFAULT_WINDOW = {
     'title': 'Java Quiz (Windows)',
-    'width': 900,
-    'height': 600,
+    'width': 1300,
+    'height': 1000,
     'min_width': 720,
     'min_height': 520,
+    'alignment': 'program',
 }
 
 
@@ -55,6 +56,55 @@ def load_questions():
     return questions
 
 
+def _parse_fallback_config(filepath):
+    """Parse simple YAML-like config file when PyYAML is unavailable."""
+    data = {}
+    with open(filepath, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#') or ':' not in line:
+                continue
+            key, val = line.split(':', 1)
+            key = key.strip()
+            val = val.strip().strip('"\'')
+            try:
+                data[key] = float(val) if '.' in val else int(val)
+            except Exception:
+                data[key] = val
+    return data
+
+
+def _load_config_file():
+    """Load configuration from file using YAML or fallback parser."""
+    if not os.path.exists(CONFIG_FILE):
+        return {}
+    try:
+        if YAML_AVAILABLE:
+            with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f) or {}
+        else:
+            return _parse_fallback_config(CONFIG_FILE)
+    except Exception:
+        return {}
+
+
+def _merge_config(cfg, data):
+    """Merge loaded config data into the default config dict."""
+    if not isinstance(data, dict):
+        return
+    
+    if 'fonts' in data and isinstance(data['fonts'], dict):
+        cfg['fonts'].update({k: v for k, v in data['fonts'].items() if v is not None})
+    if 'window' in data and isinstance(data['window'], dict):
+        cfg['window'].update({k: v for k, v in data['window'].items() if v is not None})
+    if 'font_scale' in data and data['font_scale'] is not None:
+        cfg['font_scale'] = float(data['font_scale'])
+    if 'max_questions' in data and data['max_questions'] is not None:
+        cfg['max_questions'] = int(data['max_questions'])
+    if 'pass_threshold' in data and data['pass_threshold'] is not None:
+        cfg['pass_threshold'] = float(data['pass_threshold'])
+
+
 def load_config():
     """Load configuration from CONFIG_FILE if present.
     Returns a dict with keys: fonts, font_scale, window, max_questions, pass_threshold.
@@ -66,46 +116,8 @@ def load_config():
         'max_questions': MAX_QUESTIONS,
         'pass_threshold': PASS_THRESHOLD,
     }
-    if os.path.exists(CONFIG_FILE):
-        try:
-            if YAML_AVAILABLE:
-                with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
-                    data = yaml.safe_load(f) or {}
-            else:
-                # Very simple fallback parser: supports only top-level key: value numbers/strings
-                data = {}
-                with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
-                    for line in f:
-                        line = line.strip()
-                        if not line or line.startswith('#') or ':' not in line:
-                            continue
-                        key, val = line.split(':', 1)
-                        key = key.strip()
-                        val = val.strip().strip('"\'')
-                        # try to cast number
-                        try:
-                            if '.' in val:
-                                cast_val = float(val)
-                            else:
-                                cast_val = int(val)
-                            data[key] = cast_val
-                        except Exception:
-                            data[key] = val
-            # Merge
-            if isinstance(data, dict):
-                if 'fonts' in data and isinstance(data['fonts'], dict):
-                    cfg['fonts'].update({k: v for k, v in data['fonts'].items() if v is not None})
-                if 'window' in data and isinstance(data['window'], dict):
-                    cfg['window'].update({k: v for k, v in data['window'].items() if v is not None})
-                if 'font_scale' in data and data['font_scale'] is not None:
-                    cfg['font_scale'] = float(data['font_scale'])
-                if 'max_questions' in data and data['max_questions'] is not None:
-                    cfg['max_questions'] = int(data['max_questions'])
-                if 'pass_threshold' in data and data['pass_threshold'] is not None:
-                    cfg['pass_threshold'] = float(data['pass_threshold'])
-        except Exception:
-            # Ignore config errors; fall back to defaults
-            pass
+    data = _load_config_file()
+    _merge_config(cfg, data)
     return cfg
 
 
@@ -126,9 +138,15 @@ class JavaQuizApp(tk.Tk):
 
         window = cfg.get('window', DEFAULT_WINDOW)
         self.title(window.get('title', DEFAULT_WINDOW['title']))
-        TEST_TITLE = window.get('title', DEFAULT_WINDOW['title'])
         self.geometry(f"{window.get('width', DEFAULT_WINDOW['width'])}x{window.get('height', DEFAULT_WINDOW['height'])}")
         self.minsize(window.get('min_width', DEFAULT_WINDOW['min_width']), window.get('min_height', DEFAULT_WINDOW['min_height']))
+        self.positionfrom('program')
+        self.update_idletasks()
+        w = window.get('width', DEFAULT_WINDOW['width'])
+        h = window.get('height', DEFAULT_WINDOW['height'])
+        x = (self.winfo_screenwidth() - w) // 2
+        y = (self.winfo_screenheight() - h) // 2
+        self.geometry(f'{w}x{h}+{x}+{y}')
 
         # Fonts
         fonts = cfg.get('fonts', DEFAULT_FONTS)
